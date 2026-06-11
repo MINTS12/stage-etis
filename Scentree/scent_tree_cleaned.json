@@ -1,0 +1,2471 @@
+[
+  {
+    "name": "Spicy",
+    "children": [
+      {
+        "name": "Warm Spices",
+        "children": [
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Almondy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Eugenol",
+            "children": [
+              {
+                "name": "Metallic",
+                "children": []
+              },
+              {
+                "name": "Smoky Woods",
+                "children": []
+              },
+              {
+                "name": "White Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Cinnamic",
+            "children": [
+              {
+                "name": "Eugenol",
+                "children": []
+              },
+              {
+                "name": "Almondy",
+                "children": []
+              },
+              {
+                "name": "Gourmand",
+                "children": []
+              },
+              {
+                "name": "White Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Orris Root",
+            "children": [
+              {
+                "name": "Earthy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Dry Woods",
+            "children": [
+              {
+                "name": "Cedar",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Roasted",
+            "children": []
+          },
+          {
+            "name": "Saffron",
+            "children": [
+              {
+                "name": "Yellow Fruits",
+                "children": []
+              },
+              {
+                "name": "Leather",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cool Spices",
+        "children": [
+          {
+            "name": "Terpenic",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              },
+              {
+                "name": "Agrestic",
+                "children": []
+              },
+              {
+                "name": "Orris Root",
+                "children": []
+              },
+              {
+                "name": "Dry Woods",
+                "children": []
+              },
+              {
+                "name": "Zesty",
+                "children": []
+              },
+              {
+                "name": "Smoky Woods",
+                "children": []
+              },
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Coumarinic",
+            "children": [
+              {
+                "name": "Yellow Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Agrestic",
+            "children": [
+              {
+                "name": "Balsamic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Incense",
+            "children": [
+              {
+                "name": "Zesty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Zesty",
+            "children": []
+          },
+          {
+            "name": "Dry Woods",
+            "children": []
+          },
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "White Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Fresh Flowers",
+            "children": []
+          },
+          {
+            "name": "Boozy",
+            "children": []
+          },
+          {
+            "name": "Mossy",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Herbal",
+    "children": [
+      {
+        "name": "Agrestic",
+        "children": [
+          {
+            "name": "Musky",
+            "children": []
+          },
+          {
+            "name": "Grassy",
+            "children": [
+              {
+                "name": "Leather",
+                "children": []
+              },
+              {
+                "name": "Citric",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Cut Grass",
+            "children": [
+              {
+                "name": "Eugenol",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mossy",
+            "children": []
+          },
+          {
+            "name": "Terpenic",
+            "children": [
+              {
+                "name": "Zesty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Spicy",
+            "children": []
+          },
+          {
+            "name": "Camphoric",
+            "children": []
+          },
+          {
+            "name": "Zesty",
+            "children": []
+          },
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Minty",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Terpenic",
+        "children": [
+          {
+            "name": "Cool Spices",
+            "children": [
+              {
+                "name": "Coniferous",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Metallic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Icy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Anisic",
+        "children": [
+          {
+            "name": "Green",
+            "children": []
+          },
+          {
+            "name": "Agrestic",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Lavender",
+            "children": []
+          },
+          {
+            "name": "Ozonic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Minty",
+        "children": [
+          {
+            "name": "Icy",
+            "children": [
+              {
+                "name": "Fatty",
+                "children": []
+              },
+              {
+                "name": "Zesty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Sulfuric",
+            "children": []
+          },
+          {
+            "name": "Fatty",
+            "children": []
+          },
+          {
+            "name": "Terpenic",
+            "children": []
+          },
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Spicy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tea",
+            "children": [
+              {
+                "name": "Icy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lavender",
+        "children": [
+          {
+            "name": "Fresh Flowers",
+            "children": []
+          },
+          {
+            "name": "Grassy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Camphoric",
+        "children": [
+          {
+            "name": "Coniferous",
+            "children": [
+              {
+                "name": "Earthy",
+                "children": []
+              },
+              {
+                "name": "Agrestic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Fresh Flowers",
+            "children": []
+          },
+          {
+            "name": "Zesty",
+            "children": [
+              {
+                "name": "Plastic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": [
+              {
+                "name": "Fresh Woods",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Terpenic",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Citrus",
+    "children": [
+      {
+        "name": "Citric",
+        "children": [
+          {
+            "name": "Cool Spices",
+            "children": []
+          },
+          {
+            "name": "Fresh Flowers",
+            "children": []
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Rosy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Aldehydes",
+            "children": [
+              {
+                "name": "Cool Spices",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Geranium",
+            "children": [
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Zesty",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Zesty",
+        "children": [
+          {
+            "name": "Mandarin",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              },
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Grapefruit",
+            "children": [
+              {
+                "name": "Sandalwood",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Orange",
+            "children": [
+              {
+                "name": "Animalic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Bergamot",
+            "children": [
+              {
+                "name": "Rosy",
+                "children": []
+              },
+              {
+                "name": "Agrestic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Terpenic",
+            "children": []
+          },
+          {
+            "name": "Citric",
+            "children": [
+              {
+                "name": "Fresh Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Aldehydes",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Floral",
+    "children": [
+      {
+        "name": "White Flowers",
+        "children": [
+          {
+            "name": "Grassy",
+            "children": [
+              {
+                "name": "Powdery",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Salicylic",
+            "children": [
+              {
+                "name": "Marine",
+                "children": []
+              },
+              {
+                "name": "Cut Grass",
+                "children": []
+              },
+              {
+                "name": "Anthranilic",
+                "children": []
+              },
+              {
+                "name": "Animalic",
+                "children": []
+              },
+              {
+                "name": "Benzyl",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Jasmine",
+            "children": [
+              {
+                "name": "Solar",
+                "children": []
+              },
+              {
+                "name": "Tea",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Solar",
+            "children": [
+              {
+                "name": "Waxy",
+                "children": []
+              },
+              {
+                "name": "Butyric",
+                "children": []
+              },
+              {
+                "name": "Benzyl",
+                "children": []
+              },
+              {
+                "name": "Honeyed",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Spicy",
+            "children": []
+          },
+          {
+            "name": "Almondy",
+            "children": [
+              {
+                "name": "Balsamic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Benzyl",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Powdery Flowers",
+        "children": [
+          {
+            "name": "Etheric Solvent",
+            "children": [
+              {
+                "name": "Almondy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Violet Flower",
+            "children": [
+              {
+                "name": "Juicy Fruits",
+                "children": []
+              },
+              {
+                "name": "Dry Woods",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Coumarinic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Orris Root",
+            "children": [
+              {
+                "name": "Leather",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Animalic",
+            "children": [
+              {
+                "name": "Feacal",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Orange Blossom",
+        "children": [
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Anthranilic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Anthranilic",
+            "children": [
+              {
+                "name": "Medicinal",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Grassy",
+            "children": [
+              {
+                "name": "Solar",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rosy",
+        "children": [
+          {
+            "name": "Metallic",
+            "children": [
+              {
+                "name": "Yellow Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Zesty",
+            "children": []
+          },
+          {
+            "name": "Geranium",
+            "children": [
+              {
+                "name": "Citric",
+                "children": []
+              },
+              {
+                "name": "Terpenic",
+                "children": []
+              },
+              {
+                "name": "Spicy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green Fruits",
+            "children": []
+          },
+          {
+            "name": "Honeyed",
+            "children": [
+              {
+                "name": "White Flowers",
+                "children": []
+              },
+              {
+                "name": "Gourmand",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mushroom",
+            "children": []
+          },
+          {
+            "name": "Cinnamic",
+            "children": []
+          },
+          {
+            "name": "Fresh Flowers",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Fresh Flowers",
+        "children": [
+          {
+            "name": "Lavender",
+            "children": []
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          },
+          {
+            "name": "Aldehydes",
+            "children": [
+              {
+                "name": "Plastic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Plastic",
+            "children": [
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Zesty",
+            "children": []
+          },
+          {
+            "name": "Bergamot",
+            "children": []
+          },
+          {
+            "name": "Cool Spices",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Light Flowers",
+        "children": [
+          {
+            "name": "Marine",
+            "children": []
+          },
+          {
+            "name": "Aldehydes",
+            "children": [
+              {
+                "name": "Juicy Fruits",
+                "children": []
+              },
+              {
+                "name": "Aquatic",
+                "children": []
+              },
+              {
+                "name": "Fresh Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "White Flowers",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              },
+              {
+                "name": "Berries",
+                "children": []
+              },
+              {
+                "name": "Anisic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green Fruits",
+            "children": []
+          },
+          {
+            "name": "Juicy Fruits",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Woody",
+    "children": [
+      {
+        "name": "Coniferous",
+        "children": [
+          {
+            "name": "Milky",
+            "children": []
+          },
+          {
+            "name": "Fresh Woods",
+            "children": [
+              {
+                "name": "Zesty",
+                "children": []
+              },
+              {
+                "name": "Agrestic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Zesty",
+            "children": [
+              {
+                "name": "Spicy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Balsamic",
+            "children": [
+              {
+                "name": "Camphoric",
+                "children": []
+              },
+              {
+                "name": "Grassy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Spicy",
+            "children": []
+          },
+          {
+            "name": "Terpenic",
+            "children": [
+              {
+                "name": "Etheric Solvent",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Agrestic",
+            "children": [
+              {
+                "name": "Camphoric",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ambery Woods",
+        "children": [
+          {
+            "name": "Cedar",
+            "children": [
+              {
+                "name": "Ambergris",
+                "children": []
+              },
+              {
+                "name": "Smoky Woods",
+                "children": []
+              },
+              {
+                "name": "Violet Flower",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ambergris",
+            "children": [
+              {
+                "name": "Fatty",
+                "children": []
+              },
+              {
+                "name": "Dry Woods",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green Fruits",
+            "children": []
+          },
+          {
+            "name": "Vetiver",
+            "children": [
+              {
+                "name": "Earthy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Violet Flower",
+            "children": [
+              {
+                "name": "Musky",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sandalwood",
+        "children": [
+          {
+            "name": "Milky",
+            "children": [
+              {
+                "name": "Fatty",
+                "children": []
+              },
+              {
+                "name": "Animalic",
+                "children": []
+              },
+              {
+                "name": "Grapefruit",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Smoky Woods",
+            "children": []
+          },
+          {
+            "name": "Dry Woods",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Dry Woods",
+        "children": [
+          {
+            "name": "Cedar",
+            "children": []
+          },
+          {
+            "name": "Violet Flower",
+            "children": []
+          },
+          {
+            "name": "Orris Root",
+            "children": [
+              {
+                "name": "Earthy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Roasted",
+        "children": [
+          {
+            "name": "Nutty",
+            "children": [
+              {
+                "name": "Tobacco",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vetiver",
+        "children": [
+          {
+            "name": "Grapefruit",
+            "children": []
+          },
+          {
+            "name": "Ambergris",
+            "children": [
+              {
+                "name": "Violet Flower",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cedar",
+        "children": [
+          {
+            "name": "Sandalwood",
+            "children": []
+          },
+          {
+            "name": "Smoky Woods",
+            "children": [
+              {
+                "name": "Crisp Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Terpenic",
+            "children": [
+              {
+                "name": "Orange Blossom",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ambergris",
+            "children": []
+          },
+          {
+            "name": "Leather",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Dry Woods",
+            "children": [
+              {
+                "name": "Metallic",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Smoky Woods",
+        "children": [
+          {
+            "name": "Vanillic",
+            "children": [
+              {
+                "name": "Ambery Cistus",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Vetiver",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Buttery",
+        "children": [
+          {
+            "name": "Cedar",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Balsamic",
+        "children": [
+          {
+            "name": "Smoky Woods",
+            "children": [
+              {
+                "name": "Spicy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Warm Woods",
+        "children": [
+          {
+            "name": "Vetiver",
+            "children": [
+              {
+                "name": "Sandalwood",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fresh Woods",
+        "children": [
+          {
+            "name": "Earthy",
+            "children": [
+              {
+                "name": "Ambergris",
+                "children": []
+              },
+              {
+                "name": "Camphoric",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Violet Flower",
+        "children": [
+          {
+            "name": "Fatty",
+            "children": [
+              {
+                "name": "Orris Root",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ambergris",
+        "children": [
+          {
+            "name": "Violet Flower",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fruity",
+    "children": [
+      {
+        "name": "Yellow Fruits",
+        "children": [
+          {
+            "name": "Boozy",
+            "children": [
+              {
+                "name": "Vanillic",
+                "children": []
+              },
+              {
+                "name": "Earthy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Berries",
+            "children": [
+              {
+                "name": "White Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "White Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Light Flowers",
+            "children": [
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          },
+          {
+            "name": "Green Fruits",
+            "children": [
+              {
+                "name": "Crisp Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Etheric Solvent",
+            "children": []
+          },
+          {
+            "name": "Spicy",
+            "children": [
+              {
+                "name": "Balsamic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "White Flowers",
+            "children": []
+          },
+          {
+            "name": "Grassy",
+            "children": []
+          },
+          {
+            "name": "Grapefruit",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Berries",
+        "children": [
+          {
+            "name": "Ozonic",
+            "children": [
+              {
+                "name": "Powdery Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "White Flowers",
+            "children": [
+              {
+                "name": "Vanillic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": [
+              {
+                "name": "Minty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Gourmand",
+            "children": []
+          },
+          {
+            "name": "Etheric Solvent",
+            "children": [
+              {
+                "name": "Green Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Musky",
+            "children": []
+          },
+          {
+            "name": "Coniferous",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Green Fruits",
+        "children": [
+          {
+            "name": "Butyric",
+            "children": [
+              {
+                "name": "Spicy",
+                "children": []
+              },
+              {
+                "name": "Fatty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              },
+              {
+                "name": "Zesty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          },
+          {
+            "name": "Balsamic",
+            "children": [
+              {
+                "name": "Cinnamic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Anisic",
+            "children": []
+          },
+          {
+            "name": "Dry Woods",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "White Flowers",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Grapefruit",
+            "children": [
+              {
+                "name": "Tropical Fruits",
+                "children": []
+              },
+              {
+                "name": "Warm Woods",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tropical Fruits",
+            "children": []
+          },
+          {
+            "name": "Nutty",
+            "children": []
+          },
+          {
+            "name": "Etheric Solvent",
+            "children": [
+              {
+                "name": "Tropical Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Berries",
+            "children": [
+              {
+                "name": "Tropical Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Aquatic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Lactonic",
+        "children": [
+          {
+            "name": "Yellow Fruits",
+            "children": [
+              {
+                "name": "Coconut",
+                "children": []
+              },
+              {
+                "name": "Aldehydes",
+                "children": []
+              },
+              {
+                "name": "Metallic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Coconut",
+            "children": [
+              {
+                "name": "Coumarinic",
+                "children": []
+              },
+              {
+                "name": "Butyric",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Metallic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tropical Fruits",
+        "children": [
+          {
+            "name": "Violet Flower",
+            "children": [
+              {
+                "name": "Bergamot",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Berries",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Lactonic",
+            "children": [
+              {
+                "name": "Lavender",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green Fruits",
+            "children": []
+          },
+          {
+            "name": "Sulfuric",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Juicy Fruits",
+        "children": [
+          {
+            "name": "Aquatic",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              },
+              {
+                "name": "Aldehydes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Balsamic Ambery",
+    "children": [
+      {
+        "name": "Honeyed",
+        "children": [
+          {
+            "name": "Coumarinic",
+            "children": [
+              {
+                "name": "Cinnamic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Balsamic",
+        "children": [
+          {
+            "name": "Leather",
+            "children": [
+              {
+                "name": "Smoky Woods",
+                "children": []
+              },
+              {
+                "name": "Gourmand",
+                "children": []
+              },
+              {
+                "name": "Plastic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Vanillic",
+            "children": [
+              {
+                "name": "Warm Woods",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Plastic",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mushroom",
+            "children": [
+              {
+                "name": "Warm Spices",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Roasted",
+            "children": []
+          },
+          {
+            "name": "Burnt",
+            "children": [
+              {
+                "name": "Leather",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Animalic",
+            "children": [
+              {
+                "name": "Vanillic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "White Flowers",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Coumarinic",
+        "children": [
+          {
+            "name": "Grassy",
+            "children": [
+              {
+                "name": "Almondy",
+                "children": []
+              },
+              {
+                "name": "Spicy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Balsamic",
+            "children": [
+              {
+                "name": "Tea",
+                "children": []
+              },
+              {
+                "name": "Honeyed",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tobacco",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Vanillic",
+        "children": [
+          {
+            "name": "Eugenol",
+            "children": [
+              {
+                "name": "Plastic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Coumarinic",
+            "children": []
+          },
+          {
+            "name": "Balsamic",
+            "children": []
+          },
+          {
+            "name": "Anisic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Ambery Cistus",
+        "children": [
+          {
+            "name": "Animalic",
+            "children": [
+              {
+                "name": "Boozy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tobacco",
+            "children": []
+          },
+          {
+            "name": "Spicy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Gourmand",
+        "children": [
+          {
+            "name": "Coumarinic",
+            "children": [
+              {
+                "name": "Animalic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Vanillic",
+            "children": []
+          },
+          {
+            "name": "Burnt",
+            "children": [
+              {
+                "name": "Nutty",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Nutty",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Almondy",
+        "children": [
+          {
+            "name": "Coumarinic",
+            "children": [
+              {
+                "name": "Spicy",
+                "children": []
+              },
+              {
+                "name": "Anisic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Boozy",
+            "children": []
+          },
+          {
+            "name": "Berries",
+            "children": [
+              {
+                "name": "Gourmand",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ambergris",
+        "children": [
+          {
+            "name": "Dry Woods",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Nutty",
+        "children": [
+          {
+            "name": "Roasted",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cinnamic",
+        "children": [
+          {
+            "name": "Animalic",
+            "children": [
+              {
+                "name": "Vanillic",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Undergrowth",
+    "children": [
+      {
+        "name": "Earthy",
+        "children": [
+          {
+            "name": "Etheric Solvent",
+            "children": [
+              {
+                "name": "Crisp Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Animalic",
+            "children": []
+          },
+          {
+            "name": "Mossy",
+            "children": [
+              {
+                "name": "Camphoric",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Dry Woods",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Mushroom",
+        "children": [
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Agrestic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Mossy",
+        "children": [
+          {
+            "name": "Green Fruits",
+            "children": []
+          },
+          {
+            "name": "Smoky Woods",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Marine",
+    "children": [
+      {
+        "name": "Animalic",
+        "children": []
+      },
+      {
+        "name": "Oceanic",
+        "children": [
+          {
+            "name": "Mossy",
+            "children": []
+          },
+          {
+            "name": "Rosy",
+            "children": []
+          },
+          {
+            "name": "Aquatic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Ozonic",
+        "children": [
+          {
+            "name": "Green",
+            "children": [
+              {
+                "name": "Light Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Light Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Aldehydes",
+            "children": []
+          },
+          {
+            "name": "Juicy Fruits",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Animalic",
+    "children": [
+      {
+        "name": "Violet Flower",
+        "children": []
+      },
+      {
+        "name": "Leather",
+        "children": [
+          {
+            "name": "Butyric",
+            "children": []
+          },
+          {
+            "name": "Feacal",
+            "children": [
+              {
+                "name": "Coumarinic",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Feacal",
+        "children": [
+          {
+            "name": "Leather",
+            "children": [
+              {
+                "name": "Honeyed",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ambergris",
+        "children": [
+          {
+            "name": "Musky",
+            "children": []
+          },
+          {
+            "name": "Anthranilic",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Honeyed",
+        "children": [
+          {
+            "name": "Fatty",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Burnt Leather",
+    "children": [
+      {
+        "name": "Leather",
+        "children": [
+          {
+            "name": "Violet Flower",
+            "children": []
+          },
+          {
+            "name": "Smoky Woods",
+            "children": [
+              {
+                "name": "Vetiver",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tobacco",
+            "children": [
+              {
+                "name": "Animalic",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Burnt",
+        "children": [
+          {
+            "name": "Aldehydes",
+            "children": []
+          },
+          {
+            "name": "Sulfuric",
+            "children": []
+          },
+          {
+            "name": "Leather",
+            "children": [
+              {
+                "name": "Green",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Nutty",
+            "children": []
+          },
+          {
+            "name": "Gourmand",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Green",
+    "children": [
+      {
+        "name": "Green Fruits",
+        "children": [
+          {
+            "name": "Sulfuric",
+            "children": [
+              {
+                "name": "Metallic",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Crisp Green",
+        "children": [
+          {
+            "name": "Burnt",
+            "children": []
+          },
+          {
+            "name": "Rosy",
+            "children": [
+              {
+                "name": "Metallic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tropical Fruits",
+            "children": []
+          },
+          {
+            "name": "Yellow Fruits",
+            "children": []
+          },
+          {
+            "name": "Coniferous",
+            "children": [
+              {
+                "name": "Earthy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Grassy",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Cut Grass",
+        "children": [
+          {
+            "name": "Green Fruits",
+            "children": [
+              {
+                "name": "Fresh Flowers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Aldehydes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Fatty",
+        "children": [
+          {
+            "name": "Medicinal",
+            "children": []
+          },
+          {
+            "name": "Coumarinic",
+            "children": [
+              {
+                "name": "Juicy Fruits",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mushroom",
+            "children": []
+          },
+          {
+            "name": "Green Fruits",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Juicy Fruits",
+        "children": [
+          {
+            "name": "Anisic",
+            "children": [
+              {
+                "name": "Lavender",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Plastic",
+            "children": [
+              {
+                "name": "Mossy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mushroom",
+        "children": [
+          {
+            "name": "Balsamic",
+            "children": [
+              {
+                "name": "Leather",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sulfuric",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Musky",
+    "children": [
+      {
+        "name": "Berries",
+        "children": [
+          {
+            "name": "Powdery Flowers",
+            "children": []
+          },
+          {
+            "name": "Animalic",
+            "children": [
+              {
+                "name": "Ambery Woods",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Animalic",
+        "children": [
+          {
+            "name": "Milky",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Fresh Flowers",
+        "children": []
+      },
+      {
+        "name": "Green Fruits",
+        "children": []
+      },
+      {
+        "name": "Metallic",
+        "children": [
+          {
+            "name": "Animalic",
+            "children": []
+          },
+          {
+            "name": "Dry Woods",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "White Flowers",
+        "children": [
+          {
+            "name": "Jasmine",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Light Flowers",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Aldehydes",
+    "children": [
+      {
+        "name": "Zesty",
+        "children": [
+          {
+            "name": "Orange",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Marine",
+        "children": []
+      },
+      {
+        "name": "Orange",
+        "children": [
+          {
+            "name": "Mandarin",
+            "children": [
+              {
+                "name": "Fatty",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Green",
+        "children": [
+          {
+            "name": "Green Fruits",
+            "children": [
+              {
+                "name": "Mushroom",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mandarin",
+        "children": [
+          {
+            "name": "Ozonic",
+            "children": []
+          },
+          {
+            "name": "Leather",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Butyric",
+        "children": [
+          {
+            "name": "Spicy",
+            "children": [
+              {
+                "name": "Buttery",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Flowers",
+        "children": [
+          {
+            "name": "Citric",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Ozonic",
+        "children": [
+          {
+            "name": "White Flowers",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Butyric Buttery",
+    "children": [
+      {
+        "name": "Butyric",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Sulfuric",
+    "children": [
+      {
+        "name": "Berries",
+        "children": []
+      },
+      {
+        "name": "Tropical Fruits",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Solvents",
+    "children": [
+      {
+        "name": "Dry Woods",
+        "children": []
+      }
+    ]
+  }
+]
