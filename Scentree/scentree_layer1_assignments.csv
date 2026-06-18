@@ -1,0 +1,77 @@
+fine_label,closest_scentree_node,proposed_layer1_parents,confidence
+apple,Yellow Fruits / Juicy Fruits,Fruity,Strong
+apricot,Yellow Fruits,Fruity,Strong
+banana,Yellow Fruits / Tropical Fruits,Fruity,Strong
+black currant,Berries,Fruity | Sulfuric,Strong
+cherry,Berries / Juicy Fruits,Fruity,Strong
+grape,Berries / Juicy Fruits,Fruity,Strong
+melon,Juicy Fruits / Green Fruits,Fruity | Green,Strong
+peach,Yellow Fruits / Juicy Fruits,Fruity,Strong
+pear,Green Fruits / Yellow Fruits,Fruity,Strong
+pineapple,Tropical Fruits,Fruity | Sulfuric,Strong
+plum,Yellow Fruits / Berries,Fruity,Strong
+raspberry,Berries,Fruity | Sulfuric,Strong
+strawberry,Berries / Juicy Fruits,Fruity,Strong
+ripe,Juicy Fruits / Yellow Fruits,Fruity,Medium
+juicy,Juicy Fruits,Fruity | Green,Strong
+fruit skin,Green Fruits / Zesty,Fruity | Citrus,Medium
+caramellic,Gourmand,Balsamic Ambery,Strong
+chocolate,Gourmand / Roasted,Balsamic Ambery | Burnt Leather,Strong
+cocoa,Gourmand / Roasted,Balsamic Ambery | Burnt Leather,Strong
+coffee,Roasted,Balsamic Ambery | Burnt Leather,Strong
+sweet,Gourmand / Vanillic,Balsamic Ambery,Medium
+creamy,Lactonic / Buttery,Fruity | Woody,Medium
+dairy,Lactonic / Butyric,Butyric Buttery | Animalic,Medium
+popcorn,Roasted / Gourmand,Balsamic Ambery | Burnt Leather,Medium
+hazelnut,Nutty,Balsamic Ambery | Fruity | Woody,Strong
+beefy,Feacal / Butyric,Animalic | Butyric Buttery,Medium
+meaty,Feacal / Butyric,Animalic | Burnt Leather,Medium
+cheesy,Butyric,Butyric Buttery | Animalic,Strong
+fishy,Feacal / Animalic,Animalic | Marine,Medium
+sweaty,Feacal / Butyric,Animalic | Butyric Buttery,Medium
+savory,Eugenol / Spicy,Spicy | Herbal,Medium
+cooked,Roasted / Gourmand,Burnt Leather | Balsamic Ambery,Weak
+cucumber,Aquatic / Crisp Green,Green | Marine,Medium
+tomato,Crisp Green / Agrestic,Green | Herbal,Medium
+vegetable,Agrestic / Crisp Green,Green | Undergrowth,Medium
+leafy,Cut Grass / Crisp Green,Green,Strong
+hay,Cut Grass / Agrestic,Green | Herbal | Undergrowth,Strong
+weedy,Agrestic / Cut Grass,Green | Undergrowth,Strong
+celery,Agrestic / Green,Green | Herbal,Medium
+cabbage,Agrestic / Sulfuric,Green | Sulfuric,Medium
+garlic,Sulfuric,Sulfuric | Green,Strong
+onion,Sulfuric,Sulfuric | Green,Strong
+radish,Sulfuric / Agrestic,Sulfuric | Green,Medium
+potato,Agrestic / Earthy,Undergrowth | Green,Medium
+ethereal,Etheric Solvent,Solvents | Fruity,Strong
+gassy,Etheric Solvent / Sulfuric,Solvents | Sulfuric,Medium
+pungent,Sulfuric / Etheric Solvent,Sulfuric | Solvents,Medium
+phenolic,Eugenol / Etheric Solvent,Spicy | Burnt Leather,Medium
+soapy,Aldehydes / Light Flowers,Aldehydes | Floral,Medium
+sharp,Etheric Solvent / Sulfuric,Solvents | Sulfuric,Weak
+clean,Ozonic / Aquatic,Marine | Aldehydes,Weak
+dry,Dry Woods / Agrestic,Woody | Undergrowth,Weak
+ketonic,Etheric Solvent,Solvents,Medium
+clove,Eugenol / Warm Spices,Spicy | Balsamic Ambery,Strong
+chamomile,Herbal / Fresh Flowers,Herbal | Floral,Strong
+hawthorn,White Flowers / Fresh Flowers,Floral | Herbal,Medium
+cooling,Icy / Cool Spices / Minty,Herbal | Spicy,Medium
+cortex,Cinnamic / Warm Spices,Spicy | Balsamic Ambery,Medium
+hyacinth,Fresh Flowers / White Flowers,Floral,Strong
+lily,White Flowers / Light Flowers,Floral,Strong
+muguet,Fresh Flowers / Light Flowers,Floral | Green,Strong
+alcoholic,Boozy,Fruity | Balsamic Ambery,Strong
+brandy,Boozy,Balsamic Ambery | Fruity,Strong
+cognac,Boozy,Balsamic Ambery | Fruity,Strong
+rummy,Boozy,Balsamic Ambery | Fruity,Strong
+winey,Boozy / Berries,Fruity | Balsamic Ambery,Strong
+fermented,Boozy / Butyric,Animalic | Balsamic Ambery,Medium
+malty,Boozy / Roasted,Balsamic Ambery | Burnt Leather,Medium
+warm,Warm Spices / Warm Woods,Spicy | Woody | Balsamic Ambery,Weak
+aromatic,Herbal / Terpenic,Herbal | Spicy,Weak
+bitter,Eugenol / Citric,Citrus | Herbal,Weak
+natural,—,,Ambiguous
+alliaceous,Sulfuric,Sulfuric,Strong
+oily,Fatty / Waxy,Green | Woody,Weak
+odorless,—,Drop,Ambiguous
+sour,Citric / Zesty,Citrus | Sulfuric,Weak
