@@ -1,0 +1,38 @@
+fine_label;proposed_layer1_parents;expert_parents;expert_comment
+beefy;Animalic | Butyric Buttery;Animalic;
+cabbage;Green | Sulfuric;Green;
+celery;Green | Herbal;Green;
+cooling;Herbal | Spicy;Herbal;
+cortex;Spicy | Balsamic Ambery;Herbal;
+creamy;Fruity | Woody;Butyric Buttery;
+cucumber;Green | Marine;Green;
+dairy;Butyric Buttery | Animalic;Butyric Buttery;
+fermented;Animalic | Balsamic Ambery;Sulfuric;
+fishy;Animalic | Marine;Marine;
+fruit skin;Fruity | Citrus;Fruity;
+gassy;Solvents | Sulfuric;Sulfuric;
+hawthorn;Floral | Herbal;floral;
+ketonic;Solvents;Green;
+malty;Balsamic Ambery | Burnt Leather;Green;dry herbs 
+meaty;Animalic | Burnt Leather;Animalic;
+phenolic;Spicy | Burnt Leather;Burnt leather;
+popcorn;Balsamic Ambery | Burnt Leather;Fruity;fruits a coque
+potato;Undergrowth | Green;Undergrowth;
+pungent;Sulfuric | Solvents;Sulfuric;
+radish;Sulfuric | Green;Green;
+ripe;Fruity;Sulfuric;
+savory;Spicy | Herbal;Spicy;
+soapy;Aldehydes | Floral;Solvent;
+sweaty;Animalic | Butyric Buttery;Animalic;
+sweet;Balsamic Ambery;Balsamic Ambery;
+tomato;Green | Herbal;Green;
+vegetable;Green | Undergrowth;Undergrowth;
+aromatic;Herbal | Spicy;Herbal;
+bitter;Citrus | Herbal;Herbal;
+clean;Marine | Aldehydes;Aldehydes;
+cooked;Burnt Leather | Balsamic Ambery;Burnt leather;
+dry;Woody | Undergrowth;Woody;
+oily;Green | Woody;Burnt leather;gras , vegetal
+sharp;Solvents | Sulfuric;Sulfuric , butyric buttery;
+sour;Citrus | Sulfuric;Citrus;
+warm;Spicy | Woody | Balsamic Ambery;Spicy;

@@ -1,0 +1,36 @@
+2026-07-19 11:19:25,170  INFO  Loading dataset from hmcn_dataset.csv
+2026-07-19 11:19:25,449  INFO    1005 feature columns, 138 label columns (fine_*)
+2026-07-19 11:19:25,465  INFO  Loading cached fold indices from hmcn_kfold_split_indices.pkl
+2026-07-19 11:19:25,466  INFO  Running 4 configs x 5 folds = 20 runs
+2026-07-19 11:19:25,466  INFO  --- Config n100_sqrt ---
+2026-07-19 11:19:31,802  INFO    fold 0: val PR-AUC=0.0448  test PR-AUC=0.0404  test ROC-AUC=0.5075  test F1=0.0316  (6.3s)
+2026-07-19 11:19:37,979  INFO    fold 1: val PR-AUC=0.0805  test PR-AUC=0.0858  test ROC-AUC=0.6135  test F1=0.0958  (6.2s)
+2026-07-19 11:19:44,121  INFO    fold 2: val PR-AUC=0.0381  test PR-AUC=0.0356  test ROC-AUC=0.5000  test F1=0.0190  (6.1s)
+2026-07-19 11:19:50,062  INFO    fold 3: val PR-AUC=0.0361  test PR-AUC=0.0350  test ROC-AUC=0.5000  test F1=0.0187  (5.9s)
+2026-07-19 11:19:56,315  INFO    fold 4: val PR-AUC=0.0533  test PR-AUC=0.0484  test ROC-AUC=0.5438  test F1=0.0526  (6.3s)
+2026-07-19 11:19:56,315  INFO  --- Config n100_log2 ---
+2026-07-19 11:20:02,443  INFO    fold 0: val PR-AUC=0.0448  test PR-AUC=0.0404  test ROC-AUC=0.5075  test F1=0.0316  (6.1s)
+2026-07-19 11:20:08,634  INFO    fold 1: val PR-AUC=0.0843  test PR-AUC=0.0838  test ROC-AUC=0.6230  test F1=0.0952  (6.2s)
+2026-07-19 11:20:14,814  INFO    fold 2: val PR-AUC=0.0381  test PR-AUC=0.0356  test ROC-AUC=0.5000  test F1=0.0190  (6.2s)
+2026-07-19 11:20:21,198  INFO    fold 3: val PR-AUC=0.0361  test PR-AUC=0.0350  test ROC-AUC=0.5000  test F1=0.0187  (6.4s)
+2026-07-19 11:20:27,561  INFO    fold 4: val PR-AUC=0.0564  test PR-AUC=0.0500  test ROC-AUC=0.5512  test F1=0.0532  (6.4s)
+2026-07-19 11:20:27,561  INFO  --- Config n300_sqrt ---
+2026-07-19 11:20:41,254  INFO    fold 0: val PR-AUC=0.0455  test PR-AUC=0.0406  test ROC-AUC=0.5075  test F1=0.0322  (13.7s)
+2026-07-19 11:20:54,956  INFO    fold 1: val PR-AUC=0.0882  test PR-AUC=0.0917  test ROC-AUC=0.6269  test F1=0.0963  (13.7s)
+2026-07-19 11:21:08,192  INFO    fold 2: val PR-AUC=0.0402  test PR-AUC=0.0376  test ROC-AUC=0.5034  test F1=0.0190  (13.2s)
+2026-07-19 11:21:22,233  INFO    fold 3: val PR-AUC=0.0361  test PR-AUC=0.0350  test ROC-AUC=0.5000  test F1=0.0187  (14.0s)
+2026-07-19 11:21:36,062  INFO    fold 4: val PR-AUC=0.0593  test PR-AUC=0.0552  test ROC-AUC=0.5675  test F1=0.0562  (13.8s)
+2026-07-19 11:21:36,062  INFO  --- Config n300_log2 ---
+2026-07-19 11:21:49,877  INFO    fold 0: val PR-AUC=0.0455  test PR-AUC=0.0406  test ROC-AUC=0.5075  test F1=0.0322  (13.8s)
+2026-07-19 11:22:03,443  INFO    fold 1: val PR-AUC=0.0914  test PR-AUC=0.0934  test ROC-AUC=0.6394  test F1=0.1007  (13.6s)
+2026-07-19 11:22:17,159  INFO    fold 2: val PR-AUC=0.0402  test PR-AUC=0.0376  test ROC-AUC=0.5034  test F1=0.0190  (13.7s)
+2026-07-19 11:22:30,984  INFO    fold 3: val PR-AUC=0.0361  test PR-AUC=0.0350  test ROC-AUC=0.5000  test F1=0.0187  (13.8s)
+2026-07-19 11:22:44,831  INFO    fold 4: val PR-AUC=0.0634  test PR-AUC=0.0564  test ROC-AUC=0.5639  test F1=0.0574  (13.8s)
+2026-07-19 11:22:44,864  INFO  Saved per-run results to kfold_results/RF_fine138_kfold_per_run.csv
+2026-07-19 11:22:44,870  INFO  Saved config summary to kfold_results/RF_fine138_kfold_summary.csv
+2026-07-19 11:22:44,870  INFO  ============================================================
+2026-07-19 11:22:44,870  INFO  WINNING CONFIG: n300_log2
+2026-07-19 11:22:44,870  INFO    test PR-AUC  = 0.0526 +/- 0.0243
+2026-07-19 11:22:44,870  INFO    test ROC-AUC = 0.5428 +/- 0.0600
+2026-07-19 11:22:44,870  INFO    test F1      = 0.0456 +/- 0.0346
+2026-07-19 11:22:44,870  INFO  Total runtime: 3.3 min

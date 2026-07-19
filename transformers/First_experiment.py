@@ -1,0 +1,289 @@
+"""
+Experiment: Frozen ChemBERTa + Linear Head + ASL
+Goal : classify the 12 metacategories and beat the baseline of 0.624 PR AUC  score
+"""
+
+import os
+import sys
+import logging
+import argparse
+import warnings
+from datetime import datetime
+
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
+from transformers import AutoTokenizer, AutoModel
+from sklearn.metrics import average_precision_score, roc_auc_score, f1_score
+from iterstrat.ml_stratifiers import MultilabelStratifiedShuffleSplit
+
+warnings.filterwarnings("ignore")
+
+#=============EXPERIMENT CONFIGURATION========================
+MODEL_NAME   = "seyonec/ChemBERTa-77M-MTR"
+GPU_ID       = "cuda:0"       
+MAX_LEN      = 128
+BATCH_SIZE   = 64
+EPOCHS       = 2
+DEBUG        = True  # set to False for full training
+LR           = 1e-3
+WEIGHT_DECAY = 1e-4
+
+#the asymmetric loss function parameters
+ASL_GAMMA_POS = 0
+ASL_GAMMA_NEG = 4
+ASL_MARGIN    = 0.05
+
+#Paths
+DATA_PATH = "/path/to/features_clustering_A_r2.csv"
+LOG_DIR   = "/path/to/logs"
+
+META_COLS = [
+    "floral", "fruity", "sweet", "woody",
+    "green", "spicy", "animal_musk", "earthy",
+    "citrus", "chemical", "gourmand", "powdery_amber",
+]
+
+#==================================
+
+
+#========LOGGER SETUP========================
+
+def setup_logger(log_dir: str , file_name: str = None) -> logging.Logger:
+    os.makedirs(log_dir, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path  = os.path.join(log_dir, f"{file_name}_{timestamp}.log" if file_name else f"experiment_{timestamp}.log")
+ 
+    logger = logging.getLogger("chemberta_exp")
+    if logger.hasHandlers():
+        logger.handlers.clear()
+    logger.setLevel(logging.INFO)    # bach  nprintiw 4i lwarnings ou lerrors bla les mssgs dyal debug 
+ 
+    fmt = logging.Formatter("%(asctime)s | %(message)s", datefmt="%H:%M:%S")
+ 
+    fh = logging.FileHandler(log_path)
+    fh.setFormatter(fmt)
+    logger.addHandler(fh)
+ 
+    sh = logging.StreamHandler(sys.stdout)
+    sh.setFormatter(fmt)
+    logger.addHandler(sh)
+ 
+    logger.info(f"Log file : {log_path}")
+    return logger
+#example to call it loggger = setup_logger(LOG_DIR, "chemberta_experiment")
+
+
+#==========Dataset
+
+class EmbeddingDataset(Dataset):
+    def __init__(self, X: np.ndarray, Y: np.ndarray):
+        self.X = torch.tensor(X, dtype=torch.float32) # the embeddings 
+        self.Y = torch.tensor(Y, dtype=torch.float32) # labels 
+ 
+    def __len__(self):   #x7al kayn mn sample fdataset
+        return len(self.X)
+    
+    def __getitem__(self, idx):   # kat3ti tuple li kay correspondi l index idx mn dataset
+        return self.X[idx], self.Y[idx]
+    
+#==================Linear Head Model========================
+class LinearHead(nn.Module):
+    def __init__(self, input_dim: int = 768, num_labels: int = 12):
+        super().__init__()
+        self.fc = nn.Linear(input_dim, num_labels)
+ 
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.fc(x)   # raw logits
+
+#==================Asymmetric Loss Function========================     
+class AsymmetricLoss(nn.Module):
+    def __init__(self, gamma_pos: float = 0, gamma_neg: float = 4, margin: float = 0.05):
+        super().__init__()
+        self.gamma_pos = gamma_pos
+        self.gamma_neg = gamma_neg
+        self.margin    = margin
+ 
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+        probs   = torch.sigmoid(logits)
+        probs_m = torch.clamp(probs - self.margin, min=0)
+ 
+        loss_pos = targets       * torch.log(probs    + 1e-8) * (1 - probs)   ** self.gamma_pos
+        loss_neg = (1 - targets) * torch.log(1 - probs_m + 1e-8) * probs_m   ** self.gamma_neg
+ 
+        return -torch.mean(loss_pos + loss_neg)
+    
+#======embedding extraction function========================
+# The embeddings are static here , it gives the same embeddings for the same SMILES string, so we can extract them once and save them to disk to avoid recomputation in future runs.
+def extract_embeddings(
+    smiles_list: list,
+    tokenizer,
+    backbone: nn.Module,
+    device: torch.device,
+    batch_size: int = 128,
+    max_len: int = 128,
+    logger: logging.Logger = None,
+) -> np.ndarray:
+    backbone.eval()
+    all_embs = []
+    for i in range(0, len(smiles_list), batch_size):
+        batch  = smiles_list[i : i + batch_size]
+        tokens = tokenizer(
+            batch,
+            padding=True,
+            truncation=True,
+            max_length=max_len,
+            return_tensors="pt",
+        ).to(device)
+        with torch.no_grad():
+            out = backbone(**tokens)
+        cls_emb = out.last_hidden_state[:, 0, :].cpu().numpy()
+        all_embs.append(cls_emb)
+        if logger and i % 512 == 0:
+            logger.info(f"  Embedded {min(i + batch_size, len(smiles_list))}/{len(smiles_list)}")
+    return np.vstack(all_embs)
+ 
+ #===Evaluation function========================
+def evaluate(model, loader, device):
+    model.eval()
+    all_probs, all_labels = [], []
+    with torch.no_grad():
+        for X_b, Y_b in loader:
+            logits = model(X_b.to(device))
+            probs  = torch.sigmoid(logits).cpu().numpy()
+            all_probs.append(probs)
+            all_labels.append(Y_b.numpy())
+ 
+    probs  = np.vstack(all_probs)
+    labels = np.vstack(all_labels)
+ 
+    valid = [i for i in range(labels.shape[1]) if labels[:, i].sum() > 0]
+    pr_auc  = np.mean([average_precision_score(labels[:, i], probs[:, i]) for i in valid])
+    roc_auc = np.mean([roc_auc_score(labels[:, i],           probs[:, i]) for i in valid])
+    return pr_auc, roc_auc, probs, labels
+ 
+ 
+def find_optimal_thresholds(probs: np.ndarray, labels: np.ndarray) -> np.ndarray:
+    thresholds = np.arange(0.1, 0.9, 0.02)
+    best = []
+    for i in range(labels.shape[1]):
+        best_t, best_f1 = 0.5, 0.0
+        for t in thresholds:
+            f1 = f1_score(labels[:, i], (probs[:, i] >= t).astype(int), zero_division=0)
+            if f1 > best_f1:
+                best_f1, best_t = f1, t
+        best.append(best_t)
+    return np.array(best)
+
+# ── Main ──────────────────────────────────────────────────────
+def main():
+    logger = setup_logger(LOG_DIR)
+    device = torch.device(GPU_ID if torch.cuda.is_available() else "cpu")
+ 
+    logger.info(f"Device   : {device}")
+    logger.info(f"Model    : {MODEL_NAME}")
+    logger.info(f"Config   : LR={LR}, BS={BATCH_SIZE}, EPOCHS={EPOCHS}, "
+                f"WD={WEIGHT_DECAY}, ASL=({ASL_GAMMA_POS},{ASL_GAMMA_NEG},{ASL_MARGIN})")
+ 
+    # ── Data ──
+    logger.info(f"Loading data from {DATA_PATH}")
+    df = pd.read_csv(DATA_PATH, sep=";").dropna(subset=["SMILES"]).reset_index(drop=True)
+    if DEBUG:
+        df = df.head(200)   # 200 molecules is enough to catch any error
+    logger.info("DEBUG MODE: using 200 samples only")
+    logger.info(f"Dataset  : {len(df)} molecules")
+    logger.info(f"Label prevalence:\n{df[META_COLS].mean().round(3).to_string()}")
+ 
+    # ── Embeddings ──
+    logger.info("Loading ChemBERTa tokenizer and backbone...")
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    backbone  = AutoModel.from_pretrained(MODEL_NAME).to(device)
+ 
+    logger.info("Extracting frozen embeddings (this runs once)...")
+    X = extract_embeddings(
+        df["SMILES"].tolist(), tokenizer, backbone, device,
+        batch_size=128, max_len=MAX_LEN, logger=logger
+    )
+    Y = df[META_COLS].values.astype(np.float32)
+    logger.info(f"Embeddings shape : {X.shape}")
+ 
+    # Free backbone memory — no longer needed
+    del backbone
+    torch.cuda.empty_cache()
+ 
+    # ── Splits ──
+    msss = MultilabelStratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+    for tv_idx, test_idx in msss.split(X, Y):
+        X_tv, X_test = X[tv_idx], X[test_idx]
+        Y_tv, Y_test = Y[tv_idx], Y[test_idx]
+ 
+    msss2 = MultilabelStratifiedShuffleSplit(n_splits=1, test_size=0.25, random_state=42)
+    for tr_idx, val_idx in msss2.split(X_tv, Y_tv):
+        X_train, X_val = X_tv[tr_idx], X_tv[val_idx]
+        Y_train, Y_val = Y_tv[tr_idx], Y_tv[val_idx]
+ 
+    logger.info(f"Train: {len(X_train)} | Val: {len(X_val)} | Test: {len(X_test)}")
+ 
+    train_loader = DataLoader(EmbeddingDataset(X_train, Y_train), batch_size=BATCH_SIZE, shuffle=True)
+    val_loader   = DataLoader(EmbeddingDataset(X_val,   Y_val),   batch_size=BATCH_SIZE)
+    test_loader  = DataLoader(EmbeddingDataset(X_test,  Y_test),  batch_size=BATCH_SIZE)
+ 
+    # ── Model ──
+    model     = LinearHead(input_dim=X.shape[1], num_labels=12).to(device)
+    criterion = AsymmetricLoss(ASL_GAMMA_POS, ASL_GAMMA_NEG, ASL_MARGIN)
+    optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS)
+ 
+    # ── Training ──
+    best_val_pr = 0.0
+    best_state  = None
+ 
+    for epoch in range(1, EPOCHS + 1):
+        model.train()
+        epoch_loss = 0.0
+        for X_b, Y_b in train_loader:
+            optimizer.zero_grad()
+            loss = criterion(model(X_b.to(device)), Y_b.to(device))
+            loss.backward()
+            optimizer.step()
+            epoch_loss += loss.item()
+        scheduler.step()
+ 
+        val_pr, val_roc, _, _ = evaluate(model, val_loader, device)
+ 
+        if val_pr > best_val_pr:
+            best_val_pr = val_pr
+            best_state  = {k: v.clone() for k, v in model.state_dict().items()}
+ 
+        if epoch % 5 == 0:
+            logger.info(f"Epoch {epoch:3d}/{EPOCHS} | "
+                        f"Loss: {epoch_loss / len(train_loader):.4f} | "
+                        f"Val PR AUC: {val_pr:.4f} | Val ROC AUC: {val_roc:.4f}")
+ 
+    logger.info(f"Best val PR AUC: {best_val_pr:.4f}")
+ 
+    # ── Test evaluation ──
+    model.load_state_dict(best_state)
+ 
+    _, _, val_probs, val_labels = evaluate(model, val_loader, device)
+    thresholds = find_optimal_thresholds(val_probs, val_labels)
+    logger.info(f"Calibrated thresholds: {thresholds.round(2)}")
+ 
+    test_pr, test_roc, test_probs, test_labels = evaluate(model, test_loader, device)
+    test_preds = (test_probs >= thresholds).astype(int)
+    test_f1    = f1_score(test_labels, test_preds, average="macro", zero_division=0)
+ 
+    logger.info("══ Test Results ═══════════════════════════════════")
+    logger.info(f"  Macro PR AUC  : {test_pr:.4f}   (BR+RF baseline: 0.624)")
+    logger.info(f"  Macro ROC AUC : {test_roc:.4f}  (BR+RF baseline: 0.820)")
+    logger.info(f"  Macro F1      : {test_f1:.4f}   (BR+RF baseline: 0.567)")
+    logger.info("  Per-label PR AUC:")
+    for i, col in enumerate(META_COLS):
+        pa = average_precision_score(test_labels[:, i], test_probs[:, i])
+        logger.info(f"    {col:<25s}: {pa:.4f}")
+ 
+ 
+if __name__ == "__main__":
+    main()

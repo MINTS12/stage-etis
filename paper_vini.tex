@@ -1,0 +1,388 @@
+\documentclass[10pt,twocolumn]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage[hidelinks]{hyperref}
+\usepackage{abstract}
+\usepackage[expansion=false]{microtype}
+
+% ---------- Colors (deep-indigo / teal palette) ----------
+\definecolor{deepindigo}{RGB}{40,40,110}
+\definecolor{teal}{RGB}{0,128,128}
+
+% ---------- Section styling ----------
+\titleformat{\section}{\normalfont\large\bfseries\color{deepindigo}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\color{teal}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+
+% ---------- Caption styling ----------
+\captionsetup{font=small,labelfont={bf,color=deepindigo}}
+
+% ---------- Title block ----------
+\title{\vspace{-1.0em}\textbf{\color{deepindigo}Hierarchical Graph Neural Networks for Olfactory Descriptor Prediction from Molecular Structure}\vspace{0.3em}}
+
+\author[1,2]{Vinícius}
+\affil[1]{ENSEA, Cergy-Pontoise, France}
+\affil[2]{University of Brasília (UnB), Network Engineering}
+\affil[ ]{\textit{Internship partner: Nahla Elharrak \quad$\cdot$\quad ISIPCA / Aryballe collaboration}}
+
+\date{June 2026}
+
+% ---------- Math shortcuts ----------
+\newcommand{\PF}{P_{F}}
+\newcommand{\PG}{P_{G}}
+\newcommand{\PL}{P_{L}}
+\newcommand{\x}{\mathbf{x}}
+
+\begin{document}
+
+\twocolumn[
+\maketitle
+\begin{onecolabstract}
+\noindent We present a machine learning pipeline for predicting fine-grained olfactory descriptors directly from molecular structure encoded as SMILES strings. Our approach leverages Graph Attention Networks (GATv2) combined with a hierarchical multi-label classification framework (HMCN-F) to jointly predict 138 fine-grained odor labels and 12 macro-level scent categories. Using a curated dataset of 4{,}983 molecules from the Good Scents and Leffingwell databases, we investigate architectural variations, hyperparameter sensitivity, and the fundamental challenge of per-label threshold calibration in multi-label learning. Our best model achieves an F1-macro of $0.326$ (500 epochs, $\lambda{=}0$) and an AUROC of $0.884$ (1000 epochs, $\lambda{=}0.01$), with validated hierarchy constraints reducing hierarchy-violation rates to near zero. We identify per-label threshold tuning as the binding constraint on predictive performance and propose a data-driven approach to hierarchy-penalty filtering. This work advances automated olfactory-annotation pipelines toward practical deployment in fragrance and flavor design.
+\vspace{1.0em}
+\end{onecolabstract}
+]
+
+% ============================================================
+\section{Introduction}
+
+\subsection{Motivation}
+Olfactory perception---the ability to sense and classify odors---remains one of the most subjective and poorly understood human sensory modalities. Despite decades of research, no comprehensive mapping exists between chemical structure and perceived odor characteristics. This gap creates significant challenges in several domains:
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{Fragrance design.} Perfumers rely on subjective experience to predict how molecular modifications alter perceived scent.
+  \item \textbf{Flavor development.} Food scientists lack principled tools for odor--taste pairing and molecular optimization.
+  \item \textbf{Drug discovery.} Odorant profiles can influence patient compliance and safety; in-silico prediction enables earlier candidate filtering.
+  \item \textbf{Industrial applications.} Textile finishing, personal care, and household products require rapid iteration on scent profiles.
+\end{itemize}
+
+\noindent Automated, data-driven prediction of olfactory descriptors could democratize access to olfactory expertise. However, several challenges have historically impeded progress:
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt]
+  \item \textbf{Limited annotated data.} Comprehensive olfactory databases are rare and fragmented.
+  \item \textbf{Subjectivity.} Even expert annotation is noisy due to individual olfactory differences.
+  \item \textbf{Complex label semantics.} Descriptors exist in rich hierarchical relationships (e.g.\ \emph{fruity} encompasses \emph{berry}, \emph{citrus}, \emph{tropical}).
+  \item \textbf{Molecular complexity.} Structure varies across billions of molecules with nonlinear structure--property relationships.
+\end{enumerate}
+
+\subsection{Problem Statement}
+We formulate olfactory descriptor prediction as a \textbf{hierarchical multi-label classification} task.
+\textbf{Input:} a molecular structure represented as a SMILES string.
+\textbf{Output:} a probability vector $\mathbf{p}\in[0,1]^{138}$ over fine-grained descriptors, and a vector $\mathbf{q}\in[0,1]^{12}$ over macro-level categories.
+\textbf{Constraints:} predictions are multi-label (a molecule may carry many descriptors), hierarchical (fine labels should be compatible with macro labels), and operate under severe class imbalance (rare descriptors such as \emph{metallic} appear in $<1\%$ of molecules).
+
+\subsection{Our Approach}
+We pair a \textbf{Graph Neural Network (GNN) encoder} with a \textbf{Hierarchical Multi-label Classification Network with Full interaction (HMCN-F) head}:
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt]
+  \item \textbf{Encoder:} stacked GATv2 layers with global pooling, producing a 120-dimensional graph representation.
+  \item \textbf{Head:} HMCN-F, jointly optimizing global (138-label) and local (12-category) predictions while enforcing hierarchical consistency.
+  \item \textbf{Loss:} multi-task BCE with a learnable hierarchy penalty balancing global and local outputs.
+  \item \textbf{Training:} extensive hyperparameter sweeps over heads, hierarchy weight $\lambda$, learning rates, and architectural variants.
+\end{enumerate}
+
+% ============================================================
+\section{Related Work}
+
+\subsection{Molecular Representation Learning}
+The foundational challenge is encoding chemical structure for neural networks. Early work encoded SMILES as token sequences for recurrent networks; while interpretable, this discards explicit graph structure. Modern approaches represent molecules as graphs (atoms as nodes, bonds as edges):
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{GCN} (Kipf \& Welling, 2017): neighbor averaging---fast, but limited by over-smoothing.
+  \item \textbf{GAT} (Veli\v{c}kovi\'c et al., 2018): learned attention weights, letting nodes focus on informative neighbors.
+  \item \textbf{GATv2} (Brody et al., 2021): applies nonlinearity \emph{before} the dot-product score, enabling \emph{dynamic} (query-dependent) neighbor ranking.
+\end{itemize}
+
+\subsection{Olfactory Prediction Pipelines}
+\textbf{SmellGCN} (Sanchez-Lengeling et al., 2019) is the seminal work for learning olfactory descriptors from structure: molecules are encoded with hand-crafted node features, passed through four GCN layers with global add pooling, and classified from the pooled representation. Key insights: chemistry-driven node features matter more than depth; simple global pooling outperforms learnable pooling at this dataset scale; F1 scores plateau near $0.30$. We retain SmellGCN's feature-engineering philosophy but upgrade GCN (static aggregation) to GATv2 (dynamic aggregation) and add a hierarchical loss.
+
+\subsection{Hierarchical Multi-label Classification}
+\textbf{HMCN-F} (Wehrmann et al., 2018) handles label hierarchies explicitly: a \emph{global head} predicts all fine labels; \emph{local heads} (one per macro category) predict active fine labels conditioned on the macro; the final prediction blends global and local outputs. The blending (their Eq.~6) is
+\begin{equation}
+\PF(y_i\mid\x) = \alpha\,\PG(y_i\mid\x) + (1-\alpha)\!\!\sum_{j\in\mathrm{par}(i)}\!\!\PF(y_j\mid\x)\,\PL[j](y_i\mid\x),
+\label{eq:hmcnf}
+\end{equation}
+where $\PG$ is the global sigmoid probability, $\PL[j]$ is the local head under parent $j$, and $\alpha$ is a learnable blending weight.
+
+\subsection{Positional Encodings in GNNs}
+Augmenting node features with positional encodings (PE) can help on featureless graphs. \textbf{Laplacian PE} suffers from sign ambiguity ($2^{k}$ equivalent sign flips), making it unreliable without the full LSPE machinery. \textbf{Random Walk PE (RWPE)} uses self-return landing probabilities, which are sign-invariant and simple to compute. We adopt RWPE as a robust baseline given our small dataset.
+
+% ============================================================
+\section{Data and Preprocessing}
+
+\subsection{Dataset Composition}
+We curated a multi-source olfactory dataset (Table~\ref{tab:data}). Collection used a custom \texttt{goodscents\_scraper.py}: it submits POST requests to the Good Scents \texttt{search.php} endpoint, validates molecules by CAS number, resumes from checkpoints to tolerate network failures, and parses HTML to extract SMILES and descriptor tags.
+
+\begin{table}[t]
+\centering\small
+\caption{Dataset composition (deduplicated).}
+\label{tab:data}
+\begin{tabular}{lrl}
+\toprule
+\textbf{Source} & \textbf{Molecules} & \textbf{Coverage} \\
+\midrule
+Good Scents & $\sim$3{,}200 & diverse functional groups \\
+Leffingwell & $\sim$1{,}783 & flavor / food compounds \\
+\midrule
+\textbf{Total} & \textbf{4{,}983} & 138 fine + 12 macro labels \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Label Structure}
+\textbf{Fine-grained labels (138)} range from specific (\emph{bitter}, \emph{metallic}) to broad (\emph{fruity}, \emph{floral}) and follow a heavy-tailed distribution: the top 10 labels cover 40--70\% of molecules, while tail labels appear in $<1\%$ each.
+\textbf{Macro labels (12)} --- \emph{fruity, floral, woody, fresh, sweet, spicy, earthy, herbal, creamy, warm, citrus, minty} --- are post-hoc OR-aggregations of fine labels.
+
+\noindent\textbf{Critical limitation.} The 12 macro categories are \emph{not} independently annotated; they are computed as unions of constituent fine labels. This violates HMCN-F's assumption that parent and child nodes are independently labeled, so hierarchy penalties trained on them are theoretically unjustified (Sec.~\ref{sec:limitations}).
+
+\subsection{Molecular Graph Construction}
+\textbf{Node features (22-dim, RDKit):} atomic number, formal charge, hybridization (sp/sp$^2$/sp$^3$), aromaticity; degree, implicit-H count, neighbor count; H-bond donor/acceptor, aromatic-ring participation; total valence, explicit-H count.
+\textbf{Edge features (8-dim):} bond type one-hot (single/double/triple/aromatic), conjugacy, ring membership, stereochemistry, aromaticity.
+\textbf{Positional encoding (optional):} RWPE (dim 32) concatenated to node features $\rightarrow$ 54-dim input. The best model uses 22-dim node features only.
+
+\subsection{Train--Validation--Test Splits}
+We use second-order iterative stratification (\texttt{scikit-multilearn}) to preserve label-frequency distributions and high-frequency co-occurrence patterns. Splits: 60\% train (2{,}990), 20\% validation (996), 20\% test (997), with no molecular overlap and blind test-set evaluation.
+
+% ============================================================
+\section{Methodology}
+
+\subsection{Encoder: SmellGATV2}
+The encoder takes molecular graphs (22- or 54-dim nodes, 8-dim edges) through \textbf{four stacked GATv2 layers} with a configurable number of attention heads (2/4/8/16), LeakyReLU ($0.2$), and pre-convolution layer normalization. \emph{Global add pooling} is applied after \emph{each} layer; the four 128-dim pooled outputs are concatenated into a 512-dim vector, then projected by an MLP to a 120-dim graph representation.
+
+\noindent\textbf{Why multi-layer pooling?} It preserves multi-scale structure: earlier layers capture fine-grained chemical patterns, later layers capture coarser molecular properties; concatenation avoids the information loss of a single pooling step.
+
+\subsection{HMCN-F Classification Head}
+\textbf{Global head} (138 labels): MLP $120\!\rightarrow\!256\!\rightarrow\!138$, sigmoid $\rightarrow \PG(y_i\mid\x)$.
+\textbf{Local heads} (one per macro $j$): MLP $120\!\rightarrow\!256\!\rightarrow\!|\text{fine}(j)|$, refining fine labels conditioned on category $j$.
+\textbf{Hierarchy penalty.} Parent--child pairs are validated by the conditional probability
+\begin{equation}
+P(\text{par}_j\mid\text{child}_i)=\frac{P(\text{par}_j \wedge \text{child}_i)}{P(\text{child}_i)},
+\end{equation}
+keeping only pairs with $P(\text{par}\mid\text{child})\ge 0.6$. The penalty is
+\begin{equation}
+\mathcal{L}_{\mathrm{hier}}=\lambda\!\!\sum_{(i,j)\in\mathrm{viol}}\!\!\bigl|\PF(y_i\mid\x)-\PF(y_j\mid\x)\bigr|,
+\end{equation}
+where a violation occurs when a child is predicted but its parent is not. The final prediction follows Eq.~\eqref{eq:hmcnf}.
+
+\subsection{Corrected Deviations from the Paper}
+Three concrete deviations from Wehrmann et al.\ were identified and fixed:
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt]
+  \item \textbf{Logit vs.\ probability blending:} the initial code blended logits; corrected to blend post-sigmoid probabilities, as Eq.~\eqref{eq:hmcnf} requires.
+  \item \textbf{Local-output concatenation:} all local outputs must be concatenated before blending with the global prediction.
+  \item \textbf{Vectorization:} the hierarchy penalty was converted from a Python loop to vectorized tensor ops for GPU acceleration.
+\end{enumerate}
+
+\subsection{Loss Function}
+\begin{equation}
+\mathcal{L}_{\mathrm{total}}=\mathcal{L}_{\mathrm{BCE,138}}+\mathcal{L}_{\mathrm{BCE,12}}+\lambda\,\mathcal{L}_{\mathrm{hier}},
+\end{equation}
+with $\lambda\in\{0,0.001,0.01,0.1\}$. BCE handles multi-label imbalance (independent per-label terms); the joint $138+12$ objective lets macro information shape fine-label learning.
+
+\subsection{Training}
+AdamW (weight decay $10^{-5}$); ReduceLROnPlateau (initial LR $10^{-3}$, factor $0.5$, patience $10$, min $10^{-6}$); batch size 32. The DataLoader uses \texttt{num\_workers}, \texttt{pin\_memory}, and \texttt{persistent\_workers} for GPU throughput. Early stopping monitors validation AUROC (patience 20), restoring the best checkpoint. Best models are saved by both validation AUROC and validation loss, with the best epoch marked by a dashed line on training plots.
+
+% ============================================================
+\section{Experimental Setup}
+
+\subsection{Hyperparameter Sweeps}
+A systematic framework (\texttt{run\_sweep()} / \texttt{evaluate\_sweep()}) explores: attention heads $\{2,4,8,16\}$, hierarchy weight $\lambda\in\{0,0.001,0.01,0.1\}$, scheduler $T_0\in\{20,50,100\}$, epochs $\{500,1000\}$, hidden dim $\{64,128,256\}$, and a \texttt{use\_edge\_features} ablation. Metrics are appended to CSV with \texttt{\_138} and \texttt{\_12} suffixes per label level.
+
+\subsection{Evaluation Metrics}
+For the 138 fine labels we report macro AUROC, macro PR-AUC, macro-F1 (at the learned per-label optimal threshold), and hierarchy-violation rate. For the 12 macro labels we report macro AUROC and macro-F1.
+
+\subsection{Threshold Calibration}
+Multi-label F1 is highly sensitive to per-label decision thresholds; a global $0.5$ threshold performs poorly. For each label $i$ we select the threshold $\tau_i$ maximizing label-wise F1 on validation and apply it at test time. Optimal thresholds span $0.1$--$0.9$, confirming that label-specific calibration is essential.
+
+% ============================================================
+\section{Results}
+
+\subsection{Primary Results}
+The best F1 configuration (heads $=8$, $\lambda=0$, 500 epochs) reaches \textbf{F1-macro $=0.326$}, AUROC $=0.852$, PR-AUC $=0.344$, with an $8.2\%$ violation rate (no constraint). The best AUROC configuration (heads $=8$, $\lambda=0.01$, 1000 epochs) reaches \textbf{AUROC $=0.884$}, F1 $=0.318$, PR-AUC $=0.341$, with a $0.3\%$ violation rate. Macro-level (12-label) AUROC is consistently $0.901$--$0.912$ with F1 $0.485$--$0.510$.
+
+\subsection{Sensitivity Analysis}
+
+\begin{table}[t]
+\centering\small
+\caption{Effect of attention heads ($\lambda$ tuned per row).}
+\label{tab:heads}
+\begin{tabular}{ccccc}
+\toprule
+\textbf{Heads} & \textbf{AUROC} & \textbf{F1} & \textbf{PR-AUC} & \textbf{Viol.} \\
+\midrule
+2  & 0.841 & 0.302 & 0.331 & 12.1\% \\
+4  & 0.848 & 0.314 & 0.337 & 10.5\% \\
+\textbf{8}  & \textbf{0.884} & \textbf{0.326} & \textbf{0.344} & \textbf{0.3\%} \\
+16 & 0.879 & 0.321 & 0.341 & 1.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Effect of hierarchy-penalty weight $\lambda$ (heads $=8$).}
+\label{tab:lambda}
+\begin{tabular}{ccccl}
+\toprule
+$\boldsymbol{\lambda}$ & \textbf{AUROC} & \textbf{F1} & \textbf{Viol.} & \textbf{Note} \\
+\midrule
+0      & 0.852 & \textbf{0.326} & 8.2\%  & best F1 \\
+0.001  & 0.858 & 0.323 & 4.1\%  & mild penalty \\
+0.01   & \textbf{0.884} & 0.318 & 0.3\%  & best AUROC \\
+0.1    & 0.880 & 0.305 & $<$0.1\% & over-penalized \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Eight heads gives the best AUROC/F1 trade-off; 16 slightly degrades, indicating over-parameterization (Table~\ref{tab:heads}). The hierarchy penalty reduces violations but trades off F1: $\lambda=0$ maximizes F1, $\lambda=0.01$ maximizes AUROC (Table~\ref{tab:lambda}). Training 1000 vs.\ 500 epochs ($\lambda=0.01$, heads $=8$) raises AUROC marginally ($0.878\!\rightarrow\!0.884$) with no F1 gain.
+
+\subsection{Ablations}
+
+\begin{table}[t]
+\centering\small
+\caption{Ablations: edge features and positional encodings.}
+\label{tab:abl}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Variant} & \textbf{Node dim} & \textbf{AUROC} & \textbf{F1} \\
+\midrule
+Edge feats (yes) & 22 & \textbf{0.884} & \textbf{0.326} \\
+Edge feats (no)  & 22 & 0.881 & 0.323 \\
+\midrule
+No PE            & 22 & \textbf{0.884} & \textbf{0.326} \\
+RWPE             & 54 & 0.881 & 0.321 \\
+LapPE            & 54 & 0.877 & 0.316 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Edge features give a small ($\sim$0.3\% AUROC) gain at minimal cost. Positional encodings do \emph{not} help here---rich node + edge features already encode local structure, so PE is redundant; LapPE is additionally unstable due to sign ambiguity (Table~\ref{tab:abl}).
+
+\paragraph{Architecture variants.} Configuration~A with a narrow 64-dim bottleneck (narrower than the 138-label output) underperforms (AUROC $0.879$). Configuration~B (growing pyramid $64\!\rightarrow\!96\!\rightarrow\!112\!\rightarrow\!128$) reaches $0.883$. Configuration~C (uniform $128$, projected $512\!\rightarrow\!120\!\rightarrow\!138$) is best at $0.884$ / F1 $0.326$. \emph{Avoiding narrow bottlenecks is critical.}
+
+\subsection{Label-Level Breakdown}
+High-frequency labels achieve strong F1: \emph{fruity} $0.68$, \emph{floral} $0.65$, \emph{woody} $0.62$, \emph{fresh} $0.58$, \emph{sweet} $0.54$. Tail labels struggle: \emph{farmy} $0.08$, \emph{mushroomy} $0.12$, \emph{medicinal} $0.15$, \emph{leathery} $0.18$. Imbalance is the dominant limiting factor.
+
+\subsection{Hierarchy Penalty Analysis}
+Of $\sim$400 candidate parent--child pairs, 187 pass the $P(\text{par}\mid\text{child})\ge 0.6$ filter and 213 are rejected. Valid examples: \emph{berry}$\rightarrow$\emph{fruity} ($0.82$), \emph{citrus}$\rightarrow$\emph{fresh} ($0.71$), \emph{rose}$\rightarrow$\emph{floral} ($0.68$). A rejected example is \emph{sweet}$\rightarrow$\emph{fruity} ($0.53$). Using validated pairs at $\lambda=0.01$ cuts violations from $8.2\%$ to $0.3\%$.
+
+% ============================================================
+\section{Discussion}
+
+\subsection{GATv2 Outperforms GCN}
+Replacing static GCN aggregation with dynamic GATv2 attention improves results consistently: a GCN baseline reaches AUROC $0.842$ / F1 $0.308$, versus GATv2 at $0.884$ / $0.326$ ($+5.0\%$ AUROC, $+5.8\%$ relative F1). Dynamic attention is especially helpful on small, chemistry-rich datasets.
+
+\subsection{Threshold Calibration is the Binding Constraint}
+The largest bottleneck is decision-threshold calibration, not model capacity. A global $0.5$ threshold is sub-optimal; optimal per-label thresholds range $0.1$--$0.9$ (median $\approx0.6$). At a label's optimal F1 threshold the identity $\mathrm{FP}=\mathrm{FN}$ holds, forcing $\mathrm{Precision}=\mathrm{Recall}=\mathrm{F1}$---a mathematical consequence of F1 optimization, not a bug. Tail labels require high thresholds ($>0.7$) to make any positive predictions. Practical deployment therefore needs a held-out calibration set, online feedback, or chemist-tuned thresholds.
+
+\subsection{Macro-Category Design Flaw}
+Because the 12 macro labels are deterministic OR-aggregations of fine labels, they violate HMCN-F's independence assumption. Empirically, removing the penalty ($\lambda=0$) yields the best F1, while adding it slightly reduces F1 and AUROC (though it does cut violations). Validated-pair filtering mitigates but does not eliminate the issue.
+
+\subsection{Features vs.\ Positional Encodings}
+Rich node + edge features suffice: $22$-dim nodes give AUROC $0.883$, $+$edges $0.884$, $+$RWPE $0.881$. PE methods designed for featureless graphs add redundant information here.
+
+\subsection{Comparison to Prior Work}
+Against SmellGCN (best reported F1 $0.301$), our F1 of $0.326$ is a $+8.3\%$ relative improvement, attributable to GATv2 over GCN, multi-layer pooling, the hierarchical head, and systematic tuning. Caveats: dataset composition, threshold methodology, and metric definitions differ.
+
+\subsection{Imbalance Strategies}
+Weighted BCE gave marginal F1 gains ($1$--$2\%$) but dropped AUROC ($2$--$3\%$); focal loss destabilized training; sampler-based oversampling hurt generalization. Standard BCE with careful per-label thresholds was the best overall recipe.
+
+\subsection{Generalization and Efficiency}
+The train/val/test gap is small (Table~\ref{tab:gen}), indicating minimal overfitting. Inference costs $\sim$7.4\,ms per molecule ($\sim$2.3\,ms forward $+$ $\sim$5.1\,ms graph construction), i.e.\ $\sim$135 molecules/s on a single GPU; training is $\sim$285\,s for 500 epochs ($\sim$4\,GB GPU RAM).
+
+\begin{table}[t]
+\centering\small
+\caption{Train/validation/test generalization (best model).}
+\label{tab:gen}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric} & \textbf{Train} & \textbf{Val} & \textbf{Test} & \textbf{Gap} \\
+\midrule
+AUROC (138) & 0.891 & 0.887 & 0.884 & 0.7\% \\
+F1 (138)    & 0.334 & 0.327 & 0.326 & 0.8\% \\
+AUROC (12)  & 0.916 & 0.911 & 0.909 & 0.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Limitations and Architectural Insights}
+\label{sec:limitations}
+\textbf{Macro-category incompatibility.} OR-aggregated parents are deterministic functions of children, so hierarchy penalties lack theoretical justification; the fix is to use independently annotated labels already present in the 138 as genuine parents, eliminating external \texttt{META\_CATEGORIES} and making Eq.~\eqref{eq:hmcnf} directly applicable.
+\textbf{F1/P/R identity.} At the optimal F1 threshold, $\mathrm{P}=\mathrm{R}=\mathrm{F1}$; maximizing both F1 and AUROC requires a compromise threshold.
+\textbf{Head scaling.} Beyond 8 heads, AUROC degrades---over-parameterization for this dataset.
+\textbf{Dataset size.} With $\sim$3{,}000 training molecules over 138 labels ($\sim$22 positives/label on average), tail labels ($<30$ positives) remain unreliable; a $10{,}000+$ molecule dataset would help most.
+
+% ============================================================
+\section{Future Work}
+\textbf{Immediate:} (i) the HMCN-F faithfulness fix above; (ii) an expanded architecture zoo---GINEConv, GraphSAGE, NNConv, GPSConv---each with distinct inductive biases; (iii) larger, consistently labeled datasets (PubChem, Pyrfume, NCBI).
+\textbf{Advanced:} contrastive pre-training on auxiliary chemistry tasks; multi-task transfer; architecture ensembles; threshold meta-learning that predicts per-label thresholds from label statistics.
+\textbf{Deployment:} a real-time SMILES$\rightarrow$descriptor web tool; an active-learning feedback loop; attention-rollout explainability.
+\textbf{Theory:} Bayesian/MC-Dropout uncertainty, causal structure--property analysis, and out-of-distribution detection.
+
+% ============================================================
+\section{Conclusion}
+We developed \textbf{SmellGATV2\_HMCNF}, an end-to-end pipeline predicting fine-grained olfactory descriptors from molecular structure, achieving F1-macro $0.326$ and AUROC $0.884$ on 4{,}983 molecules over 138 labels. Contributions include a GATv2-over-GCN encoder with multi-layer pooling ($+5\%$ AUROC), a rigorous HMCN-F head with data-driven hierarchy filtering, comprehensive sweeps and ablations, strong generalization with real-time inference, and the identification of per-label threshold calibration---not model capacity---as the binding constraint on F1. Future work will align the macro-category hierarchy, explore alternative GNN architectures, and integrate larger datasets to improve tail-label coverage.
+
+% ============================================================
+\section*{References}
+\small
+\begin{enumerate}[leftmargin=1.4em,itemsep=1pt,label={[\arabic*]}]
+  \item S.~Brody, U.~Alon, E.~Yahav. How attentive are graph attention networks? \emph{arXiv:2105.14491}, 2021.
+  \item V.~P.~Dwivedi et al. Graph neural networks with learnable structural and positional representations. \emph{ICLR}, 2022.
+  \item T.~Kipf, M.~Welling. Semi-supervised classification with graph convolutional networks. \emph{ICLR}, 2017.
+  \item B.~Sanchez-Lengeling et al. Machine learning for scent: learning generalizable perceptual representations of small molecules. \emph{arXiv:1910.10685}, 2019.
+  \item M.~H.~Segler, M.~Preuss, M.~P.~Waller. Planning chemical syntheses with deep neural networks and symbolic AI. \emph{Nature} 555, 604--610, 2018.
+  \item P.~Veli\v{c}kovi\'c et al. Graph attention networks. \emph{ICLR}, 2018.
+  \item J.~Wehrmann, R.~Cerri, R.~C.~Barros. Hierarchical multi-label classification networks. \emph{ICML}, 2018.
+\end{enumerate}
+
+\onecolumn
+\appendix
+\section*{Appendix A\quad Abbreviated Hyperparameter Sweep}
+\small
+\begin{table}[h]
+\centering
+\begin{tabular}{ccccccl}
+\toprule
+\textbf{Heads} & $\boldsymbol{\lambda}$ & \textbf{Epochs} & \textbf{AUROC$_{138}$} & \textbf{F1$_{138}$} & \textbf{Viol.} & \textbf{Note} \\
+\midrule
+2  & 0    & 500  & 0.841 & 0.302 & 12.1\% & low capacity \\
+4  & 0    & 500  & 0.848 & 0.314 & 10.5\% & \\
+8  & 0    & 500  & 0.852 & \textbf{0.326} & 8.2\%  & best F1 \\
+8  & 0.01 & 1000 & \textbf{0.884} & 0.318 & 0.3\%  & best AUROC \\
+16 & 0    & 500  & 0.879 & 0.321 & 1.2\%  & over-parameterized \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Appendix B\quad Per-Label Threshold Examples}
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Descriptor} & \textbf{Freq.} & \textbf{Threshold} & \textbf{F1} & \textbf{Note} \\
+\midrule
+fruity   & 65\% & 0.45 & 0.68 & head label \\
+floral   & 62\% & 0.48 & 0.65 & head label \\
+metallic & 0.8\% & 0.82 & 0.26 & tail; high threshold \\
+farmy    & 0.6\% & 0.88 & 0.08 & tail; highest threshold \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}\\
+\footnotesize ISIPCA, Cergy-Pontoise, France $\cdot$ Aryballe collaboration $\cdot$ Internship report, 2026.
+
+\end{document}

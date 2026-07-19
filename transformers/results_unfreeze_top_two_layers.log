@@ -1,0 +1,126 @@
+11:28:23 | Log file : logs/chemberta_finetune_phase1_20260630_112823.log
+11:28:23 | Device   : cuda:0
+11:28:23 | Model    : seyonec/ChemBERTa-zinc-base-v1
+11:28:23 | Config   : LR_head=0.0001, LR_backbone=1e-05, BS=32, MAX_EPOCHS=100, PATIENCE=10
+11:28:23 | Unfreeze : top 2 layers
+11:28:23 | ASL      : gamma_pos=0, gamma_neg=4, margin=0.05, smoothing=0.05
+11:28:23 | SMILES enumeration: 20 variants/molecule (train only)
+11:28:23 | Loading data from features_clustering_A_r2.csv
+11:28:24 | Dataset  : 4981 molecules
+11:28:24 | Train: 3367 | Val: 586 | Test: 1028
+11:28:24 | Generating SMILES enumeration pools for training set...
+11:28:38 | Backbone layers: 6 total, layers 4-5 unfrozen (14,175,744 / 44,103,936 params trainable)
+11:28:46 | Epoch   1/100 | Loss: 0.2180 | Val PR AUC: 0.3084 | Val ROC AUC: 0.5309 | Val macro-F1: 0.4132  <- best
+11:28:53 | Epoch   2/100 | Loss: 0.1982 | Val PR AUC: 0.3737 | Val ROC AUC: 0.6028 | Val macro-F1: 0.4347  <- best
+11:28:59 | Epoch   3/100 | Loss: 0.1926 | Val PR AUC: 0.4335 | Val ROC AUC: 0.6675 | Val macro-F1: 0.4451  <- best
+11:29:07 | Epoch   4/100 | Loss: 0.1884 | Val PR AUC: 0.4634 | Val ROC AUC: 0.6952 | Val macro-F1: 0.4588  <- best
+11:29:14 | Epoch   5/100 | Loss: 0.1861 | Val PR AUC: 0.4748 | Val ROC AUC: 0.7044 | Val macro-F1: 0.4644  <- best
+11:29:21 | Epoch   6/100 | Loss: 0.1847 | Val PR AUC: 0.4817 | Val ROC AUC: 0.7095 | Val macro-F1: 0.4750  <- best
+11:29:27 | Epoch   7/100 | Loss: 0.1826 | Val PR AUC: 0.4890 | Val ROC AUC: 0.7134 | Val macro-F1: 0.4799  <- best
+11:29:35 | Epoch   8/100 | Loss: 0.1820 | Val PR AUC: 0.4913 | Val ROC AUC: 0.7150 | Val macro-F1: 0.4798  <- best
+11:29:42 | Epoch   9/100 | Loss: 0.1812 | Val PR AUC: 0.4941 | Val ROC AUC: 0.7188 | Val macro-F1: 0.4915  <- best
+11:29:49 | Epoch  10/100 | Loss: 0.1799 | Val PR AUC: 0.4984 | Val ROC AUC: 0.7188 | Val macro-F1: 0.4797  <- best
+11:29:57 | Epoch  11/100 | Loss: 0.1789 | Val PR AUC: 0.5018 | Val ROC AUC: 0.7216 | Val macro-F1: 0.4862  <- best
+11:30:04 | Epoch  12/100 | Loss: 0.1782 | Val PR AUC: 0.5038 | Val ROC AUC: 0.7266 | Val macro-F1: 0.4881  <- best
+11:30:12 | Epoch  13/100 | Loss: 0.1782 | Val PR AUC: 0.5105 | Val ROC AUC: 0.7315 | Val macro-F1: 0.4931  <- best
+11:30:20 | Epoch  14/100 | Loss: 0.1783 | Val PR AUC: 0.5069 | Val ROC AUC: 0.7266 | Val macro-F1: 0.4887  (no improve 1/10)
+11:30:28 | Epoch  15/100 | Loss: 0.1772 | Val PR AUC: 0.5125 | Val ROC AUC: 0.7304 | Val macro-F1: 0.4918  <- best
+11:30:37 | Epoch  16/100 | Loss: 0.1770 | Val PR AUC: 0.5119 | Val ROC AUC: 0.7301 | Val macro-F1: 0.4921  (no improve 1/10)
+11:30:45 | Epoch  17/100 | Loss: 0.1762 | Val PR AUC: 0.5157 | Val ROC AUC: 0.7313 | Val macro-F1: 0.4923  <- best
+11:30:53 | Epoch  18/100 | Loss: 0.1756 | Val PR AUC: 0.5179 | Val ROC AUC: 0.7335 | Val macro-F1: 0.4911  <- best
+11:31:00 | Epoch  19/100 | Loss: 0.1755 | Val PR AUC: 0.5161 | Val ROC AUC: 0.7318 | Val macro-F1: 0.4930  (no improve 1/10)
+11:31:08 | Epoch  20/100 | Loss: 0.1756 | Val PR AUC: 0.5182 | Val ROC AUC: 0.7321 | Val macro-F1: 0.4933  <- best
+11:31:15 | Epoch  21/100 | Loss: 0.1752 | Val PR AUC: 0.5225 | Val ROC AUC: 0.7361 | Val macro-F1: 0.4945  <- best
+11:31:24 | Epoch  22/100 | Loss: 0.1742 | Val PR AUC: 0.5218 | Val ROC AUC: 0.7358 | Val macro-F1: 0.4930  (no improve 1/10)
+11:31:32 | Epoch  23/100 | Loss: 0.1749 | Val PR AUC: 0.5241 | Val ROC AUC: 0.7340 | Val macro-F1: 0.4942  <- best
+11:31:39 | Epoch  24/100 | Loss: 0.1743 | Val PR AUC: 0.5264 | Val ROC AUC: 0.7358 | Val macro-F1: 0.4938  <- best
+11:31:47 | Epoch  25/100 | Loss: 0.1740 | Val PR AUC: 0.5240 | Val ROC AUC: 0.7323 | Val macro-F1: 0.4938  (no improve 1/10)
+11:31:55 | Epoch  26/100 | Loss: 0.1738 | Val PR AUC: 0.5233 | Val ROC AUC: 0.7371 | Val macro-F1: 0.4986  (no improve 2/10)
+11:32:03 | Epoch  27/100 | Loss: 0.1737 | Val PR AUC: 0.5254 | Val ROC AUC: 0.7345 | Val macro-F1: 0.4908  (no improve 3/10)
+11:32:11 | Epoch  28/100 | Loss: 0.1726 | Val PR AUC: 0.5290 | Val ROC AUC: 0.7385 | Val macro-F1: 0.4942  <- best
+11:32:19 | Epoch  29/100 | Loss: 0.1723 | Val PR AUC: 0.5324 | Val ROC AUC: 0.7395 | Val macro-F1: 0.4980  <- best
+11:32:27 | Epoch  30/100 | Loss: 0.1729 | Val PR AUC: 0.5323 | Val ROC AUC: 0.7409 | Val macro-F1: 0.4910  (no improve 1/10)
+11:32:35 | Epoch  31/100 | Loss: 0.1724 | Val PR AUC: 0.5327 | Val ROC AUC: 0.7396 | Val macro-F1: 0.4981  <- best
+11:32:42 | Epoch  32/100 | Loss: 0.1716 | Val PR AUC: 0.5374 | Val ROC AUC: 0.7405 | Val macro-F1: 0.4924  <- best
+11:32:50 | Epoch  33/100 | Loss: 0.1717 | Val PR AUC: 0.5382 | Val ROC AUC: 0.7410 | Val macro-F1: 0.4968  <- best
+11:32:58 | Epoch  34/100 | Loss: 0.1716 | Val PR AUC: 0.5405 | Val ROC AUC: 0.7429 | Val macro-F1: 0.4980  <- best
+11:33:05 | Epoch  35/100 | Loss: 0.1714 | Val PR AUC: 0.5376 | Val ROC AUC: 0.7426 | Val macro-F1: 0.4974  (no improve 1/10)
+11:33:13 | Epoch  36/100 | Loss: 0.1715 | Val PR AUC: 0.5391 | Val ROC AUC: 0.7412 | Val macro-F1: 0.5002  (no improve 2/10)
+11:33:21 | Epoch  37/100 | Loss: 0.1708 | Val PR AUC: 0.5400 | Val ROC AUC: 0.7426 | Val macro-F1: 0.4986  (no improve 3/10)
+11:33:29 | Epoch  38/100 | Loss: 0.1706 | Val PR AUC: 0.5429 | Val ROC AUC: 0.7441 | Val macro-F1: 0.5024  <- best
+11:33:36 | Epoch  39/100 | Loss: 0.1706 | Val PR AUC: 0.5503 | Val ROC AUC: 0.7469 | Val macro-F1: 0.4981  <- best
+11:33:44 | Epoch  40/100 | Loss: 0.1701 | Val PR AUC: 0.5479 | Val ROC AUC: 0.7450 | Val macro-F1: 0.4998  (no improve 1/10)
+11:33:52 | Epoch  41/100 | Loss: 0.1699 | Val PR AUC: 0.5472 | Val ROC AUC: 0.7454 | Val macro-F1: 0.5001  (no improve 2/10)
+11:34:00 | Epoch  42/100 | Loss: 0.1700 | Val PR AUC: 0.5477 | Val ROC AUC: 0.7465 | Val macro-F1: 0.5036  (no improve 3/10)
+11:34:08 | Epoch  43/100 | Loss: 0.1698 | Val PR AUC: 0.5471 | Val ROC AUC: 0.7458 | Val macro-F1: 0.4987  (no improve 4/10)
+11:34:16 | Epoch  44/100 | Loss: 0.1696 | Val PR AUC: 0.5469 | Val ROC AUC: 0.7458 | Val macro-F1: 0.4969  (no improve 5/10)
+11:34:23 | Epoch  45/100 | Loss: 0.1694 | Val PR AUC: 0.5517 | Val ROC AUC: 0.7470 | Val macro-F1: 0.4990  <- best
+11:34:31 | Epoch  46/100 | Loss: 0.1696 | Val PR AUC: 0.5506 | Val ROC AUC: 0.7482 | Val macro-F1: 0.4986  (no improve 1/10)
+11:34:39 | Epoch  47/100 | Loss: 0.1694 | Val PR AUC: 0.5508 | Val ROC AUC: 0.7495 | Val macro-F1: 0.4994  (no improve 2/10)
+11:34:46 | Epoch  48/100 | Loss: 0.1695 | Val PR AUC: 0.5474 | Val ROC AUC: 0.7472 | Val macro-F1: 0.4961  (no improve 3/10)
+11:34:54 | Epoch  49/100 | Loss: 0.1688 | Val PR AUC: 0.5509 | Val ROC AUC: 0.7491 | Val macro-F1: 0.5042  (no improve 4/10)
+11:35:02 | Epoch  50/100 | Loss: 0.1689 | Val PR AUC: 0.5485 | Val ROC AUC: 0.7480 | Val macro-F1: 0.5011  (no improve 5/10)
+11:35:10 | Epoch  51/100 | Loss: 0.1688 | Val PR AUC: 0.5528 | Val ROC AUC: 0.7497 | Val macro-F1: 0.5033  <- best
+11:35:17 | Epoch  52/100 | Loss: 0.1685 | Val PR AUC: 0.5525 | Val ROC AUC: 0.7489 | Val macro-F1: 0.5024  (no improve 1/10)
+11:35:25 | Epoch  53/100 | Loss: 0.1690 | Val PR AUC: 0.5500 | Val ROC AUC: 0.7490 | Val macro-F1: 0.4994  (no improve 2/10)
+11:35:33 | Epoch  54/100 | Loss: 0.1681 | Val PR AUC: 0.5492 | Val ROC AUC: 0.7478 | Val macro-F1: 0.5001  (no improve 3/10)
+11:35:41 | Epoch  55/100 | Loss: 0.1674 | Val PR AUC: 0.5513 | Val ROC AUC: 0.7494 | Val macro-F1: 0.5015  (no improve 4/10)
+11:35:49 | Epoch  56/100 | Loss: 0.1675 | Val PR AUC: 0.5489 | Val ROC AUC: 0.7484 | Val macro-F1: 0.5014  (no improve 5/10)
+11:35:56 | Epoch  57/100 | Loss: 0.1680 | Val PR AUC: 0.5514 | Val ROC AUC: 0.7500 | Val macro-F1: 0.5029  (no improve 6/10)
+11:36:04 | Epoch  58/100 | Loss: 0.1681 | Val PR AUC: 0.5516 | Val ROC AUC: 0.7493 | Val macro-F1: 0.5036  (no improve 7/10)
+11:36:12 | Epoch  59/100 | Loss: 0.1676 | Val PR AUC: 0.5527 | Val ROC AUC: 0.7495 | Val macro-F1: 0.5062  (no improve 8/10)
+11:36:20 | Epoch  60/100 | Loss: 0.1678 | Val PR AUC: 0.5527 | Val ROC AUC: 0.7504 | Val macro-F1: 0.5012  (no improve 9/10)
+11:36:28 | Epoch  61/100 | Loss: 0.1681 | Val PR AUC: 0.5539 | Val ROC AUC: 0.7512 | Val macro-F1: 0.5062  <- best
+11:36:35 | Epoch  62/100 | Loss: 0.1675 | Val PR AUC: 0.5543 | Val ROC AUC: 0.7503 | Val macro-F1: 0.5040  <- best
+11:36:43 | Epoch  63/100 | Loss: 0.1673 | Val PR AUC: 0.5531 | Val ROC AUC: 0.7503 | Val macro-F1: 0.5059  (no improve 1/10)
+11:36:51 | Epoch  64/100 | Loss: 0.1679 | Val PR AUC: 0.5532 | Val ROC AUC: 0.7506 | Val macro-F1: 0.5053  (no improve 2/10)
+11:36:58 | Epoch  65/100 | Loss: 0.1671 | Val PR AUC: 0.5543 | Val ROC AUC: 0.7510 | Val macro-F1: 0.5031  <- best
+11:37:06 | Epoch  66/100 | Loss: 0.1673 | Val PR AUC: 0.5555 | Val ROC AUC: 0.7513 | Val macro-F1: 0.5071  <- best
+11:37:14 | Epoch  67/100 | Loss: 0.1670 | Val PR AUC: 0.5565 | Val ROC AUC: 0.7521 | Val macro-F1: 0.5063  <- best
+11:37:22 | Epoch  68/100 | Loss: 0.1664 | Val PR AUC: 0.5577 | Val ROC AUC: 0.7527 | Val macro-F1: 0.5059  <- best
+11:37:29 | Epoch  69/100 | Loss: 0.1675 | Val PR AUC: 0.5567 | Val ROC AUC: 0.7520 | Val macro-F1: 0.5055  (no improve 1/10)
+11:37:37 | Epoch  70/100 | Loss: 0.1668 | Val PR AUC: 0.5579 | Val ROC AUC: 0.7526 | Val macro-F1: 0.5081  <- best
+11:37:45 | Epoch  71/100 | Loss: 0.1662 | Val PR AUC: 0.5568 | Val ROC AUC: 0.7522 | Val macro-F1: 0.5084  (no improve 1/10)
+11:37:53 | Epoch  72/100 | Loss: 0.1667 | Val PR AUC: 0.5574 | Val ROC AUC: 0.7522 | Val macro-F1: 0.5075  (no improve 2/10)
+11:38:00 | Epoch  73/100 | Loss: 0.1666 | Val PR AUC: 0.5570 | Val ROC AUC: 0.7528 | Val macro-F1: 0.5077  (no improve 3/10)
+11:38:08 | Epoch  74/100 | Loss: 0.1665 | Val PR AUC: 0.5589 | Val ROC AUC: 0.7538 | Val macro-F1: 0.5087  <- best
+11:38:16 | Epoch  75/100 | Loss: 0.1663 | Val PR AUC: 0.5588 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5088  (no improve 1/10)
+11:38:24 | Epoch  76/100 | Loss: 0.1667 | Val PR AUC: 0.5586 | Val ROC AUC: 0.7537 | Val macro-F1: 0.5086  (no improve 2/10)
+11:38:31 | Epoch  77/100 | Loss: 0.1663 | Val PR AUC: 0.5578 | Val ROC AUC: 0.7532 | Val macro-F1: 0.5092  (no improve 3/10)
+11:38:39 | Epoch  78/100 | Loss: 0.1665 | Val PR AUC: 0.5588 | Val ROC AUC: 0.7538 | Val macro-F1: 0.5085  (no improve 4/10)
+11:38:47 | Epoch  79/100 | Loss: 0.1662 | Val PR AUC: 0.5590 | Val ROC AUC: 0.7539 | Val macro-F1: 0.5082  <- best
+11:38:55 | Epoch  80/100 | Loss: 0.1659 | Val PR AUC: 0.5588 | Val ROC AUC: 0.7532 | Val macro-F1: 0.5090  (no improve 1/10)
+11:39:02 | Epoch  81/100 | Loss: 0.1661 | Val PR AUC: 0.5590 | Val ROC AUC: 0.7531 | Val macro-F1: 0.5095  (no improve 2/10)
+11:39:10 | Epoch  82/100 | Loss: 0.1663 | Val PR AUC: 0.5593 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5090  <- best
+11:39:18 | Epoch  83/100 | Loss: 0.1654 | Val PR AUC: 0.5598 | Val ROC AUC: 0.7537 | Val macro-F1: 0.5095  <- best
+11:39:26 | Epoch  84/100 | Loss: 0.1661 | Val PR AUC: 0.5595 | Val ROC AUC: 0.7537 | Val macro-F1: 0.5095  (no improve 1/10)
+11:39:34 | Epoch  85/100 | Loss: 0.1660 | Val PR AUC: 0.5591 | Val ROC AUC: 0.7531 | Val macro-F1: 0.5089  (no improve 2/10)
+11:39:41 | Epoch  86/100 | Loss: 0.1658 | Val PR AUC: 0.5590 | Val ROC AUC: 0.7531 | Val macro-F1: 0.5088  (no improve 3/10)
+11:39:49 | Epoch  87/100 | Loss: 0.1663 | Val PR AUC: 0.5591 | Val ROC AUC: 0.7534 | Val macro-F1: 0.5093  (no improve 4/10)
+11:39:57 | Epoch  88/100 | Loss: 0.1663 | Val PR AUC: 0.5593 | Val ROC AUC: 0.7534 | Val macro-F1: 0.5087  (no improve 5/10)
+11:40:04 | Epoch  89/100 | Loss: 0.1659 | Val PR AUC: 0.5595 | Val ROC AUC: 0.7534 | Val macro-F1: 0.5098  (no improve 6/10)
+11:40:12 | Epoch  90/100 | Loss: 0.1661 | Val PR AUC: 0.5596 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5089  (no improve 7/10)
+11:40:20 | Epoch  91/100 | Loss: 0.1656 | Val PR AUC: 0.5595 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5095  (no improve 8/10)
+11:40:28 | Epoch  92/100 | Loss: 0.1658 | Val PR AUC: 0.5593 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5098  (no improve 9/10)
+11:40:36 | Epoch  93/100 | Loss: 0.1664 | Val PR AUC: 0.5594 | Val ROC AUC: 0.7536 | Val macro-F1: 0.5094  (no improve 10/10)
+11:40:36 | Early stopping at epoch 93 (no val macro-F1 improvement for 10 epochs)
+11:40:36 | Best val macro-pr: 0.5598
+11:40:36 | Checkpoint saved: checkpoints/chemberta_finetune_phase1_best.pt
+11:40:38 | Calibrated thresholds: [0.58 0.64 0.62 0.56 0.6  0.58 0.54 0.64 0.54 0.62 0.64 0.58]
+11:40:39 | ══ Test Results — Phase 1 Fine-tuning ═══════════════
+11:40:39 |   Macro PR AUC  : 0.5631   (BR+RF baseline: 0.624)
+11:40:39 |   Macro ROC AUC : 0.7803  (BR+RF baseline: 0.820)
+11:40:39 |   Macro F1      : 0.5646   (BR+RF baseline: 0.567)
+11:40:39 |   Per-label PR AUC:
+11:40:39 |     floral                   : 0.6453
+11:40:39 |     fruity                   : 0.7330
+11:40:39 |     sweet                    : 0.6004
+11:40:39 |     woody                    : 0.5471
+11:40:39 |     green                    : 0.6999
+11:40:39 |     spicy                    : 0.4569
+11:40:39 |     animal_musk              : 0.4049
+11:40:39 |     earthy                   : 0.5682
+11:40:39 |     citrus                   : 0.3706
+11:40:39 |     chemical                 : 0.6745
+11:40:39 |     gourmand                 : 0.6280
+11:40:39 |     powdery_amber            : 0.4284

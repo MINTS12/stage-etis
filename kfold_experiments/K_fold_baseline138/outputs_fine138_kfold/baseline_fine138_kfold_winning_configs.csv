@@ -1,0 +1,6 @@
+model,param_value,roc_auc_138,pr_auc_138,f1_macro_138,f1_micro_138,precision_macro_138,recall_macro_138,precision_micro_138,recall_micro_138,matched_accuracy_138,hamming_loss_138,jaccard_138,hier_violation_rate_138,roc_auc_12,pr_auc_12,f1_macro_12,instance_f1_12,balanced_accuracy_12,matched_accuracy_12,sensitivity_macro_12,specificity_macro_12,precision_macro_12,recall_macro_12,hamming_loss_12,jaccard_12,hier_violation_rate_12,label_cooc_consistency_12,test_loss
+KNN,KNN_n_neighbors=21_metric=cosine,0.81064,0.26172,0.29488,0.40716,0.29576,0.37,0.34121999999999997,0.5053599999999999,0.02412,0.05202,0.1855,,,,,,,,,,,,,,,,
+LR,LR_C=0.1,0.8552,0.29304,0.30844,0.40342,0.28278,0.41462000000000004,0.32662,0.5278,0.0211,0.05516,0.19406,,,,,,,,,,,,,,,,
+RF,RF_n_estimators=300_max_features=log2,0.8657199999999999,0.34418,0.34018,0.43828000000000006,0.35092,0.40338,0.37916,0.51986,0.040760000000000005,0.047099999999999996,0.21896,,,,,,,,,,,,,,,,
+SVM,SVM_C=1,0.8588800000000001,0.30966,0.31374,0.42078,0.31388,0.3847,0.35768,0.51104,0.03354,0.04968,0.19904,,,,,,,,,,,,,,,,
+XGB,XGB_n_estimators=100_max_depth=6,0.8356600000000001,0.32148,0.32182,0.45092,0.3594,0.33152,0.426,0.47940000000000005,0.03674,0.04124,0.2065,,,,,,,,,,,,,,,,

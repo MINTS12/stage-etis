@@ -1,0 +1,400 @@
+09:01:43 | INFO | DEBUG=False | log file: logs/baseline_meta12_kfold_full_20260709_090143.log
+09:01:43 | INFO | Script started at: 2026-07-09 09:01:43
+09:01:43 | INFO | Loaded hmcn_dataset.csv: (4976, 1156)
+09:01:43 | INFO | Labels (meta_*)   : 12
+09:01:43 | INFO | Fine cols excluded: 138
+09:01:43 | INFO | FP cols           : 678
+09:01:43 | INFO | Mordred cols      : 327
+09:01:43 | INFO | NaNs in features  : 0
+09:01:47 | INFO | Computed a fresh 5-fold split and cached it to 'kfold_results/hmcn_kfold_split_indices.pkl'.
+09:01:47 | INFO | Configs total: 22 | Folds: 5 | Total runs: 110
+09:01:47 | INFO | ============================================================
+09:01:47 | INFO | FOLD 1/5  (3379 train / 614 val / 983 test)
+09:01:47 | INFO | ============================================================
+09:01:47 | INFO |   Fold features: fp=672, mordred=322 (dropped 5 correlated) | train=3379 val=614 test=983
+09:01:47 | INFO |   [LR] fold 0: fitting LR_C=0.01
+09:02:59 | INFO |   [LR] fold 0: fit done in 71.3s
+09:02:59 | INFO |   [LR] fold 0 [LR_C=0.01] MACRO  F1=0.606  PR_AUC=0.623  ROC_AUC=0.812  Bal.Acc=0.727  Precision=0.529
+09:02:59 | INFO |   [LR] fold 0: fitting LR_C=0.1
+09:04:08 | INFO |   [LR] fold 0: fit done in 68.8s
+09:04:09 | INFO |   [LR] fold 0 [LR_C=0.1] MACRO  F1=0.614  PR_AUC=0.623  ROC_AUC=0.811  Bal.Acc=0.735  Precision=0.538
+09:04:09 | INFO |   [LR] fold 0: fitting LR_C=1
+09:05:21 | INFO |   [LR] fold 0: fit done in 72.1s
+09:05:21 | INFO |   [LR] fold 0 [LR_C=1] MACRO  F1=0.610  PR_AUC=0.621  ROC_AUC=0.810  Bal.Acc=0.736  Precision=0.536
+09:05:21 | INFO |   [LR] fold 0: fitting LR_C=10
+09:06:29 | INFO |   [LR] fold 0: fit done in 67.9s
+09:06:30 | INFO |   [LR] fold 0 [LR_C=10] MACRO  F1=0.611  PR_AUC=0.621  ROC_AUC=0.810  Bal.Acc=0.735  Precision=0.534
+09:06:30 | INFO |   [LR] fold 0: fitting LR_C=100
+09:07:40 | INFO |   [LR] fold 0: fit done in 69.8s
+09:07:40 | INFO |   [LR] fold 0 [LR_C=100] MACRO  F1=0.611  PR_AUC=0.621  ROC_AUC=0.810  Bal.Acc=0.735  Precision=0.534
+09:07:40 | INFO |   [RF] fold 0: fitting RF_n_estimators=100_max_features=sqrt
+09:07:44 | INFO |   [RF] fold 0: fit done in 3.5s
+09:07:45 | INFO |   [RF] fold 0 [RF_n_estimators=100_max_features=sqrt] MACRO  F1=0.621  PR_AUC=0.661  ROC_AUC=0.826  Bal.Acc=0.737  Precision=0.570
+09:07:45 | INFO |   [RF] fold 0: fitting RF_n_estimators=100_max_features=log2
+09:07:49 | INFO |   [RF] fold 0: fit done in 3.7s
+09:07:50 | INFO |   [RF] fold 0 [RF_n_estimators=100_max_features=log2] MACRO  F1=0.621  PR_AUC=0.663  ROC_AUC=0.828  Bal.Acc=0.741  Precision=0.574
+09:07:50 | INFO |   [RF] fold 0: fitting RF_n_estimators=300_max_features=sqrt
+09:07:59 | INFO |   [RF] fold 0: fit done in 8.8s
+09:08:02 | INFO |   [RF] fold 0 [RF_n_estimators=300_max_features=sqrt] MACRO  F1=0.617  PR_AUC=0.669  ROC_AUC=0.830  Bal.Acc=0.734  Precision=0.596
+09:08:02 | INFO |   [RF] fold 0: fitting RF_n_estimators=300_max_features=log2
+09:08:12 | INFO |   [RF] fold 0: fit done in 10.2s
+09:08:15 | INFO |   [RF] fold 0 [RF_n_estimators=300_max_features=log2] MACRO  F1=0.628  PR_AUC=0.671  ROC_AUC=0.831  Bal.Acc=0.744  Precision=0.589
+09:08:15 | INFO |   [XGB] fold 0: fitting XGB_n_estimators=100_max_depth=3
+09:08:21 | INFO |   [XGB] fold 0: fit done in 5.4s
+09:08:21 | INFO |   [XGB] fold 0 [XGB_n_estimators=100_max_depth=3] MACRO  F1=0.607  PR_AUC=0.651  ROC_AUC=0.817  Bal.Acc=0.727  Precision=0.566
+09:08:21 | INFO |   [XGB] fold 0: fitting XGB_n_estimators=100_max_depth=6
+09:08:32 | INFO |   [XGB] fold 0: fit done in 11.0s
+09:08:32 | INFO |   [XGB] fold 0 [XGB_n_estimators=100_max_depth=6] MACRO  F1=0.601  PR_AUC=0.656  ROC_AUC=0.817  Bal.Acc=0.717  Precision=0.596
+09:08:32 | INFO |   [XGB] fold 0: fitting XGB_n_estimators=300_max_depth=3
+09:08:46 | INFO |   [XGB] fold 0: fit done in 13.5s
+09:08:46 | INFO |   [XGB] fold 0 [XGB_n_estimators=300_max_depth=3] MACRO  F1=0.607  PR_AUC=0.652  ROC_AUC=0.811  Bal.Acc=0.729  Precision=0.560
+09:08:46 | INFO |   [XGB] fold 0: fitting XGB_n_estimators=300_max_depth=6
+09:09:15 | INFO |   [XGB] fold 0: fit done in 28.7s
+09:09:15 | INFO |   [XGB] fold 0 [XGB_n_estimators=300_max_depth=6] MACRO  F1=0.614  PR_AUC=0.657  ROC_AUC=0.816  Bal.Acc=0.727  Precision=0.578
+09:09:15 | INFO |   [SVM] fold 0: fitting SVM_C=0.1
+09:12:42 | INFO |   [SVM] fold 0: fit done in 206.4s
+09:13:05 | INFO |   [SVM] fold 0 [SVM_C=0.1] MACRO  F1=0.580  PR_AUC=0.595  ROC_AUC=0.791  Bal.Acc=0.705  Precision=0.512
+09:13:05 | INFO |   [SVM] fold 0: fitting SVM_C=1
+09:16:08 | INFO |   [SVM] fold 0: fit done in 183.0s
+09:16:27 | INFO |   [SVM] fold 0 [SVM_C=1] MACRO  F1=0.614  PR_AUC=0.633  ROC_AUC=0.818  Bal.Acc=0.736  Precision=0.553
+09:16:27 | INFO |   [SVM] fold 0: fitting SVM_C=10
+09:18:53 | INFO |   [SVM] fold 0: fit done in 146.0s
+09:19:06 | INFO |   [SVM] fold 0 [SVM_C=10] MACRO  F1=0.605  PR_AUC=0.625  ROC_AUC=0.808  Bal.Acc=0.726  Precision=0.565
+09:19:06 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=5_metric=euclidean
+09:19:06 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:08 | INFO |   [KNN] fold 0 [KNN_n_neighbors=5_metric=euclidean] MACRO  F1=0.576  PR_AUC=0.559  ROC_AUC=0.783  Bal.Acc=0.698  Precision=0.531
+09:19:08 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=5_metric=cosine
+09:19:08 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:16 | INFO |   [KNN] fold 0 [KNN_n_neighbors=5_metric=cosine] MACRO  F1=0.593  PR_AUC=0.563  ROC_AUC=0.785  Bal.Acc=0.717  Precision=0.508
+09:19:16 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=11_metric=euclidean
+09:19:16 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:17 | INFO |   [KNN] fold 0 [KNN_n_neighbors=11_metric=euclidean] MACRO  F1=0.589  PR_AUC=0.590  ROC_AUC=0.800  Bal.Acc=0.713  Precision=0.537
+09:19:17 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=11_metric=cosine
+09:19:17 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:25 | INFO |   [KNN] fold 0 [KNN_n_neighbors=11_metric=cosine] MACRO  F1=0.592  PR_AUC=0.595  ROC_AUC=0.805  Bal.Acc=0.715  Precision=0.548
+09:19:25 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=21_metric=euclidean
+09:19:25 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:26 | INFO |   [KNN] fold 0 [KNN_n_neighbors=21_metric=euclidean] MACRO  F1=0.594  PR_AUC=0.595  ROC_AUC=0.800  Bal.Acc=0.717  Precision=0.526
+09:19:26 | INFO |   [KNN] fold 0: fitting KNN_n_neighbors=21_metric=cosine
+09:19:26 | INFO |   [KNN] fold 0: fit done in 0.2s
+09:19:35 | INFO |   [KNN] fold 0 [KNN_n_neighbors=21_metric=cosine] MACRO  F1=0.591  PR_AUC=0.605  ROC_AUC=0.806  Bal.Acc=0.712  Precision=0.525
+09:19:35 | INFO | ============================================================
+09:19:35 | INFO | FOLD 2/5  (3371 train / 621 val / 984 test)
+09:19:35 | INFO | ============================================================
+09:19:35 | INFO |   Fold features: fp=670, mordred=322 (dropped 4 correlated) | train=3371 val=621 test=984
+09:19:35 | INFO |   [LR] fold 1: fitting LR_C=0.01
+09:20:43 | INFO |   [LR] fold 1: fit done in 67.7s
+09:20:43 | INFO |   [LR] fold 1 [LR_C=0.01] MACRO  F1=0.594  PR_AUC=0.620  ROC_AUC=0.805  Bal.Acc=0.726  Precision=0.518
+09:20:43 | INFO |   [LR] fold 1: fitting LR_C=0.1
+09:21:51 | INFO |   [LR] fold 1: fit done in 67.5s
+09:21:51 | INFO |   [LR] fold 1 [LR_C=0.1] MACRO  F1=0.592  PR_AUC=0.618  ROC_AUC=0.804  Bal.Acc=0.726  Precision=0.511
+09:21:51 | INFO |   [LR] fold 1: fitting LR_C=1
+09:22:59 | INFO |   [LR] fold 1: fit done in 67.4s
+09:22:59 | INFO |   [LR] fold 1 [LR_C=1] MACRO  F1=0.590  PR_AUC=0.616  ROC_AUC=0.804  Bal.Acc=0.727  Precision=0.511
+09:22:59 | INFO |   [LR] fold 1: fitting LR_C=10
+09:24:06 | INFO |   [LR] fold 1: fit done in 67.2s
+09:24:07 | INFO |   [LR] fold 1 [LR_C=10] MACRO  F1=0.594  PR_AUC=0.617  ROC_AUC=0.804  Bal.Acc=0.727  Precision=0.522
+09:24:07 | INFO |   [LR] fold 1: fitting LR_C=100
+09:25:14 | INFO |   [LR] fold 1: fit done in 67.2s
+09:25:15 | INFO |   [LR] fold 1 [LR_C=100] MACRO  F1=0.593  PR_AUC=0.617  ROC_AUC=0.804  Bal.Acc=0.726  Precision=0.522
+09:25:15 | INFO |   [RF] fold 1: fitting RF_n_estimators=100_max_features=sqrt
+09:25:18 | INFO |   [RF] fold 1: fit done in 3.4s
+09:25:19 | INFO |   [RF] fold 1 [RF_n_estimators=100_max_features=sqrt] MACRO  F1=0.608  PR_AUC=0.648  ROC_AUC=0.817  Bal.Acc=0.730  Precision=0.548
+09:25:19 | INFO |   [RF] fold 1: fitting RF_n_estimators=100_max_features=log2
+09:25:22 | INFO |   [RF] fold 1: fit done in 3.2s
+09:25:24 | INFO |   [RF] fold 1 [RF_n_estimators=100_max_features=log2] MACRO  F1=0.607  PR_AUC=0.649  ROC_AUC=0.817  Bal.Acc=0.737  Precision=0.540
+09:25:24 | INFO |   [RF] fold 1: fitting RF_n_estimators=300_max_features=sqrt
+09:25:32 | INFO |   [RF] fold 1: fit done in 8.4s
+09:25:35 | INFO |   [RF] fold 1 [RF_n_estimators=300_max_features=sqrt] MACRO  F1=0.605  PR_AUC=0.652  ROC_AUC=0.818  Bal.Acc=0.731  Precision=0.529
+09:25:35 | INFO |   [RF] fold 1: fitting RF_n_estimators=300_max_features=log2
+09:25:44 | INFO |   [RF] fold 1: fit done in 9.6s
+09:25:47 | INFO |   [RF] fold 1 [RF_n_estimators=300_max_features=log2] MACRO  F1=0.611  PR_AUC=0.655  ROC_AUC=0.821  Bal.Acc=0.735  Precision=0.535
+09:25:47 | INFO |   [XGB] fold 1: fitting XGB_n_estimators=100_max_depth=3
+09:25:52 | INFO |   [XGB] fold 1: fit done in 5.4s
+09:25:52 | INFO |   [XGB] fold 1 [XGB_n_estimators=100_max_depth=3] MACRO  F1=0.588  PR_AUC=0.638  ROC_AUC=0.803  Bal.Acc=0.712  Precision=0.531
+09:25:53 | INFO |   [XGB] fold 1: fitting XGB_n_estimators=100_max_depth=6
+09:26:03 | INFO |   [XGB] fold 1: fit done in 10.1s
+09:26:03 | INFO |   [XGB] fold 1 [XGB_n_estimators=100_max_depth=6] MACRO  F1=0.590  PR_AUC=0.632  ROC_AUC=0.802  Bal.Acc=0.719  Precision=0.528
+09:26:03 | INFO |   [XGB] fold 1: fitting XGB_n_estimators=300_max_depth=3
+09:26:17 | INFO |   [XGB] fold 1: fit done in 14.2s
+09:26:17 | INFO |   [XGB] fold 1 [XGB_n_estimators=300_max_depth=3] MACRO  F1=0.583  PR_AUC=0.632  ROC_AUC=0.800  Bal.Acc=0.717  Precision=0.547
+09:26:18 | INFO |   [XGB] fold 1: fitting XGB_n_estimators=300_max_depth=6
+09:26:45 | INFO |   [XGB] fold 1: fit done in 27.5s
+09:26:45 | INFO |   [XGB] fold 1 [XGB_n_estimators=300_max_depth=6] MACRO  F1=0.588  PR_AUC=0.633  ROC_AUC=0.801  Bal.Acc=0.717  Precision=0.537
+09:26:45 | INFO |   [SVM] fold 1: fitting SVM_C=0.1
+09:30:04 | INFO |   [SVM] fold 1: fit done in 198.6s
+09:30:28 | INFO |   [SVM] fold 1 [SVM_C=0.1] MACRO  F1=0.576  PR_AUC=0.590  ROC_AUC=0.790  Bal.Acc=0.712  Precision=0.515
+09:30:28 | INFO |   [SVM] fold 1: fitting SVM_C=1
+09:33:12 | INFO |   [SVM] fold 1: fit done in 164.7s
+09:33:29 | INFO |   [SVM] fold 1 [SVM_C=1] MACRO  F1=0.605  PR_AUC=0.629  ROC_AUC=0.811  Bal.Acc=0.732  Precision=0.551
+09:33:29 | INFO |   [SVM] fold 1: fitting SVM_C=10
+09:35:50 | INFO |   [SVM] fold 1: fit done in 141.3s
+09:36:06 | INFO |   [SVM] fold 1 [SVM_C=10] MACRO  F1=0.581  PR_AUC=0.607  ROC_AUC=0.798  Bal.Acc=0.713  Precision=0.525
+09:36:06 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=5_metric=euclidean
+09:36:06 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:07 | INFO |   [KNN] fold 1 [KNN_n_neighbors=5_metric=euclidean] MACRO  F1=0.569  PR_AUC=0.545  ROC_AUC=0.772  Bal.Acc=0.698  Precision=0.502
+09:36:07 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=5_metric=cosine
+09:36:07 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:17 | INFO |   [KNN] fold 1 [KNN_n_neighbors=5_metric=cosine] MACRO  F1=0.568  PR_AUC=0.553  ROC_AUC=0.776  Bal.Acc=0.700  Precision=0.521
+09:36:17 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=11_metric=euclidean
+09:36:17 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:18 | INFO |   [KNN] fold 1 [KNN_n_neighbors=11_metric=euclidean] MACRO  F1=0.576  PR_AUC=0.571  ROC_AUC=0.785  Bal.Acc=0.708  Precision=0.509
+09:36:18 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=11_metric=cosine
+09:36:18 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:29 | INFO |   [KNN] fold 1 [KNN_n_neighbors=11_metric=cosine] MACRO  F1=0.582  PR_AUC=0.581  ROC_AUC=0.793  Bal.Acc=0.716  Precision=0.501
+09:36:29 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=21_metric=euclidean
+09:36:29 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:30 | INFO |   [KNN] fold 1 [KNN_n_neighbors=21_metric=euclidean] MACRO  F1=0.569  PR_AUC=0.586  ROC_AUC=0.791  Bal.Acc=0.698  Precision=0.522
+09:36:30 | INFO |   [KNN] fold 1: fitting KNN_n_neighbors=21_metric=cosine
+09:36:30 | INFO |   [KNN] fold 1: fit done in 0.2s
+09:36:40 | INFO |   [KNN] fold 1 [KNN_n_neighbors=21_metric=cosine] MACRO  F1=0.581  PR_AUC=0.596  ROC_AUC=0.797  Bal.Acc=0.705  Precision=0.523
+09:36:40 | INFO | ============================================================
+09:36:40 | INFO | FOLD 3/5  (3388 train / 591 val / 997 test)
+09:36:40 | INFO | ============================================================
+09:36:40 | INFO |   Fold features: fp=670, mordred=321 (dropped 4 correlated) | train=3388 val=591 test=997
+09:36:40 | INFO |   [LR] fold 2: fitting LR_C=0.01
+09:37:49 | INFO |   [LR] fold 2: fit done in 69.0s
+09:37:50 | INFO |   [LR] fold 2 [LR_C=0.01] MACRO  F1=0.606  PR_AUC=0.626  ROC_AUC=0.813  Bal.Acc=0.734  Precision=0.530
+09:37:50 | INFO |   [LR] fold 2: fitting LR_C=0.1
+09:38:59 | INFO |   [LR] fold 2: fit done in 68.8s
+09:38:59 | INFO |   [LR] fold 2 [LR_C=0.1] MACRO  F1=0.602  PR_AUC=0.626  ROC_AUC=0.812  Bal.Acc=0.734  Precision=0.540
+09:38:59 | INFO |   [LR] fold 2: fitting LR_C=1
+09:40:07 | INFO |   [LR] fold 2: fit done in 68.2s
+09:40:08 | INFO |   [LR] fold 2 [LR_C=1] MACRO  F1=0.600  PR_AUC=0.625  ROC_AUC=0.812  Bal.Acc=0.735  Precision=0.522
+09:40:08 | INFO |   [LR] fold 2: fitting LR_C=10
+09:41:16 | INFO |   [LR] fold 2: fit done in 67.9s
+09:41:16 | INFO |   [LR] fold 2 [LR_C=10] MACRO  F1=0.601  PR_AUC=0.625  ROC_AUC=0.811  Bal.Acc=0.734  Precision=0.527
+09:41:16 | INFO |   [LR] fold 2: fitting LR_C=100
+09:42:26 | INFO |   [LR] fold 2: fit done in 69.7s
+09:42:26 | INFO |   [LR] fold 2 [LR_C=100] MACRO  F1=0.601  PR_AUC=0.625  ROC_AUC=0.811  Bal.Acc=0.734  Precision=0.527
+09:42:26 | INFO |   [RF] fold 2: fitting RF_n_estimators=100_max_features=sqrt
+09:42:30 | INFO |   [RF] fold 2: fit done in 3.3s
+09:42:31 | INFO |   [RF] fold 2 [RF_n_estimators=100_max_features=sqrt] MACRO  F1=0.602  PR_AUC=0.647  ROC_AUC=0.816  Bal.Acc=0.724  Precision=0.556
+09:42:31 | INFO |   [RF] fold 2: fitting RF_n_estimators=100_max_features=log2
+09:42:34 | INFO |   [RF] fold 2: fit done in 3.2s
+09:42:35 | INFO |   [RF] fold 2 [RF_n_estimators=100_max_features=log2] MACRO  F1=0.610  PR_AUC=0.645  ROC_AUC=0.817  Bal.Acc=0.731  Precision=0.545
+09:42:35 | INFO |   [RF] fold 2: fitting RF_n_estimators=300_max_features=sqrt
+09:42:44 | INFO |   [RF] fold 2: fit done in 8.6s
+09:42:46 | INFO |   [RF] fold 2 [RF_n_estimators=300_max_features=sqrt] MACRO  F1=0.608  PR_AUC=0.656  ROC_AUC=0.820  Bal.Acc=0.726  Precision=0.569
+09:42:47 | INFO |   [RF] fold 2: fitting RF_n_estimators=300_max_features=log2
+09:42:57 | INFO |   [RF] fold 2: fit done in 10.0s
+09:42:59 | INFO |   [RF] fold 2 [RF_n_estimators=300_max_features=log2] MACRO  F1=0.614  PR_AUC=0.656  ROC_AUC=0.821  Bal.Acc=0.731  Precision=0.576
+09:42:59 | INFO |   [XGB] fold 2: fitting XGB_n_estimators=100_max_depth=3
+09:43:04 | INFO |   [XGB] fold 2: fit done in 4.4s
+09:43:04 | INFO |   [XGB] fold 2 [XGB_n_estimators=100_max_depth=3] MACRO  F1=0.597  PR_AUC=0.637  ROC_AUC=0.810  Bal.Acc=0.724  Precision=0.532
+09:43:04 | INFO |   [XGB] fold 2: fitting XGB_n_estimators=100_max_depth=6
+09:43:14 | INFO |   [XGB] fold 2: fit done in 10.1s
+09:43:14 | INFO |   [XGB] fold 2 [XGB_n_estimators=100_max_depth=6] MACRO  F1=0.592  PR_AUC=0.636  ROC_AUC=0.805  Bal.Acc=0.717  Precision=0.549
+09:43:14 | INFO |   [XGB] fold 2: fitting XGB_n_estimators=300_max_depth=3
+09:43:28 | INFO |   [XGB] fold 2: fit done in 13.4s
+09:43:28 | INFO |   [XGB] fold 2 [XGB_n_estimators=300_max_depth=3] MACRO  F1=0.592  PR_AUC=0.632  ROC_AUC=0.805  Bal.Acc=0.713  Precision=0.549
+09:43:28 | INFO |   [XGB] fold 2: fitting XGB_n_estimators=300_max_depth=6
+09:43:56 | INFO |   [XGB] fold 2: fit done in 28.1s
+09:43:57 | INFO |   [XGB] fold 2 [XGB_n_estimators=300_max_depth=6] MACRO  F1=0.589  PR_AUC=0.635  ROC_AUC=0.804  Bal.Acc=0.716  Precision=0.540
+09:43:57 | INFO |   [SVM] fold 2: fitting SVM_C=0.1
+09:47:25 | INFO |   [SVM] fold 2: fit done in 208.2s
+09:47:47 | INFO |   [SVM] fold 2 [SVM_C=0.1] MACRO  F1=0.579  PR_AUC=0.603  ROC_AUC=0.792  Bal.Acc=0.706  Precision=0.502
+09:47:47 | INFO |   [SVM] fold 2: fitting SVM_C=1
+09:50:39 | INFO |   [SVM] fold 2: fit done in 172.3s
+09:50:57 | INFO |   [SVM] fold 2 [SVM_C=1] MACRO  F1=0.608  PR_AUC=0.638  ROC_AUC=0.818  Bal.Acc=0.725  Precision=0.554
+09:50:57 | INFO |   [SVM] fold 2: fitting SVM_C=10
+09:53:27 | INFO |   [SVM] fold 2: fit done in 149.4s
+09:53:41 | INFO |   [SVM] fold 2 [SVM_C=10] MACRO  F1=0.590  PR_AUC=0.614  ROC_AUC=0.801  Bal.Acc=0.713  Precision=0.558
+09:53:41 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=5_metric=euclidean
+09:53:41 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:53:42 | INFO |   [KNN] fold 2 [KNN_n_neighbors=5_metric=euclidean] MACRO  F1=0.576  PR_AUC=0.552  ROC_AUC=0.773  Bal.Acc=0.701  Precision=0.536
+09:53:42 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=5_metric=cosine
+09:53:43 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:53:51 | INFO |   [KNN] fold 2 [KNN_n_neighbors=5_metric=cosine] MACRO  F1=0.584  PR_AUC=0.557  ROC_AUC=0.778  Bal.Acc=0.712  Precision=0.500
+09:53:52 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=11_metric=euclidean
+09:53:52 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:53:53 | INFO |   [KNN] fold 2 [KNN_n_neighbors=11_metric=euclidean] MACRO  F1=0.586  PR_AUC=0.595  ROC_AUC=0.796  Bal.Acc=0.711  Precision=0.529
+09:53:53 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=11_metric=cosine
+09:53:53 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:54:02 | INFO |   [KNN] fold 2 [KNN_n_neighbors=11_metric=cosine] MACRO  F1=0.586  PR_AUC=0.595  ROC_AUC=0.798  Bal.Acc=0.717  Precision=0.508
+09:54:03 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=21_metric=euclidean
+09:54:03 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:54:04 | INFO |   [KNN] fold 2 [KNN_n_neighbors=21_metric=euclidean] MACRO  F1=0.582  PR_AUC=0.600  ROC_AUC=0.794  Bal.Acc=0.711  Precision=0.521
+09:54:04 | INFO |   [KNN] fold 2: fitting KNN_n_neighbors=21_metric=cosine
+09:54:04 | INFO |   [KNN] fold 2: fit done in 0.2s
+09:54:13 | INFO |   [KNN] fold 2 [KNN_n_neighbors=21_metric=cosine] MACRO  F1=0.588  PR_AUC=0.610  ROC_AUC=0.800  Bal.Acc=0.714  Precision=0.511
+09:54:13 | INFO | ============================================================
+09:54:13 | INFO | FOLD 4/5  (3347 train / 621 val / 1008 test)
+09:54:13 | INFO | ============================================================
+09:54:13 | INFO |   Fold features: fp=672, mordred=315 (dropped 9 correlated) | train=3347 val=621 test=1008
+09:54:13 | INFO |   [LR] fold 3: fitting LR_C=0.01
+09:55:19 | INFO |   [LR] fold 3: fit done in 66.7s
+09:55:20 | INFO |   [LR] fold 3 [LR_C=0.01] MACRO  F1=0.589  PR_AUC=0.603  ROC_AUC=0.808  Bal.Acc=0.717  Precision=0.539
+09:55:20 | INFO |   [LR] fold 3: fitting LR_C=0.1
+09:56:28 | INFO |   [LR] fold 3: fit done in 68.3s
+09:56:29 | INFO |   [LR] fold 3 [LR_C=0.1] MACRO  F1=0.590  PR_AUC=0.604  ROC_AUC=0.805  Bal.Acc=0.724  Precision=0.526
+09:56:29 | INFO |   [LR] fold 3: fitting LR_C=1
+09:57:44 | INFO |   [LR] fold 3: fit done in 75.3s
+09:57:45 | INFO |   [LR] fold 3 [LR_C=1] MACRO  F1=0.590  PR_AUC=0.603  ROC_AUC=0.805  Bal.Acc=0.719  Precision=0.530
+09:57:45 | INFO |   [LR] fold 3: fitting LR_C=10
+09:59:06 | INFO |   [LR] fold 3: fit done in 81.2s
+09:59:07 | INFO |   [LR] fold 3 [LR_C=10] MACRO  F1=0.590  PR_AUC=0.603  ROC_AUC=0.805  Bal.Acc=0.718  Precision=0.528
+09:59:07 | INFO |   [LR] fold 3: fitting LR_C=100
+10:00:19 | INFO |   [LR] fold 3: fit done in 71.6s
+10:00:20 | INFO |   [LR] fold 3 [LR_C=100] MACRO  F1=0.590  PR_AUC=0.603  ROC_AUC=0.805  Bal.Acc=0.718  Precision=0.528
+10:00:20 | INFO |   [RF] fold 3: fitting RF_n_estimators=100_max_features=sqrt
+10:00:23 | INFO |   [RF] fold 3: fit done in 3.3s
+10:00:24 | INFO |   [RF] fold 3 [RF_n_estimators=100_max_features=sqrt] MACRO  F1=0.607  PR_AUC=0.641  ROC_AUC=0.818  Bal.Acc=0.733  Precision=0.551
+10:00:24 | INFO |   [RF] fold 3: fitting RF_n_estimators=100_max_features=log2
+10:00:27 | INFO |   [RF] fold 3: fit done in 3.0s
+10:00:28 | INFO |   [RF] fold 3 [RF_n_estimators=100_max_features=log2] MACRO  F1=0.606  PR_AUC=0.642  ROC_AUC=0.818  Bal.Acc=0.728  Precision=0.565
+10:00:28 | INFO |   [RF] fold 3: fitting RF_n_estimators=300_max_features=sqrt
+10:00:37 | INFO |   [RF] fold 3: fit done in 8.5s
+10:00:39 | INFO |   [RF] fold 3 [RF_n_estimators=300_max_features=sqrt] MACRO  F1=0.618  PR_AUC=0.648  ROC_AUC=0.821  Bal.Acc=0.744  Precision=0.548
+10:00:39 | INFO |   [RF] fold 3: fitting RF_n_estimators=300_max_features=log2
+10:00:47 | INFO |   [RF] fold 3: fit done in 7.7s
+10:00:49 | INFO |   [RF] fold 3 [RF_n_estimators=300_max_features=log2] MACRO  F1=0.608  PR_AUC=0.650  ROC_AUC=0.822  Bal.Acc=0.734  Precision=0.557
+10:00:49 | INFO |   [XGB] fold 3: fitting XGB_n_estimators=100_max_depth=3
+10:01:19 | INFO |   [XGB] fold 3: fit done in 30.2s
+10:01:19 | INFO |   [XGB] fold 3 [XGB_n_estimators=100_max_depth=3] MACRO  F1=0.594  PR_AUC=0.627  ROC_AUC=0.813  Bal.Acc=0.721  Precision=0.541
+10:01:19 | INFO |   [XGB] fold 3: fitting XGB_n_estimators=100_max_depth=6
+10:02:09 | INFO |   [XGB] fold 3: fit done in 49.8s
+10:02:09 | INFO |   [XGB] fold 3 [XGB_n_estimators=100_max_depth=6] MACRO  F1=0.595  PR_AUC=0.624  ROC_AUC=0.808  Bal.Acc=0.723  Precision=0.532
+10:02:09 | INFO |   [XGB] fold 3: fitting XGB_n_estimators=300_max_depth=3
+10:03:29 | INFO |   [XGB] fold 3: fit done in 79.1s
+10:03:29 | INFO |   [XGB] fold 3 [XGB_n_estimators=300_max_depth=3] MACRO  F1=0.589  PR_AUC=0.623  ROC_AUC=0.809  Bal.Acc=0.723  Precision=0.533
+10:03:29 | INFO |   [XGB] fold 3: fitting XGB_n_estimators=300_max_depth=6
+10:06:10 | INFO |   [XGB] fold 3: fit done in 160.7s
+10:06:10 | INFO |   [XGB] fold 3 [XGB_n_estimators=300_max_depth=6] MACRO  F1=0.590  PR_AUC=0.625  ROC_AUC=0.806  Bal.Acc=0.717  Precision=0.538
+10:06:10 | INFO |   [SVM] fold 3: fitting SVM_C=0.1
+10:09:41 | INFO |   [SVM] fold 3: fit done in 210.6s
+10:10:03 | INFO |   [SVM] fold 3 [SVM_C=0.1] MACRO  F1=0.574  PR_AUC=0.572  ROC_AUC=0.789  Bal.Acc=0.708  Precision=0.497
+10:10:03 | INFO |   [SVM] fold 3: fitting SVM_C=1
+10:12:48 | INFO |   [SVM] fold 3: fit done in 165.4s
+10:13:06 | INFO |   [SVM] fold 3 [SVM_C=1] MACRO  F1=0.600  PR_AUC=0.610  ROC_AUC=0.813  Bal.Acc=0.720  Precision=0.558
+10:13:06 | INFO |   [SVM] fold 3: fitting SVM_C=10
+10:15:30 | INFO |   [SVM] fold 3: fit done in 143.9s
+10:15:45 | INFO |   [SVM] fold 3 [SVM_C=10] MACRO  F1=0.584  PR_AUC=0.596  ROC_AUC=0.797  Bal.Acc=0.720  Precision=0.522
+10:15:45 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=5_metric=euclidean
+10:15:45 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:15:46 | INFO |   [KNN] fold 3 [KNN_n_neighbors=5_metric=euclidean] MACRO  F1=0.578  PR_AUC=0.551  ROC_AUC=0.780  Bal.Acc=0.707  Precision=0.539
+10:15:46 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=5_metric=cosine
+10:15:46 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:15:56 | INFO |   [KNN] fold 3 [KNN_n_neighbors=5_metric=cosine] MACRO  F1=0.581  PR_AUC=0.553  ROC_AUC=0.784  Bal.Acc=0.710  Precision=0.507
+10:15:56 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=11_metric=euclidean
+10:15:56 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:15:57 | INFO |   [KNN] fold 3 [KNN_n_neighbors=11_metric=euclidean] MACRO  F1=0.587  PR_AUC=0.585  ROC_AUC=0.795  Bal.Acc=0.715  Precision=0.529
+10:15:57 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=11_metric=cosine
+10:15:58 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:16:08 | INFO |   [KNN] fold 3 [KNN_n_neighbors=11_metric=cosine] MACRO  F1=0.582  PR_AUC=0.587  ROC_AUC=0.798  Bal.Acc=0.710  Precision=0.536
+10:16:08 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=21_metric=euclidean
+10:16:08 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:16:09 | INFO |   [KNN] fold 3 [KNN_n_neighbors=21_metric=euclidean] MACRO  F1=0.585  PR_AUC=0.589  ROC_AUC=0.797  Bal.Acc=0.715  Precision=0.507
+10:16:09 | INFO |   [KNN] fold 3: fitting KNN_n_neighbors=21_metric=cosine
+10:16:09 | INFO |   [KNN] fold 3: fit done in 0.2s
+10:16:19 | INFO |   [KNN] fold 3 [KNN_n_neighbors=21_metric=cosine] MACRO  F1=0.582  PR_AUC=0.591  ROC_AUC=0.799  Bal.Acc=0.713  Precision=0.513
+10:16:19 | INFO | ============================================================
+10:16:19 | INFO | FOLD 5/5  (3370 train / 602 val / 1004 test)
+10:16:19 | INFO | ============================================================
+10:16:19 | INFO |   Fold features: fp=667, mordred=321 (dropped 2 correlated) | train=3370 val=602 test=1004
+10:16:19 | INFO |   [LR] fold 4: fitting LR_C=0.01
+10:17:30 | INFO |   [LR] fold 4: fit done in 71.6s
+10:17:31 | INFO |   [LR] fold 4 [LR_C=0.01] MACRO  F1=0.584  PR_AUC=0.584  ROC_AUC=0.799  Bal.Acc=0.722  Precision=0.502
+10:17:31 | INFO |   [LR] fold 4: fitting LR_C=0.1
+10:18:38 | INFO |   [LR] fold 4: fit done in 67.3s
+10:18:39 | INFO |   [LR] fold 4 [LR_C=0.1] MACRO  F1=0.578  PR_AUC=0.586  ROC_AUC=0.797  Bal.Acc=0.713  Precision=0.507
+10:18:39 | INFO |   [LR] fold 4: fitting LR_C=1
+10:19:46 | INFO |   [LR] fold 4: fit done in 67.0s
+10:19:46 | INFO |   [LR] fold 4 [LR_C=1] MACRO  F1=0.574  PR_AUC=0.586  ROC_AUC=0.797  Bal.Acc=0.712  Precision=0.500
+10:19:46 | INFO |   [LR] fold 4: fitting LR_C=10
+10:20:53 | INFO |   [LR] fold 4: fit done in 67.0s
+10:20:53 | INFO |   [LR] fold 4 [LR_C=10] MACRO  F1=0.574  PR_AUC=0.586  ROC_AUC=0.797  Bal.Acc=0.712  Precision=0.500
+10:20:53 | INFO |   [LR] fold 4: fitting LR_C=100
+10:22:00 | INFO |   [LR] fold 4: fit done in 66.9s
+10:22:01 | INFO |   [LR] fold 4 [LR_C=100] MACRO  F1=0.574  PR_AUC=0.586  ROC_AUC=0.797  Bal.Acc=0.711  Precision=0.504
+10:22:01 | INFO |   [RF] fold 4: fitting RF_n_estimators=100_max_features=sqrt
+10:22:04 | INFO |   [RF] fold 4: fit done in 3.1s
+10:22:05 | INFO |   [RF] fold 4 [RF_n_estimators=100_max_features=sqrt] MACRO  F1=0.590  PR_AUC=0.625  ROC_AUC=0.812  Bal.Acc=0.722  Precision=0.523
+10:22:05 | INFO |   [RF] fold 4: fitting RF_n_estimators=100_max_features=log2
+10:22:09 | INFO |   [RF] fold 4: fit done in 3.6s
+10:22:10 | INFO |   [RF] fold 4 [RF_n_estimators=100_max_features=log2] MACRO  F1=0.587  PR_AUC=0.628  ROC_AUC=0.814  Bal.Acc=0.715  Precision=0.552
+10:22:10 | INFO |   [RF] fold 4: fitting RF_n_estimators=300_max_features=sqrt
+10:22:19 | INFO |   [RF] fold 4: fit done in 8.6s
+10:22:21 | INFO |   [RF] fold 4 [RF_n_estimators=300_max_features=sqrt] MACRO  F1=0.592  PR_AUC=0.635  ROC_AUC=0.816  Bal.Acc=0.727  Precision=0.539
+10:22:21 | INFO |   [RF] fold 4: fitting RF_n_estimators=300_max_features=log2
+10:22:32 | INFO |   [RF] fold 4: fit done in 10.2s
+10:22:34 | INFO |   [RF] fold 4 [RF_n_estimators=300_max_features=log2] MACRO  F1=0.594  PR_AUC=0.632  ROC_AUC=0.817  Bal.Acc=0.722  Precision=0.543
+10:22:34 | INFO |   [XGB] fold 4: fitting XGB_n_estimators=100_max_depth=3
+10:22:39 | INFO |   [XGB] fold 4: fit done in 4.8s
+10:22:39 | INFO |   [XGB] fold 4 [XGB_n_estimators=100_max_depth=3] MACRO  F1=0.574  PR_AUC=0.607  ROC_AUC=0.800  Bal.Acc=0.708  Precision=0.507
+10:22:40 | INFO |   [XGB] fold 4: fitting XGB_n_estimators=100_max_depth=6
+10:22:49 | INFO |   [XGB] fold 4: fit done in 9.7s
+10:22:50 | INFO |   [XGB] fold 4 [XGB_n_estimators=100_max_depth=6] MACRO  F1=0.570  PR_AUC=0.617  ROC_AUC=0.803  Bal.Acc=0.704  Precision=0.520
+10:22:50 | INFO |   [XGB] fold 4: fitting XGB_n_estimators=300_max_depth=3
+10:23:03 | INFO |   [XGB] fold 4: fit done in 13.5s
+10:23:03 | INFO |   [XGB] fold 4 [XGB_n_estimators=300_max_depth=3] MACRO  F1=0.566  PR_AUC=0.610  ROC_AUC=0.797  Bal.Acc=0.707  Precision=0.507
+10:23:03 | INFO |   [XGB] fold 4: fitting XGB_n_estimators=300_max_depth=6
+10:23:31 | INFO |   [XGB] fold 4: fit done in 27.3s
+10:23:31 | INFO |   [XGB] fold 4 [XGB_n_estimators=300_max_depth=6] MACRO  F1=0.577  PR_AUC=0.619  ROC_AUC=0.801  Bal.Acc=0.712  Precision=0.538
+10:23:31 | INFO |   [SVM] fold 4: fitting SVM_C=0.1
+10:26:48 | INFO |   [SVM] fold 4: fit done in 197.3s
+10:27:09 | INFO |   [SVM] fold 4 [SVM_C=0.1] MACRO  F1=0.566  PR_AUC=0.558  ROC_AUC=0.781  Bal.Acc=0.702  Precision=0.488
+10:27:09 | INFO |   [SVM] fold 4: fitting SVM_C=1
+10:29:49 | INFO |   [SVM] fold 4: fit done in 159.7s
+10:30:05 | INFO |   [SVM] fold 4 [SVM_C=1] MACRO  F1=0.597  PR_AUC=0.594  ROC_AUC=0.804  Bal.Acc=0.726  Precision=0.522
+10:30:05 | INFO |   [SVM] fold 4: fitting SVM_C=10
+10:32:21 | INFO |   [SVM] fold 4: fit done in 136.1s
+10:32:34 | INFO |   [SVM] fold 4 [SVM_C=10] MACRO  F1=0.575  PR_AUC=0.588  ROC_AUC=0.793  Bal.Acc=0.707  Precision=0.533
+10:32:34 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=5_metric=euclidean
+10:32:34 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:32:35 | INFO |   [KNN] fold 4 [KNN_n_neighbors=5_metric=euclidean] MACRO  F1=0.577  PR_AUC=0.537  ROC_AUC=0.777  Bal.Acc=0.710  Precision=0.511
+10:32:35 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=5_metric=cosine
+10:32:35 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:32:45 | INFO |   [KNN] fold 4 [KNN_n_neighbors=5_metric=cosine] MACRO  F1=0.575  PR_AUC=0.541  ROC_AUC=0.780  Bal.Acc=0.710  Precision=0.505
+10:32:45 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=11_metric=euclidean
+10:32:45 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:32:46 | INFO |   [KNN] fold 4 [KNN_n_neighbors=11_metric=euclidean] MACRO  F1=0.574  PR_AUC=0.568  ROC_AUC=0.791  Bal.Acc=0.704  Precision=0.509
+10:32:46 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=11_metric=cosine
+10:32:46 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:32:55 | INFO |   [KNN] fold 4 [KNN_n_neighbors=11_metric=cosine] MACRO  F1=0.580  PR_AUC=0.573  ROC_AUC=0.796  Bal.Acc=0.712  Precision=0.502
+10:32:55 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=21_metric=euclidean
+10:32:56 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:32:56 | INFO |   [KNN] fold 4 [KNN_n_neighbors=21_metric=euclidean] MACRO  F1=0.560  PR_AUC=0.576  ROC_AUC=0.792  Bal.Acc=0.693  Precision=0.496
+10:32:56 | INFO |   [KNN] fold 4: fitting KNN_n_neighbors=21_metric=cosine
+10:32:57 | INFO |   [KNN] fold 4: fit done in 0.2s
+10:33:06 | INFO |   [KNN] fold 4 [KNN_n_neighbors=21_metric=cosine] MACRO  F1=0.576  PR_AUC=0.574  ROC_AUC=0.794  Bal.Acc=0.710  Precision=0.504
+10:33:06 | INFO | Mean +/- std across folds, per (Model, Config):
+                                            Bal.Acc           MCC            F1        ROC_AUC        PR_AUC        Precision        Sensitivity        Specificity       
+                                               mean    std   mean    std   mean    std    mean    std   mean    std      mean    std        mean    std        mean    std
+Model Config                                                                                                                                                              
+KNN   KNN_n_neighbors=11_metric=cosine        0.714  0.003  0.405  0.009  0.585  0.005   0.798  0.004  0.586  0.009     0.519  0.021       0.684  0.023       0.744  0.021
+      KNN_n_neighbors=11_metric=euclidean     0.710  0.004  0.403  0.010  0.582  0.007   0.793  0.006  0.582  0.012     0.523  0.013       0.676  0.006       0.744  0.009
+      KNN_n_neighbors=21_metric=cosine        0.711  0.003  0.402  0.005  0.583  0.006   0.799  0.005  0.595  0.014     0.515  0.009       0.685  0.014       0.737  0.010
+      KNN_n_neighbors=21_metric=euclidean     0.707  0.011  0.396  0.017  0.578  0.014   0.795  0.004  0.589  0.009     0.514  0.012       0.679  0.025       0.734  0.014
+      KNN_n_neighbors=5_metric=cosine         0.710  0.006  0.396  0.007  0.580  0.009   0.781  0.004  0.553  0.008     0.508  0.008       0.689  0.024       0.730  0.013
+      KNN_n_neighbors=5_metric=euclidean      0.703  0.006  0.394  0.011  0.575  0.004   0.777  0.005  0.549  0.008     0.524  0.016       0.662  0.013       0.743  0.016
+LR    LR_C=0.01                               0.725  0.006  0.421  0.011  0.596  0.010   0.807  0.006  0.611  0.017     0.524  0.014       0.703  0.024       0.747  0.016
+      LR_C=0.1                                0.727  0.009  0.422  0.016  0.595  0.013   0.806  0.006  0.611  0.016     0.524  0.015       0.701  0.021       0.752  0.019
+      LR_C=1                                  0.726  0.010  0.419  0.016  0.593  0.013   0.806  0.006  0.610  0.016     0.520  0.014       0.704  0.022       0.747  0.013
+      LR_C=10                                 0.725  0.010  0.420  0.017  0.594  0.014   0.806  0.006  0.610  0.016     0.522  0.013       0.704  0.022       0.747  0.013
+      LR_C=100                                0.725  0.011  0.420  0.017  0.594  0.014   0.806  0.006  0.610  0.016     0.523  0.011       0.701  0.024       0.748  0.012
+RF    RF_n_estimators=100_max_features=log2   0.730  0.010  0.443  0.014  0.606  0.013   0.819  0.005  0.645  0.013     0.555  0.014       0.685  0.021       0.776  0.010
+      RF_n_estimators=100_max_features=sqrt   0.729  0.006  0.440  0.013  0.606  0.011   0.818  0.005  0.644  0.013     0.550  0.017       0.688  0.008       0.771  0.008
+      RF_n_estimators=300_max_features=log2   0.733  0.008  0.449  0.016  0.611  0.012   0.822  0.005  0.653  0.014     0.560  0.022       0.687  0.023       0.779  0.024
+      RF_n_estimators=300_max_features=sqrt   0.732  0.007  0.445  0.015  0.608  0.010   0.821  0.006  0.652  0.012     0.556  0.027       0.682  0.029       0.783  0.025
+SVM   SVM_C=0.1                               0.706  0.004  0.390  0.006  0.575  0.005   0.789  0.005  0.584  0.018     0.503  0.011       0.700  0.008       0.713  0.013
+      SVM_C=1                                 0.728  0.006  0.436  0.008  0.605  0.007   0.813  0.006  0.621  0.018     0.548  0.015       0.685  0.019       0.770  0.017
+      SVM_C=10                                0.716  0.007  0.416  0.014  0.587  0.012   0.799  0.006  0.606  0.015     0.541  0.019       0.654  0.021       0.778  0.015
+XGB   XGB_n_estimators=100_max_depth=3        0.718  0.008  0.419  0.017  0.592  0.012   0.808  0.007  0.632  0.017     0.535  0.021       0.679  0.013       0.757  0.020
+      XGB_n_estimators=100_max_depth=6        0.716  0.007  0.419  0.017  0.590  0.012   0.807  0.006  0.633  0.015     0.545  0.030       0.662  0.020       0.770  0.023
+      XGB_n_estimators=300_max_depth=3        0.718  0.008  0.417  0.018  0.587  0.015   0.805  0.006  0.630  0.015     0.539  0.021       0.665  0.016       0.771  0.017
+      XGB_n_estimators=300_max_depth=6        0.718  0.006  0.422  0.015  0.592  0.014   0.806  0.006  0.634  0.014     0.546  0.018       0.660  0.007       0.775  0.008
+10:33:06 | INFO | Ablation-format mean +/- std summary (compare directly against HMCN's hmcn_kfold_summary_mean_std.csv): outputs_meta12_kfold/baseline_meta12_kfold_ablation_summary_mean_std.csv
+10:33:06 | INFO | Winning config per model (best mean pr_auc_12 across folds):
+                                             pr_auc_12  f1_macro_12  roc_auc_12
+model param_value                                                              
+KNN   KNN_n_neighbors=21_metric=cosine         0.59532      0.58336     0.79936
+LR    LR_C=0.1                                 0.61130      0.59502     0.80610
+RF    RF_n_estimators=300_max_features=log2    0.65278      0.61100     0.82240
+SVM   SVM_C=1                                  0.62094      0.60476     0.81304
+XGB   XGB_n_estimators=300_max_depth=6         0.63380      0.59172     0.80556
+10:33:06 | INFO | Winning configs saved to: outputs_meta12_kfold/baseline_meta12_kfold_winning_configs.csv
+10:33:06 | INFO | Done. Per-label results in outputs_meta12_kfold/baseline_meta12_kfold_all_results.csv
+10:33:06 | INFO | Done. Ablation-format results (matches hmcn_ablation_results.csv schema) in outputs_meta12_kfold/baseline_meta12_kfold_ablation_results.csv
+10:33:06 | INFO | Script finished at: 2026-07-09 10:33:06
+10:33:06 | INFO | Total elapsed time: 1:31:23.329513

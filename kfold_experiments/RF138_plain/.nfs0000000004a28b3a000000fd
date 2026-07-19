@@ -1,0 +1,8 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/users/nahlelha63/RF138_plain/RF_fine138_kfold.py", line 310, in <module>
+    main()
+  File "/users/nahlelha63/RF138_plain/RF_fine138_kfold.py", line 257, in main
+    split["train_idx"], split["val_idx"], split["test_idx"],
+    ~~~~~^^^^^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str

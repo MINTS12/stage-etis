@@ -1,0 +1,1235 @@
+nohup: ignoring input
+Script started at: 2026-07-08 15:15:33
+Device: cuda
+Computed a fresh 5-fold split and cached it to 'kfold_results/hmcn_kfold_split_indices.pkl'.
+Configs per fold: 120 | Folds: 5 | Total runs: 600
+
+
+============================================================
+FOLD 1/5  (3379 train / 614 val / 983 test)
+============================================================
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [1/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1952 fine_f1=0.1985 meta_pr_auc=0.6139 meta_f1=0.5910
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [2/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1595 fine_f1=0.1543 meta_pr_auc=0.6113 meta_f1=0.5955
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [3/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1974 fine_f1=0.1995 meta_pr_auc=0.6101 meta_f1=0.5947
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [4/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1972 fine_f1=0.1949 meta_pr_auc=0.6111 meta_f1=0.5885
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [5/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1950 fine_f1=0.1947 meta_pr_auc=0.6155 meta_f1=0.5928
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [6/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1033 fine_f1=0.0936 meta_pr_auc=0.6013 meta_f1=0.5872
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [7/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0961 fine_f1=0.0786 meta_pr_auc=0.5993 meta_f1=0.5864
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [8/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1022 fine_f1=0.0946 meta_pr_auc=0.6060 meta_f1=0.5863
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [9/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1028 fine_f1=0.0956 meta_pr_auc=0.6021 meta_f1=0.5894
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [10/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1031 fine_f1=0.0911 meta_pr_auc=0.6037 meta_f1=0.5891
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [11/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1714 fine_f1=0.1680 meta_pr_auc=0.5990 meta_f1=0.5852
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [12/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1712 fine_f1=0.1626 meta_pr_auc=0.6002 meta_f1=0.5883
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [13/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1708 fine_f1=0.1594 meta_pr_auc=0.5993 meta_f1=0.5895
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [14/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1782 fine_f1=0.1665 meta_pr_auc=0.5975 meta_f1=0.5884
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [15/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1680 fine_f1=0.1602 meta_pr_auc=0.6032 meta_f1=0.5894
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [16/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0866 fine_f1=0.0704 meta_pr_auc=0.5865 meta_f1=0.5763
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [17/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0760 fine_f1=0.0684 meta_pr_auc=0.5802 meta_f1=0.5666
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [18/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0868 fine_f1=0.0752 meta_pr_auc=0.5849 meta_f1=0.5770
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [19/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0825 fine_f1=0.0772 meta_pr_auc=0.5882 meta_f1=0.5747
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [20/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0846 fine_f1=0.0624 meta_pr_auc=0.5885 meta_f1=0.5798
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [21/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1383 fine_f1=0.1214 meta_pr_auc=0.5868 meta_f1=0.5756
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [22/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1454 fine_f1=0.1294 meta_pr_auc=0.5766 meta_f1=0.5777
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [23/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1402 fine_f1=0.1206 meta_pr_auc=0.5837 meta_f1=0.5792
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [24/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1388 fine_f1=0.1290 meta_pr_auc=0.5824 meta_f1=0.5800
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [25/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1411 fine_f1=0.1267 meta_pr_auc=0.5826 meta_f1=0.5819
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [26/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0532 fine_f1=0.0415 meta_pr_auc=0.5577 meta_f1=0.5650
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [27/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0550 fine_f1=0.0477 meta_pr_auc=0.5590 meta_f1=0.5652
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [28/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0538 fine_f1=0.0415 meta_pr_auc=0.5658 meta_f1=0.5722
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [29/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0540 fine_f1=0.0469 meta_pr_auc=0.5611 meta_f1=0.5680
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [30/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0540 fine_f1=0.0411 meta_pr_auc=0.5670 meta_f1=0.5733
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [31/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2217 fine_f1=0.2206 meta_pr_auc=0.6289 meta_f1=0.6050
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [32/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2272 fine_f1=0.2218 meta_pr_auc=0.6281 meta_f1=0.6092
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [33/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1836 fine_f1=0.1885 meta_pr_auc=0.6208 meta_f1=0.5893
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [34/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2213 fine_f1=0.2144 meta_pr_auc=0.6260 meta_f1=0.6064
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [35/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2164 fine_f1=0.2165 meta_pr_auc=0.6306 meta_f1=0.6028
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [36/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1091 fine_f1=0.1182 meta_pr_auc=0.6175 meta_f1=0.5990
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [37/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1153 fine_f1=0.1102 meta_pr_auc=0.6167 meta_f1=0.5985
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [38/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1145 fine_f1=0.1082 meta_pr_auc=0.6172 meta_f1=0.5964
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [39/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1167 fine_f1=0.1061 meta_pr_auc=0.6200 meta_f1=0.5993
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [40/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1127 fine_f1=0.1023 meta_pr_auc=0.6147 meta_f1=0.5975
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [41/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2163 fine_f1=0.2084 meta_pr_auc=0.6155 meta_f1=0.6029
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [42/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1951 fine_f1=0.1968 meta_pr_auc=0.6110 meta_f1=0.5959
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [43/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2148 fine_f1=0.2124 meta_pr_auc=0.6145 meta_f1=0.5954
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [44/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2107 fine_f1=0.2047 meta_pr_auc=0.6147 meta_f1=0.6027
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [45/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1928 fine_f1=0.1934 meta_pr_auc=0.6107 meta_f1=0.6002
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [46/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1076 fine_f1=0.0998 meta_pr_auc=0.6046 meta_f1=0.5893
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [47/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1065 fine_f1=0.1021 meta_pr_auc=0.6042 meta_f1=0.5825
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [48/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1072 fine_f1=0.0982 meta_pr_auc=0.6042 meta_f1=0.5900
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [49/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1036 fine_f1=0.0912 meta_pr_auc=0.6008 meta_f1=0.5893
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [50/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1102 fine_f1=0.0997 meta_pr_auc=0.6059 meta_f1=0.5892
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [51/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1865 fine_f1=0.1749 meta_pr_auc=0.5922 meta_f1=0.5858
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [52/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1904 fine_f1=0.1798 meta_pr_auc=0.5996 meta_f1=0.5910
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [53/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1881 fine_f1=0.1769 meta_pr_auc=0.5961 meta_f1=0.5848
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [54/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1962 fine_f1=0.1840 meta_pr_auc=0.5978 meta_f1=0.5878
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [55/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1924 fine_f1=0.1752 meta_pr_auc=0.5987 meta_f1=0.5896
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [56/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0717 fine_f1=0.0632 meta_pr_auc=0.5777 meta_f1=0.5740
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [57/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0711 fine_f1=0.0656 meta_pr_auc=0.5809 meta_f1=0.5662
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [58/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0912 fine_f1=0.0868 meta_pr_auc=0.5812 meta_f1=0.5734
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [59/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0740 fine_f1=0.0645 meta_pr_auc=0.5820 meta_f1=0.5706
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [60/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0971 fine_f1=0.0900 meta_pr_auc=0.5790 meta_f1=0.5722
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [61/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1896 fine_f1=0.1848 meta_pr_auc=0.6249 meta_f1=0.5967
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [62/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1938 fine_f1=0.1920 meta_pr_auc=0.6245 meta_f1=0.5991
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [63/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1912 fine_f1=0.1910 meta_pr_auc=0.6244 meta_f1=0.6011
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [64/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1921 fine_f1=0.1940 meta_pr_auc=0.6277 meta_f1=0.5979
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [65/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1900 fine_f1=0.1894 meta_pr_auc=0.6276 meta_f1=0.6003
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [66/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1008 fine_f1=0.0933 meta_pr_auc=0.6091 meta_f1=0.5889
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [67/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1039 fine_f1=0.0989 meta_pr_auc=0.6111 meta_f1=0.5960
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [68/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1020 fine_f1=0.0978 meta_pr_auc=0.6104 meta_f1=0.5867
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [69/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1065 fine_f1=0.0943 meta_pr_auc=0.6081 meta_f1=0.5920
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [70/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1047 fine_f1=0.0995 meta_pr_auc=0.6126 meta_f1=0.5920
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [71/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1726 fine_f1=0.1681 meta_pr_auc=0.6184 meta_f1=0.5993
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [72/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1673 fine_f1=0.1630 meta_pr_auc=0.6138 meta_f1=0.5926
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [73/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1859 fine_f1=0.1803 meta_pr_auc=0.6165 meta_f1=0.5966
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [74/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1663 fine_f1=0.1660 meta_pr_auc=0.6137 meta_f1=0.5917
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [75/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1841 fine_f1=0.1799 meta_pr_auc=0.6157 meta_f1=0.5888
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [76/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0960 fine_f1=0.0859 meta_pr_auc=0.6011 meta_f1=0.5873
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [77/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0844 fine_f1=0.0782 meta_pr_auc=0.6023 meta_f1=0.5819
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [78/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0983 fine_f1=0.0858 meta_pr_auc=0.5999 meta_f1=0.5810
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [79/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0750 fine_f1=0.0720 meta_pr_auc=0.6070 meta_f1=0.5849
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [80/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0908 fine_f1=0.0826 meta_pr_auc=0.5986 meta_f1=0.5854
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [81/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1593 fine_f1=0.1514 meta_pr_auc=0.5959 meta_f1=0.5848
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [82/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1274 fine_f1=0.1225 meta_pr_auc=0.5944 meta_f1=0.5811
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [83/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1367 fine_f1=0.1400 meta_pr_auc=0.5938 meta_f1=0.5836
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [84/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1400 fine_f1=0.1409 meta_pr_auc=0.5923 meta_f1=0.5872
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [85/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1580 fine_f1=0.1473 meta_pr_auc=0.5939 meta_f1=0.5847
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [86/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0578 fine_f1=0.0483 meta_pr_auc=0.5784 meta_f1=0.5700
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [87/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0677 fine_f1=0.0567 meta_pr_auc=0.5824 meta_f1=0.5770
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [88/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0606 fine_f1=0.0529 meta_pr_auc=0.5784 meta_f1=0.5671
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [89/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0599 fine_f1=0.0524 meta_pr_auc=0.5827 meta_f1=0.5765
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [90/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0568 fine_f1=0.0478 meta_pr_auc=0.5793 meta_f1=0.5676
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [91/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2283 fine_f1=0.2240 meta_pr_auc=0.6357 meta_f1=0.6112
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [92/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2168 fine_f1=0.2141 meta_pr_auc=0.6342 meta_f1=0.6033
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [93/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2191 fine_f1=0.2142 meta_pr_auc=0.6317 meta_f1=0.6001
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [94/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2277 fine_f1=0.2264 meta_pr_auc=0.6333 meta_f1=0.6073
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [95/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2172 fine_f1=0.2100 meta_pr_auc=0.6322 meta_f1=0.6004
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [96/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1131 fine_f1=0.1065 meta_pr_auc=0.6232 meta_f1=0.6002
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [97/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1138 fine_f1=0.1084 meta_pr_auc=0.6176 meta_f1=0.6015
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [98/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1101 fine_f1=0.1163 meta_pr_auc=0.6226 meta_f1=0.6074
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [99/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1131 fine_f1=0.1205 meta_pr_auc=0.6232 meta_f1=0.6038
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [100/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1133 fine_f1=0.1021 meta_pr_auc=0.6249 meta_f1=0.6019
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [101/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2189 fine_f1=0.2177 meta_pr_auc=0.6304 meta_f1=0.6031
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [102/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2121 fine_f1=0.2127 meta_pr_auc=0.6219 meta_f1=0.5990
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [103/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1968 fine_f1=0.1947 meta_pr_auc=0.6259 meta_f1=0.5980
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [104/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2305 fine_f1=0.2185 meta_pr_auc=0.6279 meta_f1=0.6075
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [105/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2372 fine_f1=0.2298 meta_pr_auc=0.6314 meta_f1=0.6079
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [106/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1152 fine_f1=0.1051 meta_pr_auc=0.6106 meta_f1=0.5961
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [107/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1084 fine_f1=0.1008 meta_pr_auc=0.6114 meta_f1=0.5904
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [108/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1092 fine_f1=0.0945 meta_pr_auc=0.6095 meta_f1=0.5941
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [109/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1120 fine_f1=0.0997 meta_pr_auc=0.6077 meta_f1=0.5909
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [110/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1180 fine_f1=0.1049 meta_pr_auc=0.6147 meta_f1=0.5939
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [111/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1922 fine_f1=0.1929 meta_pr_auc=0.6101 meta_f1=0.5972
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [112/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2106 fine_f1=0.2017 meta_pr_auc=0.6132 meta_f1=0.5999
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [113/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2041 fine_f1=0.1966 meta_pr_auc=0.6126 meta_f1=0.5970
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [114/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2156 fine_f1=0.2060 meta_pr_auc=0.6128 meta_f1=0.5961
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [115/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2019 fine_f1=0.1974 meta_pr_auc=0.6102 meta_f1=0.5960
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [116/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0925 fine_f1=0.0812 meta_pr_auc=0.5972 meta_f1=0.5854
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [117/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0971 fine_f1=0.0925 meta_pr_auc=0.5915 meta_f1=0.5787
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [118/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0938 fine_f1=0.0733 meta_pr_auc=0.5960 meta_f1=0.5810
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [119/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0928 fine_f1=0.0773 meta_pr_auc=0.5997 meta_f1=0.5888
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [120/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0937 fine_f1=0.0782 meta_pr_auc=0.5964 meta_f1=0.5829
+
+============================================================
+FOLD 2/5  (3371 train / 621 val / 984 test)
+============================================================
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [1/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1847 fine_f1=0.1858 meta_pr_auc=0.6104 meta_f1=0.5871
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [2/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1899 fine_f1=0.1920 meta_pr_auc=0.6063 meta_f1=0.5874
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [3/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1896 fine_f1=0.1888 meta_pr_auc=0.6104 meta_f1=0.5849
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [4/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1885 fine_f1=0.1899 meta_pr_auc=0.6077 meta_f1=0.5878
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [5/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1852 fine_f1=0.1860 meta_pr_auc=0.6080 meta_f1=0.5821
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [6/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1030 fine_f1=0.0955 meta_pr_auc=0.5989 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [7/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1013 fine_f1=0.0940 meta_pr_auc=0.5994 meta_f1=0.5730
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [8/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1020 fine_f1=0.0942 meta_pr_auc=0.5992 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [9/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1030 fine_f1=0.0928 meta_pr_auc=0.5985 meta_f1=0.5825
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [10/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1023 fine_f1=0.0921 meta_pr_auc=0.5999 meta_f1=0.5805
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [11/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1546 fine_f1=0.1441 meta_pr_auc=0.5923 meta_f1=0.5803
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [12/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1835 fine_f1=0.1782 meta_pr_auc=0.5919 meta_f1=0.5729
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [13/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1428 fine_f1=0.1417 meta_pr_auc=0.5904 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [14/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1683 fine_f1=0.1496 meta_pr_auc=0.5927 meta_f1=0.5806
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [15/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1533 fine_f1=0.1374 meta_pr_auc=0.5904 meta_f1=0.5752
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [16/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0839 fine_f1=0.0725 meta_pr_auc=0.5895 meta_f1=0.5762
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [17/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0870 fine_f1=0.0765 meta_pr_auc=0.5865 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [18/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0850 fine_f1=0.0683 meta_pr_auc=0.5788 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [19/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0860 fine_f1=0.0701 meta_pr_auc=0.5777 meta_f1=0.5714
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [20/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0815 fine_f1=0.0715 meta_pr_auc=0.5864 meta_f1=0.5740
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [21/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1396 fine_f1=0.1213 meta_pr_auc=0.5699 meta_f1=0.5734
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [22/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1359 fine_f1=0.1143 meta_pr_auc=0.5712 meta_f1=0.5672
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [23/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1370 fine_f1=0.1244 meta_pr_auc=0.5669 meta_f1=0.5717
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [24/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1421 fine_f1=0.1283 meta_pr_auc=0.5695 meta_f1=0.5716
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [25/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1354 fine_f1=0.1230 meta_pr_auc=0.5686 meta_f1=0.5736
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [26/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0529 fine_f1=0.0410 meta_pr_auc=0.5538 meta_f1=0.5591
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [27/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0529 fine_f1=0.0411 meta_pr_auc=0.5559 meta_f1=0.5579
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [28/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0518 fine_f1=0.0396 meta_pr_auc=0.5531 meta_f1=0.5575
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [29/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0540 fine_f1=0.0438 meta_pr_auc=0.5532 meta_f1=0.5614
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [30/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0528 fine_f1=0.0428 meta_pr_auc=0.5543 meta_f1=0.5594
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [31/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2204 fine_f1=0.2206 meta_pr_auc=0.6139 meta_f1=0.5889
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [32/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2179 fine_f1=0.2137 meta_pr_auc=0.6169 meta_f1=0.5927
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [33/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2232 fine_f1=0.2190 meta_pr_auc=0.6149 meta_f1=0.5933
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [34/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2196 fine_f1=0.2211 meta_pr_auc=0.6136 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [35/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2193 fine_f1=0.2155 meta_pr_auc=0.6128 meta_f1=0.5864
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [36/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1063 fine_f1=0.0945 meta_pr_auc=0.6052 meta_f1=0.5907
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [37/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1093 fine_f1=0.0959 meta_pr_auc=0.6067 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [38/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1088 fine_f1=0.0943 meta_pr_auc=0.6050 meta_f1=0.5848
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [39/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1086 fine_f1=0.0950 meta_pr_auc=0.6083 meta_f1=0.5915
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [40/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1113 fine_f1=0.0995 meta_pr_auc=0.6065 meta_f1=0.5792
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [41/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2230 fine_f1=0.2145 meta_pr_auc=0.6113 meta_f1=0.5863
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [42/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2041 fine_f1=0.1996 meta_pr_auc=0.6052 meta_f1=0.5873
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [43/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2276 fine_f1=0.2165 meta_pr_auc=0.6081 meta_f1=0.5842
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [44/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2220 fine_f1=0.2094 meta_pr_auc=0.6080 meta_f1=0.5838
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [45/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2259 fine_f1=0.2247 meta_pr_auc=0.6067 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [46/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1046 fine_f1=0.0976 meta_pr_auc=0.5903 meta_f1=0.5787
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [47/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1084 fine_f1=0.0944 meta_pr_auc=0.5921 meta_f1=0.5795
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [48/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1042 fine_f1=0.0926 meta_pr_auc=0.5927 meta_f1=0.5814
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [49/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1006 fine_f1=0.0860 meta_pr_auc=0.5936 meta_f1=0.5772
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [50/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1039 fine_f1=0.0959 meta_pr_auc=0.5915 meta_f1=0.5822
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [51/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1893 fine_f1=0.1554 meta_pr_auc=0.5885 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [52/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1880 fine_f1=0.1708 meta_pr_auc=0.5869 meta_f1=0.5769
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [53/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1882 fine_f1=0.1626 meta_pr_auc=0.5884 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [54/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1864 fine_f1=0.1648 meta_pr_auc=0.5864 meta_f1=0.5787
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [55/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1823 fine_f1=0.1529 meta_pr_auc=0.5888 meta_f1=0.5786
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [56/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0903 fine_f1=0.0732 meta_pr_auc=0.5786 meta_f1=0.5679
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [57/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0883 fine_f1=0.0781 meta_pr_auc=0.5796 meta_f1=0.5736
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [58/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0901 fine_f1=0.0751 meta_pr_auc=0.5778 meta_f1=0.5724
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [59/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0911 fine_f1=0.0730 meta_pr_auc=0.5791 meta_f1=0.5680
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [60/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0850 fine_f1=0.0708 meta_pr_auc=0.5759 meta_f1=0.5712
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [61/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2083 fine_f1=0.2014 meta_pr_auc=0.6124 meta_f1=0.5798
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [62/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1961 fine_f1=0.1965 meta_pr_auc=0.6101 meta_f1=0.5829
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [63/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1927 fine_f1=0.1897 meta_pr_auc=0.6153 meta_f1=0.5931
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [64/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2004 fine_f1=0.2035 meta_pr_auc=0.6146 meta_f1=0.5908
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [65/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1943 fine_f1=0.1939 meta_pr_auc=0.6108 meta_f1=0.5885
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [66/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1009 fine_f1=0.0884 meta_pr_auc=0.6051 meta_f1=0.5789
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [67/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0979 fine_f1=0.0859 meta_pr_auc=0.6018 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [68/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1035 fine_f1=0.0929 meta_pr_auc=0.6043 meta_f1=0.5806
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [69/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1041 fine_f1=0.0909 meta_pr_auc=0.6081 meta_f1=0.5814
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [70/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1004 fine_f1=0.0879 meta_pr_auc=0.6035 meta_f1=0.5807
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [71/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1786 fine_f1=0.1650 meta_pr_auc=0.6094 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [72/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1792 fine_f1=0.1772 meta_pr_auc=0.6030 meta_f1=0.5823
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [73/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1823 fine_f1=0.1799 meta_pr_auc=0.6092 meta_f1=0.5852
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [74/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1816 fine_f1=0.1795 meta_pr_auc=0.6045 meta_f1=0.5822
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [75/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1716 fine_f1=0.1591 meta_pr_auc=0.6041 meta_f1=0.5866
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [76/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0846 fine_f1=0.0717 meta_pr_auc=0.5871 meta_f1=0.5717
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [77/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0965 fine_f1=0.0811 meta_pr_auc=0.5908 meta_f1=0.5673
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [78/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0978 fine_f1=0.0826 meta_pr_auc=0.5869 meta_f1=0.5672
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [79/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0844 fine_f1=0.0717 meta_pr_auc=0.5862 meta_f1=0.5720
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [80/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0940 fine_f1=0.0817 meta_pr_auc=0.5881 meta_f1=0.5744
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [81/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1426 fine_f1=0.1353 meta_pr_auc=0.5799 meta_f1=0.5707
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [82/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1455 fine_f1=0.1346 meta_pr_auc=0.5839 meta_f1=0.5761
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [83/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1371 fine_f1=0.1268 meta_pr_auc=0.5911 meta_f1=0.5732
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [84/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1309 fine_f1=0.1215 meta_pr_auc=0.5883 meta_f1=0.5755
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [85/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1342 fine_f1=0.1222 meta_pr_auc=0.5894 meta_f1=0.5778
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [86/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0513 fine_f1=0.0401 meta_pr_auc=0.5701 meta_f1=0.5678
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [87/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0563 fine_f1=0.0381 meta_pr_auc=0.5663 meta_f1=0.5686
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [88/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0600 fine_f1=0.0488 meta_pr_auc=0.5688 meta_f1=0.5570
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [89/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0564 fine_f1=0.0405 meta_pr_auc=0.5668 meta_f1=0.5741
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [90/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0569 fine_f1=0.0396 meta_pr_auc=0.5664 meta_f1=0.5714
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [91/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2342 fine_f1=0.2312 meta_pr_auc=0.6261 meta_f1=0.5890
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [92/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1907 fine_f1=0.1797 meta_pr_auc=0.6206 meta_f1=0.5914
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [93/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2323 fine_f1=0.2313 meta_pr_auc=0.6228 meta_f1=0.5950
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [94/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2186 fine_f1=0.2171 meta_pr_auc=0.6235 meta_f1=0.5852
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [95/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2224 fine_f1=0.2140 meta_pr_auc=0.6238 meta_f1=0.5939
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [96/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1125 fine_f1=0.0996 meta_pr_auc=0.6223 meta_f1=0.5909
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [97/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1113 fine_f1=0.1005 meta_pr_auc=0.6176 meta_f1=0.5920
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [98/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1108 fine_f1=0.0955 meta_pr_auc=0.6220 meta_f1=0.5906
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [99/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1130 fine_f1=0.0990 meta_pr_auc=0.6213 meta_f1=0.5863
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [100/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1139 fine_f1=0.1033 meta_pr_auc=0.6194 meta_f1=0.5828
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [101/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2018 fine_f1=0.1937 meta_pr_auc=0.6199 meta_f1=0.5858
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [102/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2114 fine_f1=0.2106 meta_pr_auc=0.6263 meta_f1=0.5911
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [103/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2151 fine_f1=0.2103 meta_pr_auc=0.6267 meta_f1=0.5956
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [104/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2359 fine_f1=0.2332 meta_pr_auc=0.6223 meta_f1=0.5995
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [105/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2157 fine_f1=0.2087 meta_pr_auc=0.6274 meta_f1=0.5857
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [106/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1131 fine_f1=0.0963 meta_pr_auc=0.6082 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [107/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1033 fine_f1=0.0900 meta_pr_auc=0.6097 meta_f1=0.5875
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [108/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1047 fine_f1=0.0972 meta_pr_auc=0.6101 meta_f1=0.5862
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [109/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1108 fine_f1=0.0989 meta_pr_auc=0.6088 meta_f1=0.5863
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [110/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1052 fine_f1=0.0908 meta_pr_auc=0.6103 meta_f1=0.5874
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [111/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2080 fine_f1=0.1974 meta_pr_auc=0.6076 meta_f1=0.5881
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [112/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2058 fine_f1=0.2032 meta_pr_auc=0.6065 meta_f1=0.5862
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [113/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2127 fine_f1=0.2005 meta_pr_auc=0.6074 meta_f1=0.5944
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [114/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2018 fine_f1=0.1992 meta_pr_auc=0.6057 meta_f1=0.5976
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [115/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2077 fine_f1=0.1905 meta_pr_auc=0.6075 meta_f1=0.5960
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [116/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0845 fine_f1=0.0764 meta_pr_auc=0.5935 meta_f1=0.5764
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [117/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0808 fine_f1=0.0739 meta_pr_auc=0.5948 meta_f1=0.5789
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [118/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0878 fine_f1=0.0793 meta_pr_auc=0.5951 meta_f1=0.5818
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [119/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0857 fine_f1=0.0755 meta_pr_auc=0.5882 meta_f1=0.5718
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [120/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1028 fine_f1=0.0898 meta_pr_auc=0.5953 meta_f1=0.5812
+
+============================================================
+FOLD 3/5  (3388 train / 591 val / 997 test)
+============================================================
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [1/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1878 fine_f1=0.1801 meta_pr_auc=0.6087 meta_f1=0.5835
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [2/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1823 fine_f1=0.1769 meta_pr_auc=0.6067 meta_f1=0.5878
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [3/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1955 fine_f1=0.1947 meta_pr_auc=0.6096 meta_f1=0.5872
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [4/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1866 fine_f1=0.1820 meta_pr_auc=0.6047 meta_f1=0.5813
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [5/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1842 fine_f1=0.1802 meta_pr_auc=0.6052 meta_f1=0.5894
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [6/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1037 fine_f1=0.0962 meta_pr_auc=0.6009 meta_f1=0.5865
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [7/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1009 fine_f1=0.0914 meta_pr_auc=0.5965 meta_f1=0.5832
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [8/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0933 fine_f1=0.0786 meta_pr_auc=0.5985 meta_f1=0.5871
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [9/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1004 fine_f1=0.0924 meta_pr_auc=0.5973 meta_f1=0.5858
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [10/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0840 fine_f1=0.0744 meta_pr_auc=0.5995 meta_f1=0.5862
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [11/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1802 fine_f1=0.1681 meta_pr_auc=0.5899 meta_f1=0.5827
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [12/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1736 fine_f1=0.1598 meta_pr_auc=0.5925 meta_f1=0.5843
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [13/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1825 fine_f1=0.1642 meta_pr_auc=0.5886 meta_f1=0.5841
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [14/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1753 fine_f1=0.1708 meta_pr_auc=0.5871 meta_f1=0.5813
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [15/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1777 fine_f1=0.1654 meta_pr_auc=0.5860 meta_f1=0.5862
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [16/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0834 fine_f1=0.0721 meta_pr_auc=0.5716 meta_f1=0.5710
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [17/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0817 fine_f1=0.0699 meta_pr_auc=0.5711 meta_f1=0.5683
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [18/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0842 fine_f1=0.0715 meta_pr_auc=0.5758 meta_f1=0.5719
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [19/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0833 fine_f1=0.0721 meta_pr_auc=0.5745 meta_f1=0.5700
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [20/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0785 fine_f1=0.0699 meta_pr_auc=0.5733 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [21/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1498 fine_f1=0.1294 meta_pr_auc=0.5743 meta_f1=0.5677
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [22/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1482 fine_f1=0.1216 meta_pr_auc=0.5679 meta_f1=0.5625
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [23/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1509 fine_f1=0.1289 meta_pr_auc=0.5678 meta_f1=0.5682
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [24/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1500 fine_f1=0.1273 meta_pr_auc=0.5687 meta_f1=0.5646
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [25/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1483 fine_f1=0.1218 meta_pr_auc=0.5702 meta_f1=0.5637
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [26/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0566 fine_f1=0.0455 meta_pr_auc=0.5550 meta_f1=0.5603
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [27/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0549 fine_f1=0.0450 meta_pr_auc=0.5570 meta_f1=0.5575
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [28/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0548 fine_f1=0.0478 meta_pr_auc=0.5588 meta_f1=0.5588
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [29/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0563 fine_f1=0.0454 meta_pr_auc=0.5512 meta_f1=0.5535
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [30/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0567 fine_f1=0.0454 meta_pr_auc=0.5502 meta_f1=0.5542
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [31/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2282 fine_f1=0.2253 meta_pr_auc=0.6165 meta_f1=0.5898
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [32/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2205 fine_f1=0.2236 meta_pr_auc=0.6114 meta_f1=0.5930
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [33/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2265 fine_f1=0.2247 meta_pr_auc=0.6176 meta_f1=0.5938
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [34/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2261 fine_f1=0.2237 meta_pr_auc=0.6123 meta_f1=0.5870
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [35/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2261 fine_f1=0.2244 meta_pr_auc=0.6162 meta_f1=0.5902
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [36/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1119 fine_f1=0.1107 meta_pr_auc=0.6119 meta_f1=0.5893
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [37/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1119 fine_f1=0.1017 meta_pr_auc=0.6123 meta_f1=0.5831
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [38/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1112 fine_f1=0.0992 meta_pr_auc=0.6088 meta_f1=0.5848
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [39/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1096 fine_f1=0.0985 meta_pr_auc=0.6067 meta_f1=0.5854
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [40/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1121 fine_f1=0.1120 meta_pr_auc=0.6100 meta_f1=0.5903
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [41/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2148 fine_f1=0.2051 meta_pr_auc=0.6098 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [42/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2103 fine_f1=0.2116 meta_pr_auc=0.6036 meta_f1=0.5811
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [43/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2030 fine_f1=0.1874 meta_pr_auc=0.6070 meta_f1=0.5812
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [44/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2029 fine_f1=0.1947 meta_pr_auc=0.6048 meta_f1=0.5869
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [45/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2020 fine_f1=0.1922 meta_pr_auc=0.6018 meta_f1=0.5809
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [46/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1089 fine_f1=0.0959 meta_pr_auc=0.5979 meta_f1=0.5818
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [47/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1095 fine_f1=0.0946 meta_pr_auc=0.5966 meta_f1=0.5795
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [48/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1087 fine_f1=0.0980 meta_pr_auc=0.5959 meta_f1=0.5745
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [49/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1104 fine_f1=0.0933 meta_pr_auc=0.5998 meta_f1=0.5789
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [50/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1076 fine_f1=0.0936 meta_pr_auc=0.5986 meta_f1=0.5769
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [51/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1987 fine_f1=0.1756 meta_pr_auc=0.5959 meta_f1=0.5813
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [52/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1943 fine_f1=0.1744 meta_pr_auc=0.5945 meta_f1=0.5740
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [53/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2009 fine_f1=0.1758 meta_pr_auc=0.5931 meta_f1=0.5797
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [54/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2037 fine_f1=0.1746 meta_pr_auc=0.5923 meta_f1=0.5754
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [55/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2015 fine_f1=0.1758 meta_pr_auc=0.5962 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [56/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0854 fine_f1=0.0733 meta_pr_auc=0.5696 meta_f1=0.5611
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [57/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0954 fine_f1=0.0845 meta_pr_auc=0.5773 meta_f1=0.5632
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [58/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0877 fine_f1=0.0763 meta_pr_auc=0.5750 meta_f1=0.5685
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [59/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0868 fine_f1=0.0764 meta_pr_auc=0.5747 meta_f1=0.5645
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [60/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0890 fine_f1=0.0760 meta_pr_auc=0.5743 meta_f1=0.5703
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [61/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2030 fine_f1=0.2020 meta_pr_auc=0.6105 meta_f1=0.5896
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [62/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2177 fine_f1=0.2154 meta_pr_auc=0.6126 meta_f1=0.5886
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [63/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2079 fine_f1=0.2055 meta_pr_auc=0.6174 meta_f1=0.5945
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [64/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2003 fine_f1=0.1953 meta_pr_auc=0.6122 meta_f1=0.5909
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [65/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2039 fine_f1=0.1952 meta_pr_auc=0.6157 meta_f1=0.5879
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [66/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1092 fine_f1=0.0875 meta_pr_auc=0.6066 meta_f1=0.5841
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [67/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1010 fine_f1=0.0785 meta_pr_auc=0.6019 meta_f1=0.5855
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [68/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1012 fine_f1=0.0802 meta_pr_auc=0.6024 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [69/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0988 fine_f1=0.0869 meta_pr_auc=0.6084 meta_f1=0.5870
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [70/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1035 fine_f1=0.0802 meta_pr_auc=0.6039 meta_f1=0.5818
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [71/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1903 fine_f1=0.1836 meta_pr_auc=0.6039 meta_f1=0.5939
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [72/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1931 fine_f1=0.1837 meta_pr_auc=0.5994 meta_f1=0.5794
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [73/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1991 fine_f1=0.1906 meta_pr_auc=0.6029 meta_f1=0.5820
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [74/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1939 fine_f1=0.1741 meta_pr_auc=0.6021 meta_f1=0.5870
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [75/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1868 fine_f1=0.1790 meta_pr_auc=0.5992 meta_f1=0.5812
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [76/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0863 fine_f1=0.0747 meta_pr_auc=0.5884 meta_f1=0.5711
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [77/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0846 fine_f1=0.0738 meta_pr_auc=0.5891 meta_f1=0.5796
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [78/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0822 fine_f1=0.0637 meta_pr_auc=0.5882 meta_f1=0.5733
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [79/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0877 fine_f1=0.0748 meta_pr_auc=0.5878 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [80/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0879 fine_f1=0.0744 meta_pr_auc=0.5864 meta_f1=0.5806
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [81/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1542 fine_f1=0.1367 meta_pr_auc=0.5845 meta_f1=0.5742
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [82/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1501 fine_f1=0.1418 meta_pr_auc=0.5853 meta_f1=0.5785
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [83/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1492 fine_f1=0.1396 meta_pr_auc=0.5860 meta_f1=0.5704
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [84/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1558 fine_f1=0.1413 meta_pr_auc=0.5859 meta_f1=0.5788
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [85/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1536 fine_f1=0.1426 meta_pr_auc=0.5851 meta_f1=0.5737
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [86/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0512 fine_f1=0.0371 meta_pr_auc=0.5647 meta_f1=0.5624
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [87/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0561 fine_f1=0.0406 meta_pr_auc=0.5697 meta_f1=0.5621
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [88/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0586 fine_f1=0.0417 meta_pr_auc=0.5691 meta_f1=0.5642
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [89/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0588 fine_f1=0.0415 meta_pr_auc=0.5688 meta_f1=0.5623
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [90/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0510 fine_f1=0.0372 meta_pr_auc=0.5666 meta_f1=0.5640
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [91/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2412 fine_f1=0.2482 meta_pr_auc=0.6217 meta_f1=0.5937
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [92/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2421 fine_f1=0.2396 meta_pr_auc=0.6247 meta_f1=0.5977
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [93/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2138 fine_f1=0.2156 meta_pr_auc=0.6212 meta_f1=0.5967
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [94/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2380 fine_f1=0.2282 meta_pr_auc=0.6227 meta_f1=0.5981
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [95/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2315 fine_f1=0.2352 meta_pr_auc=0.6215 meta_f1=0.5936
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [96/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1139 fine_f1=0.1063 meta_pr_auc=0.6115 meta_f1=0.5874
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [97/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1192 fine_f1=0.1120 meta_pr_auc=0.6154 meta_f1=0.5892
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [98/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1158 fine_f1=0.1090 meta_pr_auc=0.6153 meta_f1=0.5923
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [99/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1121 fine_f1=0.1069 meta_pr_auc=0.6113 meta_f1=0.5875
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [100/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1130 fine_f1=0.1073 meta_pr_auc=0.6131 meta_f1=0.5917
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [101/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2266 fine_f1=0.2187 meta_pr_auc=0.6206 meta_f1=0.5906
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [102/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2249 fine_f1=0.2217 meta_pr_auc=0.6217 meta_f1=0.5872
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [103/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2244 fine_f1=0.2266 meta_pr_auc=0.6205 meta_f1=0.5892
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [104/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2194 fine_f1=0.2244 meta_pr_auc=0.6177 meta_f1=0.5904
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [105/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2251 fine_f1=0.2210 meta_pr_auc=0.6186 meta_f1=0.5871
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [106/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1150 fine_f1=0.1096 meta_pr_auc=0.6064 meta_f1=0.5841
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [107/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1062 fine_f1=0.0926 meta_pr_auc=0.6090 meta_f1=0.5887
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [108/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1152 fine_f1=0.1123 meta_pr_auc=0.6104 meta_f1=0.5879
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [109/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1123 fine_f1=0.1113 meta_pr_auc=0.6091 meta_f1=0.5833
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [110/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1141 fine_f1=0.1096 meta_pr_auc=0.6090 meta_f1=0.5862
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [111/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2107 fine_f1=0.2029 meta_pr_auc=0.6058 meta_f1=0.5965
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [112/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2094 fine_f1=0.1953 meta_pr_auc=0.6062 meta_f1=0.5841
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [113/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2056 fine_f1=0.1905 meta_pr_auc=0.6095 meta_f1=0.5874
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [114/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2158 fine_f1=0.2070 meta_pr_auc=0.6066 meta_f1=0.5874
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [115/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2124 fine_f1=0.2084 meta_pr_auc=0.6090 meta_f1=0.5912
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [116/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1026 fine_f1=0.0868 meta_pr_auc=0.5897 meta_f1=0.5737
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [117/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0888 fine_f1=0.0792 meta_pr_auc=0.5900 meta_f1=0.5729
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [118/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0898 fine_f1=0.0790 meta_pr_auc=0.5884 meta_f1=0.5778
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [119/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1021 fine_f1=0.0925 meta_pr_auc=0.5896 meta_f1=0.5732
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [120/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0867 fine_f1=0.0732 meta_pr_auc=0.5905 meta_f1=0.5800
+
+============================================================
+FOLD 4/5  (3347 train / 621 val / 1008 test)
+============================================================
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [1/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1577 fine_f1=0.1572 meta_pr_auc=0.5928 meta_f1=0.5736
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [2/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1691 fine_f1=0.1752 meta_pr_auc=0.5881 meta_f1=0.5723
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [3/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1753 fine_f1=0.1777 meta_pr_auc=0.5891 meta_f1=0.5710
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [4/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1553 fine_f1=0.1539 meta_pr_auc=0.5944 meta_f1=0.5775
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [5/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1703 fine_f1=0.1756 meta_pr_auc=0.5873 meta_f1=0.5663
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [6/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0998 fine_f1=0.0936 meta_pr_auc=0.5770 meta_f1=0.5666
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [7/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0966 fine_f1=0.0901 meta_pr_auc=0.5850 meta_f1=0.5681
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [8/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0957 fine_f1=0.0908 meta_pr_auc=0.5842 meta_f1=0.5617
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [9/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0996 fine_f1=0.0962 meta_pr_auc=0.5768 meta_f1=0.5673
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [10/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0961 fine_f1=0.0947 meta_pr_auc=0.5811 meta_f1=0.5703
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [11/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1592 fine_f1=0.1586 meta_pr_auc=0.5770 meta_f1=0.5727
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [12/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1565 fine_f1=0.1536 meta_pr_auc=0.5836 meta_f1=0.5710
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [13/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1569 fine_f1=0.1610 meta_pr_auc=0.5801 meta_f1=0.5616
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [14/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1598 fine_f1=0.1589 meta_pr_auc=0.5812 meta_f1=0.5615
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [15/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1510 fine_f1=0.1502 meta_pr_auc=0.5787 meta_f1=0.5674
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [16/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0824 fine_f1=0.0756 meta_pr_auc=0.5668 meta_f1=0.5542
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [17/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0760 fine_f1=0.0666 meta_pr_auc=0.5694 meta_f1=0.5639
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [18/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0804 fine_f1=0.0658 meta_pr_auc=0.5750 meta_f1=0.5597
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [19/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0770 fine_f1=0.0681 meta_pr_auc=0.5687 meta_f1=0.5634
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [20/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0778 fine_f1=0.0661 meta_pr_auc=0.5658 meta_f1=0.5623
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [21/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1348 fine_f1=0.1199 meta_pr_auc=0.5555 meta_f1=0.5483
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [22/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1301 fine_f1=0.1209 meta_pr_auc=0.5612 meta_f1=0.5577
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [23/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1333 fine_f1=0.1222 meta_pr_auc=0.5608 meta_f1=0.5528
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [24/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1233 fine_f1=0.1126 meta_pr_auc=0.5581 meta_f1=0.5566
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [25/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1230 fine_f1=0.1121 meta_pr_auc=0.5565 meta_f1=0.5572
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [26/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0487 fine_f1=0.0434 meta_pr_auc=0.5392 meta_f1=0.5488
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [27/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0521 fine_f1=0.0419 meta_pr_auc=0.5354 meta_f1=0.5438
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [28/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0477 fine_f1=0.0459 meta_pr_auc=0.5380 meta_f1=0.5493
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [29/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0488 fine_f1=0.0454 meta_pr_auc=0.5351 meta_f1=0.5440
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [30/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0519 fine_f1=0.0422 meta_pr_auc=0.5376 meta_f1=0.5461
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [31/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2259 fine_f1=0.2216 meta_pr_auc=0.6003 meta_f1=0.5761
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [32/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2201 fine_f1=0.2145 meta_pr_auc=0.5975 meta_f1=0.5739
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [33/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2161 fine_f1=0.2081 meta_pr_auc=0.5990 meta_f1=0.5717
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [34/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2196 fine_f1=0.2106 meta_pr_auc=0.6002 meta_f1=0.5757
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [35/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2146 fine_f1=0.2040 meta_pr_auc=0.6014 meta_f1=0.5799
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [36/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1030 fine_f1=0.0981 meta_pr_auc=0.5954 meta_f1=0.5779
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [37/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1044 fine_f1=0.1013 meta_pr_auc=0.5946 meta_f1=0.5720
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [38/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1046 fine_f1=0.1000 meta_pr_auc=0.5934 meta_f1=0.5703
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [39/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1023 fine_f1=0.0993 meta_pr_auc=0.5958 meta_f1=0.5772
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [40/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1056 fine_f1=0.1019 meta_pr_auc=0.5932 meta_f1=0.5735
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [41/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2018 fine_f1=0.1971 meta_pr_auc=0.5959 meta_f1=0.5755
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [42/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2088 fine_f1=0.1934 meta_pr_auc=0.5966 meta_f1=0.5799
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [43/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2137 fine_f1=0.2044 meta_pr_auc=0.5953 meta_f1=0.5774
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [44/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2118 fine_f1=0.2072 meta_pr_auc=0.5970 meta_f1=0.5707
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [45/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1944 fine_f1=0.1891 meta_pr_auc=0.5899 meta_f1=0.5683
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [46/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1023 fine_f1=0.0954 meta_pr_auc=0.5825 meta_f1=0.5652
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [47/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0994 fine_f1=0.0931 meta_pr_auc=0.5821 meta_f1=0.5738
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [48/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1009 fine_f1=0.1021 meta_pr_auc=0.5790 meta_f1=0.5691
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [49/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0995 fine_f1=0.0914 meta_pr_auc=0.5828 meta_f1=0.5696
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [50/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1034 fine_f1=0.0979 meta_pr_auc=0.5794 meta_f1=0.5642
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [51/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1829 fine_f1=0.1683 meta_pr_auc=0.5769 meta_f1=0.5631
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [52/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1828 fine_f1=0.1688 meta_pr_auc=0.5766 meta_f1=0.5616
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [53/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1803 fine_f1=0.1717 meta_pr_auc=0.5787 meta_f1=0.5663
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [54/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1714 fine_f1=0.1552 meta_pr_auc=0.5787 meta_f1=0.5664
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [55/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1868 fine_f1=0.1736 meta_pr_auc=0.5798 meta_f1=0.5647
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [56/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0885 fine_f1=0.0802 meta_pr_auc=0.5573 meta_f1=0.5584
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [57/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0867 fine_f1=0.0781 meta_pr_auc=0.5660 meta_f1=0.5590
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [58/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0796 fine_f1=0.0686 meta_pr_auc=0.5652 meta_f1=0.5595
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [59/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0846 fine_f1=0.0760 meta_pr_auc=0.5634 meta_f1=0.5603
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [60/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0846 fine_f1=0.0789 meta_pr_auc=0.5638 meta_f1=0.5503
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [61/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1632 fine_f1=0.1617 meta_pr_auc=0.5966 meta_f1=0.5773
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [62/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1569 fine_f1=0.1550 meta_pr_auc=0.5954 meta_f1=0.5794
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [63/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1963 fine_f1=0.1962 meta_pr_auc=0.5921 meta_f1=0.5730
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [64/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1458 fine_f1=0.1339 meta_pr_auc=0.5948 meta_f1=0.5738
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [65/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1376 fine_f1=0.1364 meta_pr_auc=0.5932 meta_f1=0.5757
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [66/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0959 fine_f1=0.0929 meta_pr_auc=0.5876 meta_f1=0.5751
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [67/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0938 fine_f1=0.0939 meta_pr_auc=0.5882 meta_f1=0.5714
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [68/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0994 fine_f1=0.0961 meta_pr_auc=0.5865 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [69/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0942 fine_f1=0.0931 meta_pr_auc=0.5861 meta_f1=0.5709
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [70/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0950 fine_f1=0.0940 meta_pr_auc=0.5850 meta_f1=0.5604
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [71/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1754 fine_f1=0.1698 meta_pr_auc=0.5866 meta_f1=0.5767
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [72/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1725 fine_f1=0.1764 meta_pr_auc=0.5852 meta_f1=0.5766
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [73/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1776 fine_f1=0.1733 meta_pr_auc=0.5885 meta_f1=0.5723
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [74/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1636 fine_f1=0.1648 meta_pr_auc=0.5846 meta_f1=0.5704
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [75/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1611 fine_f1=0.1632 meta_pr_auc=0.5843 meta_f1=0.5759
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [76/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0902 fine_f1=0.0837 meta_pr_auc=0.5778 meta_f1=0.5648
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [77/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0904 fine_f1=0.0832 meta_pr_auc=0.5775 meta_f1=0.5739
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [78/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0912 fine_f1=0.0851 meta_pr_auc=0.5747 meta_f1=0.5639
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [79/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0889 fine_f1=0.0817 meta_pr_auc=0.5769 meta_f1=0.5652
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [80/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0830 fine_f1=0.0748 meta_pr_auc=0.5712 meta_f1=0.5621
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [81/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1257 fine_f1=0.1290 meta_pr_auc=0.5731 meta_f1=0.5668
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [82/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1223 fine_f1=0.1237 meta_pr_auc=0.5717 meta_f1=0.5657
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [83/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1247 fine_f1=0.1269 meta_pr_auc=0.5722 meta_f1=0.5624
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [84/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1275 fine_f1=0.1266 meta_pr_auc=0.5737 meta_f1=0.5712
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [85/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1214 fine_f1=0.1197 meta_pr_auc=0.5732 meta_f1=0.5660
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [86/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0653 fine_f1=0.0489 meta_pr_auc=0.5618 meta_f1=0.5527
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [87/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0591 fine_f1=0.0525 meta_pr_auc=0.5595 meta_f1=0.5541
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [88/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0587 fine_f1=0.0530 meta_pr_auc=0.5594 meta_f1=0.5597
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [89/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0564 fine_f1=0.0490 meta_pr_auc=0.5649 meta_f1=0.5605
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [90/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0572 fine_f1=0.0509 meta_pr_auc=0.5603 meta_f1=0.5589
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [91/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1853 fine_f1=0.1836 meta_pr_auc=0.6123 meta_f1=0.5888
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [92/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2258 fine_f1=0.2109 meta_pr_auc=0.6091 meta_f1=0.5857
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [93/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1971 fine_f1=0.1942 meta_pr_auc=0.6096 meta_f1=0.5877
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [94/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1848 fine_f1=0.1794 meta_pr_auc=0.6141 meta_f1=0.5882
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [95/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1865 fine_f1=0.1718 meta_pr_auc=0.6101 meta_f1=0.5846
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [96/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1157 fine_f1=0.1141 meta_pr_auc=0.6046 meta_f1=0.5872
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [97/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1130 fine_f1=0.1088 meta_pr_auc=0.5996 meta_f1=0.5848
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [98/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1022 fine_f1=0.0951 meta_pr_auc=0.6007 meta_f1=0.5816
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [99/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1151 fine_f1=0.1108 meta_pr_auc=0.6045 meta_f1=0.5820
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [100/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1139 fine_f1=0.1180 meta_pr_auc=0.6067 meta_f1=0.5857
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [101/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1977 fine_f1=0.1894 meta_pr_auc=0.6080 meta_f1=0.5801
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [102/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2052 fine_f1=0.2008 meta_pr_auc=0.6077 meta_f1=0.5786
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [103/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2038 fine_f1=0.1982 meta_pr_auc=0.6028 meta_f1=0.5774
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [104/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1937 fine_f1=0.1909 meta_pr_auc=0.6093 meta_f1=0.5854
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [105/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2019 fine_f1=0.1892 meta_pr_auc=0.6038 meta_f1=0.5801
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [106/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1062 fine_f1=0.1044 meta_pr_auc=0.5978 meta_f1=0.5741
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [107/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1015 fine_f1=0.0980 meta_pr_auc=0.5966 meta_f1=0.5792
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [108/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1014 fine_f1=0.0981 meta_pr_auc=0.5997 meta_f1=0.5775
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [109/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1026 fine_f1=0.0971 meta_pr_auc=0.5997 meta_f1=0.5822
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [110/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1034 fine_f1=0.1074 meta_pr_auc=0.5992 meta_f1=0.5712
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [111/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1862 fine_f1=0.1836 meta_pr_auc=0.5958 meta_f1=0.5777
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [112/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1894 fine_f1=0.1835 meta_pr_auc=0.5917 meta_f1=0.5726
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [113/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1825 fine_f1=0.1740 meta_pr_auc=0.5971 meta_f1=0.5732
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [114/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1901 fine_f1=0.1855 meta_pr_auc=0.5918 meta_f1=0.5778
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [115/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1925 fine_f1=0.1809 meta_pr_auc=0.5935 meta_f1=0.5786
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [116/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0874 fine_f1=0.0818 meta_pr_auc=0.5799 meta_f1=0.5616
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [117/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0967 fine_f1=0.0932 meta_pr_auc=0.5805 meta_f1=0.5605
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [118/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0976 fine_f1=0.0889 meta_pr_auc=0.5795 meta_f1=0.5599
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [119/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0887 fine_f1=0.0838 meta_pr_auc=0.5818 meta_f1=0.5665
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [120/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0942 fine_f1=0.0879 meta_pr_auc=0.5803 meta_f1=0.5648
+
+============================================================
+FOLD 5/5  (3370 train / 602 val / 1004 test)
+============================================================
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [1/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1839 fine_f1=0.1877 meta_pr_auc=0.5750 meta_f1=0.5758
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [2/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1824 fine_f1=0.1796 meta_pr_auc=0.5739 meta_f1=0.5700
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [3/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1969 fine_f1=0.1972 meta_pr_auc=0.5761 meta_f1=0.5703
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [4/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1849 fine_f1=0.1873 meta_pr_auc=0.5728 meta_f1=0.5716
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [5/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1679 fine_f1=0.1681 meta_pr_auc=0.5788 meta_f1=0.5723
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [6/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1072 fine_f1=0.0956 meta_pr_auc=0.5692 meta_f1=0.5669
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [7/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1066 fine_f1=0.0967 meta_pr_auc=0.5697 meta_f1=0.5631
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [8/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1018 fine_f1=0.0960 meta_pr_auc=0.5697 meta_f1=0.5610
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [9/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1041 fine_f1=0.0950 meta_pr_auc=0.5705 meta_f1=0.5697
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [10/120] {'gd': 64, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1067 fine_f1=0.0957 meta_pr_auc=0.5702 meta_f1=0.5590
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [11/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1688 fine_f1=0.1601 meta_pr_auc=0.5685 meta_f1=0.5653
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [12/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1430 fine_f1=0.1336 meta_pr_auc=0.5618 meta_f1=0.5600
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [13/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1533 fine_f1=0.1451 meta_pr_auc=0.5646 meta_f1=0.5604
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [14/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1570 fine_f1=0.1468 meta_pr_auc=0.5613 meta_f1=0.5610
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [15/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1445 fine_f1=0.1249 meta_pr_auc=0.5636 meta_f1=0.5599
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [16/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0608 fine_f1=0.0548 meta_pr_auc=0.5575 meta_f1=0.5557
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [17/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0638 fine_f1=0.0531 meta_pr_auc=0.5571 meta_f1=0.5558
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [18/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0642 fine_f1=0.0538 meta_pr_auc=0.5579 meta_f1=0.5575
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [19/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0700 fine_f1=0.0614 meta_pr_auc=0.5599 meta_f1=0.5646
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [20/120] {'gd': 64, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0625 fine_f1=0.0563 meta_pr_auc=0.5618 meta_f1=0.5591
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [21/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1160 fine_f1=0.1056 meta_pr_auc=0.5478 meta_f1=0.5543
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [22/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1184 fine_f1=0.1049 meta_pr_auc=0.5454 meta_f1=0.5554
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [23/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1207 fine_f1=0.1115 meta_pr_auc=0.5505 meta_f1=0.5568
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [24/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1221 fine_f1=0.1181 meta_pr_auc=0.5536 meta_f1=0.5547
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [25/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1175 fine_f1=0.1063 meta_pr_auc=0.5491 meta_f1=0.5547
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [26/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0482 fine_f1=0.0400 meta_pr_auc=0.5391 meta_f1=0.5526
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [27/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0528 fine_f1=0.0508 meta_pr_auc=0.5403 meta_f1=0.5533
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [28/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0515 fine_f1=0.0451 meta_pr_auc=0.5416 meta_f1=0.5506
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [29/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0497 fine_f1=0.0435 meta_pr_auc=0.5331 meta_f1=0.5529
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [30/120] {'gd': 64, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0528 fine_f1=0.0457 meta_pr_auc=0.5401 meta_f1=0.5514
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [31/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2022 fine_f1=0.2074 meta_pr_auc=0.5916 meta_f1=0.5830
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [32/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2077 fine_f1=0.2068 meta_pr_auc=0.5920 meta_f1=0.5798
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [33/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2000 fine_f1=0.2044 meta_pr_auc=0.5915 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [34/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2031 fine_f1=0.2070 meta_pr_auc=0.5922 meta_f1=0.5829
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [35/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1976 fine_f1=0.2066 meta_pr_auc=0.5879 meta_f1=0.5752
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [36/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1157 fine_f1=0.1017 meta_pr_auc=0.5846 meta_f1=0.5768
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [37/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1146 fine_f1=0.1024 meta_pr_auc=0.5808 meta_f1=0.5738
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [38/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1133 fine_f1=0.1016 meta_pr_auc=0.5848 meta_f1=0.5723
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [39/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1144 fine_f1=0.1016 meta_pr_auc=0.5811 meta_f1=0.5748
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [40/120] {'gd': 64, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1147 fine_f1=0.1045 meta_pr_auc=0.5815 meta_f1=0.5748
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [41/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2018 fine_f1=0.1947 meta_pr_auc=0.5823 meta_f1=0.5803
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [42/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2021 fine_f1=0.2004 meta_pr_auc=0.5855 meta_f1=0.5789
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [43/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1976 fine_f1=0.1926 meta_pr_auc=0.5824 meta_f1=0.5773
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [44/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2146 fine_f1=0.2113 meta_pr_auc=0.5825 meta_f1=0.5809
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [45/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2027 fine_f1=0.1962 meta_pr_auc=0.5781 meta_f1=0.5751
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [46/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1076 fine_f1=0.0973 meta_pr_auc=0.5728 meta_f1=0.5654
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [47/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1079 fine_f1=0.0968 meta_pr_auc=0.5700 meta_f1=0.5676
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [48/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1098 fine_f1=0.1062 meta_pr_auc=0.5685 meta_f1=0.5683
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [49/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1093 fine_f1=0.1052 meta_pr_auc=0.5685 meta_f1=0.5667
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [50/120] {'gd': 64, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1005 fine_f1=0.0879 meta_pr_auc=0.5653 meta_f1=0.5631
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [51/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1702 fine_f1=0.1494 meta_pr_auc=0.5579 meta_f1=0.5658
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [52/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1734 fine_f1=0.1559 meta_pr_auc=0.5619 meta_f1=0.5657
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [53/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1950 fine_f1=0.1854 meta_pr_auc=0.5668 meta_f1=0.5639
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [54/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1813 fine_f1=0.1685 meta_pr_auc=0.5637 meta_f1=0.5650
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [55/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1666 fine_f1=0.1637 meta_pr_auc=0.5601 meta_f1=0.5634
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [56/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1033 fine_f1=0.0833 meta_pr_auc=0.5497 meta_f1=0.5598
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [57/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1022 fine_f1=0.0847 meta_pr_auc=0.5562 meta_f1=0.5552
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [58/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1013 fine_f1=0.0845 meta_pr_auc=0.5510 meta_f1=0.5491
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [59/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1026 fine_f1=0.0861 meta_pr_auc=0.5545 meta_f1=0.5588
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=64_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [60/120] {'gd': 64, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0956 fine_f1=0.0859 meta_pr_auc=0.5518 meta_f1=0.5522
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [61/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1807 fine_f1=0.1766 meta_pr_auc=0.5799 meta_f1=0.5773
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [62/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1816 fine_f1=0.1807 meta_pr_auc=0.5838 meta_f1=0.5725
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [63/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2050 fine_f1=0.2081 meta_pr_auc=0.5850 meta_f1=0.5752
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [64/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1917 fine_f1=0.1874 meta_pr_auc=0.5840 meta_f1=0.5726
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [65/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1762 fine_f1=0.1652 meta_pr_auc=0.5781 meta_f1=0.5651
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [66/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1056 fine_f1=0.0999 meta_pr_auc=0.5774 meta_f1=0.5665
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [67/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1058 fine_f1=0.0998 meta_pr_auc=0.5743 meta_f1=0.5665
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [68/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1044 fine_f1=0.0976 meta_pr_auc=0.5750 meta_f1=0.5606
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [69/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1044 fine_f1=0.0994 meta_pr_auc=0.5753 meta_f1=0.5671
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [70/120] {'gd': 128, 'ld': 32, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1046 fine_f1=0.1018 meta_pr_auc=0.5740 meta_f1=0.5653
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [71/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1864 fine_f1=0.1812 meta_pr_auc=0.5813 meta_f1=0.5740
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [72/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1629 fine_f1=0.1562 meta_pr_auc=0.5722 meta_f1=0.5650
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [73/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1595 fine_f1=0.1412 meta_pr_auc=0.5653 meta_f1=0.5585
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [74/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1706 fine_f1=0.1631 meta_pr_auc=0.5712 meta_f1=0.5663
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [75/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1695 fine_f1=0.1596 meta_pr_auc=0.5712 meta_f1=0.5731
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [76/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1013 fine_f1=0.0917 meta_pr_auc=0.5603 meta_f1=0.5551
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [77/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0960 fine_f1=0.0870 meta_pr_auc=0.5609 meta_f1=0.5519
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [78/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0995 fine_f1=0.0920 meta_pr_auc=0.5625 meta_f1=0.5579
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [79/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0987 fine_f1=0.0932 meta_pr_auc=0.5656 meta_f1=0.5540
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [80/120] {'gd': 128, 'ld': 32, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0969 fine_f1=0.0868 meta_pr_auc=0.5627 meta_f1=0.5564
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [81/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1433 fine_f1=0.1334 meta_pr_auc=0.5560 meta_f1=0.5628
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [82/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1264 fine_f1=0.1163 meta_pr_auc=0.5519 meta_f1=0.5602
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [83/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1348 fine_f1=0.1258 meta_pr_auc=0.5567 meta_f1=0.5598
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [84/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1333 fine_f1=0.1243 meta_pr_auc=0.5509 meta_f1=0.5593
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [85/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1307 fine_f1=0.1199 meta_pr_auc=0.5570 meta_f1=0.5628
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [86/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.0606 fine_f1=0.0542 meta_pr_auc=0.5436 meta_f1=0.5517
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [87/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.0523 fine_f1=0.0436 meta_pr_auc=0.5454 meta_f1=0.5586
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [88/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.0621 fine_f1=0.0467 meta_pr_auc=0.5419 meta_f1=0.5542
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [89/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.0596 fine_f1=0.0535 meta_pr_auc=0.5462 meta_f1=0.5505
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=32_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [90/120] {'gd': 128, 'ld': 32, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.0626 fine_f1=0.0563 meta_pr_auc=0.5472 meta_f1=0.5526
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0]
+  [91/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.2185 fine_f1=0.2146 meta_pr_auc=0.5905 meta_f1=0.5845
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.01]
+  [92/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.2164 fine_f1=0.2134 meta_pr_auc=0.5931 meta_f1=0.5830
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.05]
+  [93/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.2264 fine_f1=0.2158 meta_pr_auc=0.5953 meta_f1=0.5814
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.1]
+  [94/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.2232 fine_f1=0.2123 meta_pr_auc=0.5965 meta_f1=0.5785
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-04_lv=0.3]
+  [95/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.2230 fine_f1=0.2213 meta_pr_auc=0.5913 meta_f1=0.5819
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0]
+  [96/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1085 fine_f1=0.1028 meta_pr_auc=0.5862 meta_f1=0.5759
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.01]
+  [97/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1119 fine_f1=0.1073 meta_pr_auc=0.5873 meta_f1=0.5767
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.05]
+  [98/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1078 fine_f1=0.0943 meta_pr_auc=0.5859 meta_f1=0.5767
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.1]
+  [99/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1089 fine_f1=0.1032 meta_pr_auc=0.5839 meta_f1=0.5717
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.5_lr=1e-03_wd=1e-03_lv=0.3]
+  [100/120] {'gd': 128, 'ld': 64, 'dr': 0.5, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1123 fine_f1=0.1050 meta_pr_auc=0.5905 meta_f1=0.5793
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0]
+  [101/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1946 fine_f1=0.1995 meta_pr_auc=0.5844 meta_f1=0.5790
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.01]
+  [102/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1965 fine_f1=0.1983 meta_pr_auc=0.5828 meta_f1=0.5758
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.05]
+  [103/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1964 fine_f1=0.2011 meta_pr_auc=0.5828 meta_f1=0.5755
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.1]
+  [104/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1942 fine_f1=0.1963 meta_pr_auc=0.5823 meta_f1=0.5765
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-04_lv=0.3]
+  [105/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1986 fine_f1=0.2059 meta_pr_auc=0.5870 meta_f1=0.5749
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0]
+  [106/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1109 fine_f1=0.1118 meta_pr_auc=0.5704 meta_f1=0.5665
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.01]
+  [107/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1087 fine_f1=0.1031 meta_pr_auc=0.5824 meta_f1=0.5736
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.05]
+  [108/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1143 fine_f1=0.1041 meta_pr_auc=0.5817 meta_f1=0.5730
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.1]
+  [109/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1095 fine_f1=0.1035 meta_pr_auc=0.5827 meta_f1=0.5771
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.6_lr=1e-03_wd=1e-03_lv=0.3]
+  [110/120] {'gd': 128, 'ld': 64, 'dr': 0.6, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1041 fine_f1=0.1001 meta_pr_auc=0.5766 meta_f1=0.5684
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0]
+  [111/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0} -> fine_pr_auc=0.1984 fine_f1=0.1965 meta_pr_auc=0.5810 meta_f1=0.5730
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.01]
+  [112/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.01} -> fine_pr_auc=0.1677 fine_f1=0.1590 meta_pr_auc=0.5752 meta_f1=0.5708
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.05]
+  [113/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.05} -> fine_pr_auc=0.1962 fine_f1=0.1894 meta_pr_auc=0.5811 meta_f1=0.5733
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.1]
+  [114/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.1} -> fine_pr_auc=0.1833 fine_f1=0.1786 meta_pr_auc=0.5776 meta_f1=0.5752
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-04_lv=0.3]
+  [115/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.0001, 'lv': 0.3} -> fine_pr_auc=0.1961 fine_f1=0.1918 meta_pr_auc=0.5793 meta_f1=0.5722
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0]
+  [116/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0} -> fine_pr_auc=0.1057 fine_f1=0.0917 meta_pr_auc=0.5663 meta_f1=0.5613
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.01]
+  [117/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.01} -> fine_pr_auc=0.1064 fine_f1=0.0902 meta_pr_auc=0.5702 meta_f1=0.5657
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.05]
+  [118/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.05} -> fine_pr_auc=0.1061 fine_f1=0.0930 meta_pr_auc=0.5719 meta_f1=0.5617
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.1]
+  [119/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.1} -> fine_pr_auc=0.1057 fine_f1=0.0904 meta_pr_auc=0.5690 meta_f1=0.5636
+  → Saved to kfold_results/hmcn_kfold_ablation_results.csv  [hmcn_kfold_sweep | grid=gd=128_ld=64_do=0.7_lr=1e-03_wd=1e-03_lv=0.3]
+  [120/120] {'gd': 128, 'ld': 64, 'dr': 0.7, 'lr': 0.001, 'wd': 0.001, 'lv': 0.3} -> fine_pr_auc=0.1052 fine_f1=0.0920 meta_pr_auc=0.5676 meta_f1=0.5599
+
+============================================================
+K-fold sweep complete.
+  Per-run results (same schema as hmcn_ablation_results.csv, plus 'fold'): 'kfold_results/hmcn_kfold_ablation_results.csv'
+  Mean ± std summary (report this): 'kfold_results/hmcn_kfold_summary_mean_std.csv'
+============================================================
+
+Script finished at: 2026-07-09 12:17:53
+Total elapsed time: 21:02:19.753043

@@ -1,0 +1,112 @@
+09:54:07 | Log file : logs/experiment_20260629_095407.log
+09:54:07 | Device   : cuda:0
+09:54:07 | Model    : seyonec/ChemBERTa-zinc-base-v1
+09:54:07 | Config   : LR=0.001, BS=64, EPOCHS=300, WD=0.0001, ASL=(0,4,0.05)
+09:54:07 | Loading data from features_clustering_A_r2.csv
+09:54:08 | Dataset  : 4981 molecules
+09:54:08 | Label prevalence:
+floral           0.262
+fruity           0.458
+sweet            0.387
+woody            0.212
+green            0.452
+spicy            0.216
+animal_musk      0.155
+earthy           0.202
+citrus           0.103
+chemical         0.431
+gourmand         0.242
+powdery_amber    0.206
+09:54:08 | Loading ChemBERTa tokenizer and backbone...
+09:54:09 | Extracting frozen embeddings (this runs once)...
+09:54:09 |   Embedded 128/4981
+09:54:09 |   Embedded 640/4981
+09:54:10 |   Embedded 1152/4981
+09:54:10 |   Embedded 1664/4981
+09:54:10 |   Embedded 2176/4981
+09:54:11 |   Embedded 2688/4981
+09:54:12 |   Embedded 3200/4981
+09:54:13 |   Embedded 3712/4981
+09:54:14 |   Embedded 4224/4981
+09:54:15 |   Embedded 4736/4981
+09:54:16 | Embeddings shape : (4981, 768)
+09:54:16 | Train: 2952 | Val: 1001 | Test: 1028
+09:54:17 | Epoch   5/300 | Loss: 0.1656 | Val PR AUC: 0.5071 | Val ROC AUC: 0.7314
+09:54:17 | Epoch  10/300 | Loss: 0.1604 | Val PR AUC: 0.5184 | Val ROC AUC: 0.7406
+09:54:18 | Epoch  15/300 | Loss: 0.1570 | Val PR AUC: 0.5210 | Val ROC AUC: 0.7391
+09:54:19 | Epoch  20/300 | Loss: 0.1559 | Val PR AUC: 0.5227 | Val ROC AUC: 0.7398
+09:54:20 | Epoch  25/300 | Loss: 0.1539 | Val PR AUC: 0.5232 | Val ROC AUC: 0.7409
+09:54:21 | Epoch  30/300 | Loss: 0.1517 | Val PR AUC: 0.5250 | Val ROC AUC: 0.7404
+09:54:22 | Epoch  35/300 | Loss: 0.1509 | Val PR AUC: 0.5264 | Val ROC AUC: 0.7433
+09:54:22 | Epoch  40/300 | Loss: 0.1490 | Val PR AUC: 0.5250 | Val ROC AUC: 0.7415
+09:54:23 | Epoch  45/300 | Loss: 0.1482 | Val PR AUC: 0.5258 | Val ROC AUC: 0.7421
+09:54:24 | Epoch  50/300 | Loss: 0.1474 | Val PR AUC: 0.5245 | Val ROC AUC: 0.7407
+09:54:25 | Epoch  55/300 | Loss: 0.1476 | Val PR AUC: 0.5225 | Val ROC AUC: 0.7396
+09:54:25 | Epoch  60/300 | Loss: 0.1466 | Val PR AUC: 0.5226 | Val ROC AUC: 0.7402
+09:54:26 | Epoch  65/300 | Loss: 0.1450 | Val PR AUC: 0.5236 | Val ROC AUC: 0.7383
+09:54:27 | Epoch  70/300 | Loss: 0.1446 | Val PR AUC: 0.5266 | Val ROC AUC: 0.7414
+09:54:28 | Epoch  75/300 | Loss: 0.1438 | Val PR AUC: 0.5263 | Val ROC AUC: 0.7397
+09:54:28 | Epoch  80/300 | Loss: 0.1428 | Val PR AUC: 0.5226 | Val ROC AUC: 0.7384
+09:54:29 | Epoch  85/300 | Loss: 0.1425 | Val PR AUC: 0.5249 | Val ROC AUC: 0.7399
+09:54:30 | Epoch  90/300 | Loss: 0.1416 | Val PR AUC: 0.5215 | Val ROC AUC: 0.7387
+09:54:31 | Epoch  95/300 | Loss: 0.1420 | Val PR AUC: 0.5257 | Val ROC AUC: 0.7392
+09:54:32 | Epoch 100/300 | Loss: 0.1414 | Val PR AUC: 0.5242 | Val ROC AUC: 0.7401
+09:54:33 | Epoch 105/300 | Loss: 0.1405 | Val PR AUC: 0.5217 | Val ROC AUC: 0.7370
+09:54:33 | Epoch 110/300 | Loss: 0.1395 | Val PR AUC: 0.5239 | Val ROC AUC: 0.7376
+09:54:34 | Epoch 115/300 | Loss: 0.1393 | Val PR AUC: 0.5234 | Val ROC AUC: 0.7376
+09:54:35 | Epoch 120/300 | Loss: 0.1398 | Val PR AUC: 0.5238 | Val ROC AUC: 0.7386
+09:54:35 | Epoch 125/300 | Loss: 0.1405 | Val PR AUC: 0.5233 | Val ROC AUC: 0.7365
+09:54:36 | Epoch 130/300 | Loss: 0.1391 | Val PR AUC: 0.5237 | Val ROC AUC: 0.7380
+09:54:37 | Epoch 135/300 | Loss: 0.1390 | Val PR AUC: 0.5219 | Val ROC AUC: 0.7350
+09:54:38 | Epoch 140/300 | Loss: 0.1380 | Val PR AUC: 0.5212 | Val ROC AUC: 0.7370
+09:54:38 | Epoch 145/300 | Loss: 0.1371 | Val PR AUC: 0.5195 | Val ROC AUC: 0.7361
+09:54:39 | Epoch 150/300 | Loss: 0.1376 | Val PR AUC: 0.5217 | Val ROC AUC: 0.7358
+09:54:40 | Epoch 155/300 | Loss: 0.1370 | Val PR AUC: 0.5230 | Val ROC AUC: 0.7380
+09:54:41 | Epoch 160/300 | Loss: 0.1366 | Val PR AUC: 0.5231 | Val ROC AUC: 0.7368
+09:54:42 | Epoch 165/300 | Loss: 0.1366 | Val PR AUC: 0.5205 | Val ROC AUC: 0.7360
+09:54:42 | Epoch 170/300 | Loss: 0.1358 | Val PR AUC: 0.5220 | Val ROC AUC: 0.7380
+09:54:43 | Epoch 175/300 | Loss: 0.1365 | Val PR AUC: 0.5216 | Val ROC AUC: 0.7370
+09:54:44 | Epoch 180/300 | Loss: 0.1356 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7374
+09:54:45 | Epoch 185/300 | Loss: 0.1356 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7376
+09:54:46 | Epoch 190/300 | Loss: 0.1367 | Val PR AUC: 0.5231 | Val ROC AUC: 0.7376
+09:54:47 | Epoch 195/300 | Loss: 0.1345 | Val PR AUC: 0.5214 | Val ROC AUC: 0.7360
+09:54:47 | Epoch 200/300 | Loss: 0.1358 | Val PR AUC: 0.5218 | Val ROC AUC: 0.7368
+09:54:48 | Epoch 205/300 | Loss: 0.1352 | Val PR AUC: 0.5227 | Val ROC AUC: 0.7371
+09:54:49 | Epoch 210/300 | Loss: 0.1345 | Val PR AUC: 0.5228 | Val ROC AUC: 0.7369
+09:54:50 | Epoch 215/300 | Loss: 0.1348 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7368
+09:54:51 | Epoch 220/300 | Loss: 0.1349 | Val PR AUC: 0.5228 | Val ROC AUC: 0.7376
+09:54:51 | Epoch 225/300 | Loss: 0.1345 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7372
+09:54:52 | Epoch 230/300 | Loss: 0.1341 | Val PR AUC: 0.5215 | Val ROC AUC: 0.7370
+09:54:53 | Epoch 235/300 | Loss: 0.1338 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7373
+09:54:54 | Epoch 240/300 | Loss: 0.1340 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7372
+09:54:54 | Epoch 245/300 | Loss: 0.1337 | Val PR AUC: 0.5220 | Val ROC AUC: 0.7369
+09:54:55 | Epoch 250/300 | Loss: 0.1334 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7373
+09:54:56 | Epoch 255/300 | Loss: 0.1339 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7370
+09:54:57 | Epoch 260/300 | Loss: 0.1344 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7370
+09:54:58 | Epoch 265/300 | Loss: 0.1337 | Val PR AUC: 0.5220 | Val ROC AUC: 0.7370
+09:54:59 | Epoch 270/300 | Loss: 0.1331 | Val PR AUC: 0.5222 | Val ROC AUC: 0.7371
+09:54:59 | Epoch 275/300 | Loss: 0.1336 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7372
+09:55:00 | Epoch 280/300 | Loss: 0.1327 | Val PR AUC: 0.5223 | Val ROC AUC: 0.7371
+09:55:01 | Epoch 285/300 | Loss: 0.1335 | Val PR AUC: 0.5224 | Val ROC AUC: 0.7370
+09:55:02 | Epoch 290/300 | Loss: 0.1331 | Val PR AUC: 0.5223 | Val ROC AUC: 0.7370
+09:55:02 | Epoch 295/300 | Loss: 0.1326 | Val PR AUC: 0.5223 | Val ROC AUC: 0.7370
+09:55:03 | Epoch 300/300 | Loss: 0.1327 | Val PR AUC: 0.5223 | Val ROC AUC: 0.7370
+09:55:03 | Best val PR AUC: 0.5288
+09:55:04 | Calibrated thresholds: [0.66 0.66 0.54 0.62 0.56 0.58 0.56 0.58 0.48 0.58 0.68 0.52]
+09:55:04 | ══ Test Results ═══════════════════════════════════
+09:55:04 |   Macro PR AUC  : 0.5483   (BR+RF baseline: 0.624)
+09:55:04 |   Macro ROC AUC : 0.7614  (BR+RF baseline: 0.820)
+09:55:04 |   Macro F1      : 0.5447   (BR+RF baseline: 0.567)
+09:55:04 |   Per-label PR AUC:
+09:55:04 |     floral                   : 0.5954
+09:55:04 |     fruity                   : 0.7475
+09:55:04 |     sweet                    : 0.6066
+09:55:04 |     woody                    : 0.5166
+09:55:04 |     green                    : 0.6755
+09:55:04 |     spicy                    : 0.4621
+09:55:04 |     animal_musk              : 0.3942
+09:55:04 |     earthy                   : 0.5368
+09:55:04 |     citrus                   : 0.3765
+09:55:04 |     chemical                 : 0.6789
+09:55:04 |     gourmand                 : 0.5776
+09:55:04 |     powdery_amber            : 0.4115
